@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -80,6 +79,7 @@
             padding: 10px 10px 10px 30px;
             border-radius: 40px;
             outline: none;
+
         }
         .board .list {
             text-align: left;
@@ -95,8 +95,10 @@
             border-radius: 4px;
         }
         .board .list ul li.hide {
-            display: none;
+            display:none;
         }
+
+
         @media (max-width: 800px){
             .board {
                 width: 92vw;
@@ -114,7 +116,7 @@
                 width: 100%;
                 box-sizing: border-box;
                 font-size: 16px;
-                padding: 10px 10px 10px 20px;
+                padding :10px 10px 10px 20px;
             }
             .board .list {
                 margin-top: 20px;
@@ -129,8 +131,8 @@
         .search-result {
             padding: 20px;
             font-family: 'GyeonggiBatang';
-            background-color: #BDD6E6;
-            margin: 10px 0;
+            background-color: #bdd6e6;
+            margin: 20px;
             border-radius: 40px;
         }
     </style>
@@ -138,15 +140,16 @@
 <body>
     <div id="wrap">
         <div class="board">
-            <span>CSS 속성을 적어주세요!!</span>
+            <span>CSS 속성을 넣어주세요</span>
             <h1>CSS 속성 검색하기</h1>
-            <div class="search">
+            <div class ="search">
                 <label for="search-box">검색하기</label>
-                <input id="search-box" class = "search-input" type="text">
+                <input id="search-box" class="search-input" type="text">
             </div>
+
             <div class="search-result">
-                
             </div>
+
         </div>
         <div class="girl">
             <img src="img/search_girl.png" alt="">
@@ -161,7 +164,7 @@
             { name: "align-content", desc: "콘텐츠의 상하관계 정렬 상태를 정의합니다." },
             { name: "align-items", desc: "콘텐츠 내부의 정렬 상태를 정의합니다." },
             { name: "align-self", desc: "콘텐츠의 정렬 상태를 정의합니다." },
-            { name: "align-all", desc: "요소의 속성을 초기화 또는 상속을 설정합니다." },
+            { name: "all", desc: "콘텐츠의 정렬 상태를 정의합니다." },
             { name: "animation", desc: "애니메이션을 정의합니다." },
             { name: "animation-delay", desc: "요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다." },
             { name: "animation-direction", desc: "애니메이션 움직임 방향을 설정합니다." },
@@ -259,7 +262,7 @@
             { name: "font-variant", desc: "글꼴의 변형을 정의합니다." },
             { name: "font-weight", desc: "폰트의 두께를 정의합니다." },
             { name: "grid", desc: "그리드 레이아웃을 정의합니다." },
-            { name: "grid-area", desc: "grid-area	grid-area" },
+            { name: "grid-area", desc: "grid-area   grid-area" },
             { name: "grid-auto-columns", desc: "grid-auto-columns" },
             { name: "grid-auto-flow", desc: "grid-auto-flow" },
             { name: "grid-auto-rows", desc: "grid-auto-rows" },
@@ -358,29 +361,30 @@
             { name: "word-wrap", desc: "줄바꿈을 설정합니다." },
             { name: "z-index", desc: "요소의 위치가 겹칠 경우 순서를 정의합니다." }
         ];
-
+        
         const searchInput = document.querySelector(".search-input");
-        const searchRusult = document.querySelector(".search-result");
+        const searchResult = document.querySelector(".search-result");
 
-        searchInput.addEventListener("keyup", () => {
-            const searchWord = searchInput.value; // 사용자가 입력한 값
-            console.log(searchWord);
+
+        searchInput.addEventListener("keyup",()=>{
+            const searchWord = searchInput.value; //사용자가 입력한 값
+            //console.log(searchWord);
             findDesc(searchWord);
         });
 
         function findDesc(searchWord){
             const findData = cssProp.find((el)=>{
-                return el.name === searchWord;          //사용자 입력한 값, 데이터 값이 일치여부
+                return el.name === searchWord;   //사용자가 입력한 값, 데이터 값이 일치여부
             });
 
-            //데이터가 없을 때
-            if( findData === null ){
-                searchRusult.textContent = "해당 속성이 존재하지 않습니다!!";
+            //데이터가 없을때
+            if(findData == null){
+                searchResult.textContent = "해당 속성이 존재하지 않습니다."
             } else {
-                searchRusult.textContent = findData.desc;   //데이터가 있으면 출력!!
+                searchResult.textContent = findData.desc; //데이터가 있으면 출력
+
             }
         }
-        
 
     </script>
 </body>
