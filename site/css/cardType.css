@@ -27,7 +27,7 @@
 .cardType02 h2 {
   font-weight: 500;
   font-size: 50px;
-  margin-bottom: 6px;
+  margin-bottom: 18px;
   text-align: center;
 }
 .cardType02 p {
@@ -115,7 +115,7 @@
 }
 .card2 .card-keyword2 {
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .card2 .mat {
@@ -124,4 +124,5 @@
     border-radius: 30px;
     padding: 2px 8px 2px 8px;
     margin-left: 0px;
+    
 }
