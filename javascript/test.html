@@ -1,171 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>자바스크립트 함수</title>
 </head>
-
 <body>
   <script>
-    // //선언적 함수
-    // function func1() {
-    //   document.write("선언적 함수<br>");
-    // }
-    // func1();
-    // //익명 함수
-    // const func2 = function () {
-    //   document.write("익명함수<br>");
-    // }
-    // func2();
-    // //매개변수 함수
-    // function func3(text) {
-    //   document.write(text);
-    // }
-    // func3("매개변수 함수<br>");
-    // //
-    // function func4() {
-    //   const text = "리턴값 함수<br>";
-    //   return text;
-    // }
-    // document.write(func4());
-    // func5 = () => {
-    //   document.write("화살표함수 : 선언적함수<br>")
-    // }
-    // func5();
-    // const func6 = () => {
-    //   document.write("화살표함수 : 익명함수<br>");
-    // }
-    // func6();
-    // func7 = () => {
-    //   let str = "화살표 함수 : 리턴값 함수<br>";
-    //   return str;
-    // }
-    // document.write(func7());
-    // const func8 = (str) => {
-    //   return str;
-    // }
-    // document.write(func8("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-    // const func9 = str => {
-    //   return str;
-    // }
-    // document.write(func9("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-    // const func10 = str => str;
-    // document.write(func10("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-    // func11 = str => str;
-    // document.write(func11("화살표 함수 : 익명함수 + 매개변수 + 리턴값<br>"));
-
-    // function func12(str1, str2) {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // func12("함수", "실행");
-    // func13 = (str1, str2) => {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // func13("함수", "실행");
-    // func14 = (str1, str2) => {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // const a = "함수";
-    // const b = "실행";
-    // func14(a, b);
-    // func15 = (str1, str2) => {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // const c = ["함수", "실행"];
-    // func15(c[0], c[1]);
-    // func16 = (str1, str2) => {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // const d = [{
-    //   a: "함수"
-    // }, {
-    //   b: "실행"
-    // }];
-    // func16(d[0].a, d[1].b);
-    // func17 = (str1, str2) => {
-    //   document.write(`${str1}가 ${str2}되었습니다.<br>`);
-    // }
-    // const e = {
-    //   a: "함수",
-    //   b: "실행"
-    // };
-    // func17(e.a, e.b);
-    // const f = {
-    //   a: "함수",
-    //   b: "실행",
-    //   result: () => {
-    //     document.write(`${f.a}가 ${f.b}되었습니다.<br>`);
-    //   }
-    // }
-    // f.result();
-      
-    function f1() {
-      document.write("함수1<br>");
+    //자바스크립트가 실행되었습니다.
+    //선언적 함수
+    function func (){
+      document.write("함수가 실행되었습니다.<br>");
     }
-    f1();
-    f1();
-    f1();
-    f1();
-
-    let f2 = function(){
-      document.write("익명함수<br>");
+    func();
+    //익명 함수
+    const func1 = function() {
+      document.write("함수가 실행되었습니다.<br>");
     }
-    f2();
-
-    let f3 = function(txt){
-      document.write(txt);
-    }
-    f3("매개 변수<br>");
-
-    let f4 = function() {
-      let str = "리턴값 함수<br>";
+    func1();
+    //리턴값 함수
+    function func2(){
+      const str = "함수가 실행되었습니다.<br>"
       return str;
     }
-    document.write(f4());
+    document.write(func2());
 
-    
-    f5 = () => {
-      document.write("화살표 함수 : 선언적 함수 <br>");
-    }
-    f5();
-
-    f6 = (str) => {
+    //매개변수 함수
+    function func3(str){
       document.write(str);
     }
-    f6("화살표 함수:선언적 함수<br>");
+    func3("함수가 실행되었습니다.<br>")
 
-    f7 = (str) => {
-      return str;
+    //1-10까지 for 출력
+    for(let i=1; i<=10; i++){
+      document.write(i,);
     }
-    documnet.write(f6("화살표 함수:선언적 함수<br>1111111"));
+    document.write("<br>")
 
-    f8 = (str) => str;
-    documnet.write(f8("화살표 함수:선언적 함수<br>1111111"));
-
-    f9 = str => str;
-    documnet.write(f9("화살표 함수:선언적 함수<br>1111111"));
-
-    function f10(str1, str2){
-      document.write(str1 +str2);
+    //여러가지로 출력
+    const num = [1,2,3,4,5];
+    //for 출력
+    for (let i=0; i<num.length; i++){
+      document.write(num[i]);
     }
-    f10("함수가","실행되었습니다11111.");
+    document.write("<br>")
 
-    let a = ["함수가", "실행"];
+    //forEach 출력
+    num.forEach(function(el){
+      document.write(el);
 
+    });
+    document.write("<br>")
 
-
-    function func11(str1, str2){
-      this.str1 = str1;
-      this.str2 = str2;
-      this.result =function() {
-        document.write(str1+str2)
-      }
+    //for in
+    for (let i in num){
+      document.write(num[i]);
     }
-    const info1 = new func11("함수", "실행");
-    info.result();
+    document.write("<br>")
+    //for of
+    for (let i of num){
+      document.write(num[1]);
+    }
+    document.write("<br>")
   </script>
 </body>
 
