@@ -221,82 +221,42 @@ body {
 }
 
 /*키워드*/
-.cardType03 .card-wrap .card .keywordsh {
+.cardType03 .card-wrap .card .card-cate {
   font-size: 14px;
-  font-weight: 300;
-  display: inline-block;
-  padding: 4px 14px 4px 15px;
-  border-radius: 20px;
-  background-color: #000;
+  font-weight: 800;
+  padding: 3px 14px 2px 15px;
   color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 9px;
-}
-
-.cardType03 .card-wrap .card .keywordsc {
-  font-size: 14px;
-  font-weight: 300;
-  display: inline-block;
-  padding: 4px 14px 4px 15px;
   border-radius: 20px;
-  background-color: #000;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 9px;
-}
-
-.cardType03 .card-wrap .card .keywordsj {
-  font-size: 14px;
-  font-weight: 300;
+  margin-bottom: 5px;
   display: inline-block;
-  padding: 4px 14px 4px 15px;
-  border-radius: 20px;
-  background-color: #000;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 9px;
 }
-
-.cardType03 .card-wrap .card .keywordsjq {
-  font-size: 14px;
-  font-weight: 300;
-  display: inline-block;
-  padding: 4px 14px 3px 15px;
-  border-radius: 20px;
-  background-color: #000;
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 9px;
+.cardType03 .card-wrap .card .card-cate.red {
+  background: #ff5151;
 }
-
-.cardType03 .card-wrap .card .keywordsh {
-  background-color: #ff5151;
+.cardType03 .card-wrap .card .card-cate.blue {
+  background: #5465ff;
 }
-
-.cardType03 .card-wrap .card .keywordsc {
-  background-color: #5465ff;
+.cardType03 .card-wrap .card .card-cate.green {
+  background: #11c865;
 }
-
-.cardType03 .card-wrap .card .keywordsj {
-  background-color: #ff4646;
-}
-
-.cardType03 .card-wrap .card .keywordsjq {
-  background-color: #11c865;
-}
-/*키워드끝 인생*/
+/*키워드끝 */
 
 .cardType03 .card-wrap .card .card-title {
   font-size: 26px;
   font-weight: bold;
   display: block;
-  margin-bottom: 14px;
 }
 
 .cardType03 .card-wrap .card .card-desc {
   font-size: 16px;
+  font-weight: 300;
   color: #555;
   display: block;
+  margin: 7px 0 7px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .cardType03 .card-wrap .card .card-date {
@@ -314,7 +274,7 @@ body {
 
 
 
-/* cardType04 */
+/* cardType04 쌤꺼 */
 .cardType04 {
   padding: 100px 0;
   font-family: 'NanumSquare';
