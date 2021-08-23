@@ -80,3 +80,62 @@ body {
   padding: 8px 18px;
 }
 
+/* imageType02 */
+.imageType02 {
+  font-family: 'GmarketSans';
+  padding: 100px 0;
+}
+.imageType02 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0 171px 42px 0;
+}
+
+.imageType02 .wrap {
+  display: flex;
+  gap: 20px;
+}
+.image .card {
+  margin: 10px;
+}
+.image-wrap02 > div {
+  width: 590px;
+}
+
+.imageType02 .image {
+  position:relative;
+}
+/*텍스트*/
+.imageType02 .image .text .tit {
+  position:absolute;
+  top: 176px;
+  left:150px;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+.imageType02 .image .text .tit2 {
+  position:absolute;
+  top: 154px;
+  left:164px;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+.imageType02 .image .text .button {
+  position:absolute;
+  top: 209px;
+  left:133px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.imageType02 .image .button .aa {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+  padding: 11px 24px;
+  border-radius: 40px;
+  font-weight: 500;
+}
+
