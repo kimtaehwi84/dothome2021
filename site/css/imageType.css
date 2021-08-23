@@ -1,0 +1,82 @@
+body {
+  background-color: #f3f3f3;
+}
+.imageType {
+  margin: 150px 0;
+  background-color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+}
+/* imageType01 */
+.imageType01 {
+  font-family: 'GmarketSans';
+  padding: 100px 0;
+}
+.imageType01 h2 {
+  font-weight: 500;
+  font-size: 50px;
+  margin: 0 171px 42px 0;
+}
+
+.imageType01 .wrap {
+  display: flex;
+  gap: 20px;
+}
+.image .card {
+  margin: 10px;
+}
+.image-wrap01 > div {
+  width: 590px;
+}
+
+.imageType01 .image {
+  position:relative;
+}
+/*텍스트*/
+.imageType01 .image .text .tit {
+  position:absolute;
+  top: 226px;
+  left:29px;
+  bottom: 124px;
+  color: #fff;
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+.imageType01 .image .text .desc {
+  position:absolute;
+  top: 268px;
+  left:30px;
+  bottom: 77px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 300;
+}
+.imageType01 .image .text .button {
+  position:absolute;
+  top: 327px;
+  left:30px;
+  bottom: 77px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+.imageType01 .image .text .button2 {
+  position:absolute;
+  top: 327px;
+  left:30px;
+  bottom: 77px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+}
+.imageType01 .image .button .aa {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 18px;
+}
+.imageType01 .image .button2 .aa {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 8px 18px;
+}
+
