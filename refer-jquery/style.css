@@ -26,6 +26,13 @@ body {
   font-family: 'NEXON Lv1 Gothic OTF';
   line-height: 1.6;
 }
+h1 {
+  padding: 40px 0 20px 0;
+}
+
+h1 a {
+  font-family: 'TmonMonsori';
+}
 ul {
   list-style: none;
 }
@@ -38,6 +45,9 @@ hr {
   border-color: #e6e6e6;
   border-width: 0px;
   border-bottom-width: 1px;
+}
+ul {
+  list-style: none;
 }
 .title {
   border-top: 3px solid #000;
@@ -158,6 +168,9 @@ hr {
 }
 .sample code {
   font-family: 'NEXON Lv1 Gothic OTF';
+}
+.list {
+  margin-left: 30px;
 }
 
 @media (max-width: 800px){
