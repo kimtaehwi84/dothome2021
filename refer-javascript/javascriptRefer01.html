@@ -712,9 +712,6 @@
         document.querySelector(".result15").addEventListener("click", function () {
             document.querySelector(".result15 div").classList.toggle("show");
         })
-        document.querySelector(".result15").addEventListener("click", function () {
-            document.querySelector(".result15 div").classList.toggle("show");
-        })
         document.querySelector(".result16").addEventListener("click", function () {
             document.querySelector(".result16 div").classList.toggle("show");
         })
@@ -913,15 +910,11 @@
             const b = 200;
             const c = "javascript";
 
-            const obj = {
-                a,
-                b,
-                c
-            }
+            const obj = {a,b,c}
 
             document.querySelector(".result15-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result15-2").innerHTML = obj.b + "<br>";
-            document.querySelector(".result15-3").innerHTML = obj.b[0] + "<br>";
+            document.querySelector(".result15-3").innerHTML = obj.c + "<br>";
         }
         //sample16
         //16. 객체 : 데이터 저장소(키와 값) : 표현 방법8 : 객체 속에 함수
