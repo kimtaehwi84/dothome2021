@@ -923,18 +923,15 @@
                 a: 100,
                 b: [200, 300],
                 c: "javascript",
-                d: function () {},
-                e: function () {},
-                f: function () {}
             }
             document.querySelector(".result16-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result16-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result16-3").innerHTML = obj.b[0] + "<br>";
             document.querySelector(".result16-4").innerHTML = obj.b[1] + "<br>";
             document.querySelector(".result16-5").innerHTML = obj.c + "<br>";
-            document.querySelector(".result16-6").innerHTML = (obj.d()) + "<br>";
-            document.querySelector(".result16-7").innerHTML = (obj.e()) + "<br>";
-            document.querySelector(".result16-8").innerHTML = (obj.f()) + "<br>";
+            document.querySelector(".result16-5").innerHTML = "자바스크립트가 실행되었습니다."+ "<br>";
+            document.querySelector(".result16-7").innerHTML = obj.c + "가 실행되었습니다."+ "<br>";;
+            document.querySelector(".result16-8").innerHTML = obj.c + "가 실행되었습니다."+ "<br>";;
         }
         //후..
         //sample17
