@@ -530,7 +530,7 @@
 
     <!--sample 17-->
     <div id="sample17" class="sample">
-        <h2>17. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
+        <h2>01. 변수의 종류 : 지역변수, 전역변수<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     let x = 100; //전역변수
@@ -579,7 +579,7 @@
     <!--//sample17-->
     <!--sample 18-->
     <div id="sample18" class="sample">
-        <h2>18. 변수의 변환 : 형 변환<span class="dot"></span></h2>
+        <h2>02. 변수의 변환 : 형 변환<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     let x = 100;
@@ -620,7 +620,7 @@
     <!--//sample18-->
     <!--sample 19-->
     <div id="sample19" class="sample">
-        <h2>19. 변수의 유형 : 데이터 타입<span class="dot"></span></h2>
+        <h2>03. 변수의 유형 : 데이터 타입<span class="dot"></span></h2>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">{
     let num1 = 100;
@@ -667,71 +667,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/prism.min.js"></script>
     <script>
-        document.querySelector(".result1").addEventListener("click", function () {
-            document.querySelector(".result1 div").classList.toggle("show");
-        })
-        document.querySelector(".result2").addEventListener("click", function () {
-            document.querySelector(".result2 div").classList.toggle("show");
-        })
-        document.querySelector(".result3").addEventListener("click", function () {
-            document.querySelector(".result3 div").classList.toggle("show");
-        })
-        document.querySelector(".result4").addEventListener("click", function () {
-            document.querySelector(".result4 div").classList.toggle("show");
-        })
-        document.querySelector(".result5").addEventListener("click", function () {
-            document.querySelector(".result5 div").classList.toggle("show");
-        })
-        document.querySelector(".result6").addEventListener("click", function () {
-            document.querySelector(".result6 div").classList.toggle("show");
-        })
-        document.querySelector(".result7").addEventListener("click", function () {
-            document.querySelector(".result7 div").classList.toggle("show");
-        })
-        document.querySelector(".result8").addEventListener("click", function () {
-            document.querySelector(".result8 div").classList.toggle("show");
-        })
-        document.querySelector(".result9").addEventListener("click", function () {
-            document.querySelector(".result9 div").classList.toggle("show");
-        })
-        document.querySelector(".result10").addEventListener("click", function () {
-            document.querySelector(".result10 div").classList.toggle("show");
-        })
-        document.querySelector(".result11").addEventListener("click", function () {
-            document.querySelector(".result11 div").classList.toggle("show");
-        })
-        document.querySelector(".result12").addEventListener("click", function () {
-            document.querySelector(".result12 div").classList.toggle("show");
-        })
-        document.querySelector(".result13").addEventListener("click", function () {
-            document.querySelector(".result13 div").classList.toggle("show");
-        })
-        document.querySelector(".result14").addEventListener("click", function () {
-            document.querySelector(".result14 div").classList.toggle("show");
-        })
-        document.querySelector(".result15").addEventListener("click", function () {
-            document.querySelector(".result15 div").classList.toggle("show");
-        })
-        document.querySelector(".result16").addEventListener("click", function () {
-            document.querySelector(".result16 div").classList.toggle("show");
-        })
-        document.querySelector(".result17").addEventListener("click", function () {
-            document.querySelector(".result17 div").classList.toggle("show");
-        })
-        document.querySelector(".result18").addEventListener("click", function () {
-            document.querySelector(".result18 div").classList.toggle("show");
-        })
-        document.querySelector(".result19").addEventListener("click", function () {
-            document.querySelector(".result19 div").classList.toggle("show");
-        })
-
-
         //sample1
         //01. 변수 : 데이터 저장소
         {
             var x = 100; //변수 x에 숫자 100을 저장
             var y = 200; //변수 y에 숫자 200을 저장
             var z = "javascript"; //변수 z에 문자 javascript 저장
+
+            document.querySelector(".result1").addEventListener("click", function () {
+                document.querySelector(".result1 div").classList.toggle("show");
+            })
             document.querySelector(".result1-1").innerHTML = x + "<br>";
             document.querySelector(".result1-2").innerHTML = y + "<br>";
             document.querySelector(".result1-3").innerHTML = z + "<br>";
@@ -746,7 +691,9 @@
             x = 300; //변수 x의값이 100에서 300으로 변경
             y = 400;
             z = "jquery";
-
+            document.querySelector(".result2").addEventListener("click", function () {
+                document.querySelector(".result2 div").classList.toggle("show");
+            })
             document.querySelector(".result2-1").innerHTML = x + "<br>";
             document.querySelector(".result2-2").innerHTML = y + "<br>";
             document.querySelector(".result2-3").innerHTML = z + "<br>";
@@ -761,6 +708,9 @@
             y += 400;
             z += "jquery"; //z = z + "jquery";
 
+            document.querySelector(".result3").addEventListener("click", function () {
+                document.querySelector(".result3 div").classList.toggle("show");
+            })
             document.querySelector(".result3-1").innerHTML = x + "<br>";
             document.querySelector(".result3-2").innerHTML = y + "<br>";
             document.querySelector(".result3-3").innerHTML = z + "<br>";
@@ -776,6 +726,9 @@
             //z = 500;    
             // const는 변경 불가능한 값
 
+            document.querySelector(".result4").addEventListener("click", function () {
+                document.querySelector(".result4 div").classList.toggle("show");
+            })
             document.querySelector(".result4-1").innerHTML = x + "<br>";
             document.querySelector(".result4-2").innerHTML = y + "<br>";
             document.querySelector(".result4-3").innerHTML = z + "<br>";
@@ -788,6 +741,9 @@
             arr[1] = 200; //두번째 배열에 숫자 200을 저장
             arr[2] = "javascript"; //세번째 배열에 문자 javascripts 저장
 
+            document.querySelector(".result5").addEventListener("click", function () {
+                document.querySelector(".result5 div").classList.toggle("show");
+            })
             document.querySelector(".result5-1").innerHTML = arr[0] + "<br>";
             document.querySelector(".result5-2").innerHTML = arr[1] + "<br>";
             document.querySelector(".result5-3").innerHTML = arr[2] + "<br>";
@@ -798,6 +754,9 @@
         {
             const arr = new Array(100, 200, "javascript");
 
+            document.querySelector(".result6").addEventListener("click", function () {
+                document.querySelector(".result6 div").classList.toggle("show");
+            })
             document.querySelector(".result6-1").innerHTML = arr[0] + "<br>";
             document.querySelector(".result6-2").innerHTML = arr[1] + "<br>";
             document.querySelector(".result6-3").innerHTML = arr[2] + "<br>";
@@ -811,6 +770,9 @@
             arr[1] = 200;
             arr[2] = "javascript";
 
+            document.querySelector(".result7").addEventListener("click", function () {
+                document.querySelector(".result7 div").classList.toggle("show");
+            })
             document.querySelector(".result7-1").innerHTML = arr[0] + "<br>";
             document.querySelector(".result7-2").innerHTML = arr[1] + "<br>";
             document.querySelector(".result7-3").innerHTML = arr[2] + "<br>";
@@ -821,6 +783,9 @@
         {
             const arr = [100, 200, "javascript"];
 
+            document.querySelector(".result8").addEventListener("click", function () {
+                document.querySelector(".result8 div").classList.toggle("show");
+            })
             document.querySelector(".result8-1").innerHTML = arr[0] + "<br>";
             document.querySelector(".result8-2").innerHTML = arr[1] + "<br>";
             document.querySelector(".result8-3").innerHTML = arr[2] + "<br>";
@@ -835,6 +800,9 @@
             obj[1] = 200;
             obj[2] = "javascript";
 
+            document.querySelector(".result9").addEventListener("click", function () {
+                document.querySelector(".result9 div").classList.toggle("show");
+            })
             document.querySelector(".result9-1").innerHTML = obj[0] + "<br>";
             document.querySelector(".result9-2").innerHTML = obj[1] + "<br>";
             document.querySelector(".result9-3").innerHTML = obj[2] + "<br>";
@@ -847,6 +815,9 @@
             obj.b = 200;
             obj.c = "javascript";
 
+            document.querySelector(".result10").addEventListener("click", function () {
+                document.querySelector(".result10 div").classList.toggle("show");
+            })
             document.querySelector(".result10-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result10-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result10-3").innerHTML = obj.c + "<br>";
@@ -859,6 +830,9 @@
             obj.b = 200;
             obj.c = "javascript";
 
+            document.querySelector(".result11").addEventListener("click", function () {
+                document.querySelector(".result11 div").classList.toggle("show");
+            })
             document.querySelector(".result11-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result11-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result11-3").innerHTML = obj.c + "<br>";
@@ -871,7 +845,9 @@
                 b: 200,
                 c: "javascript"
             };
-
+            document.querySelector(".result12").addEventListener("click", function () {
+                document.querySelector(".result12 div").classList.toggle("show");
+            })
             document.querySelector(".result12-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result12-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result12-3").innerHTML = obj.c + "<br>";
@@ -879,11 +855,18 @@
         //sample13
         //13. 객체 : 데이터 저장소(키와 값) : 표현 방법5 : 배열 속에 객체
         {
-            const obj = [
-                {a: 100, b: 200},
-                {c: "javascript"}
+            const obj = [{
+                    a: 100,
+                    b: 200
+                },
+                {
+                    c: "javascript"
+                }
             ];
 
+            document.querySelector(".result13").addEventListener("click", function () {
+                document.querySelector(".result13 div").classList.toggle("show");
+            })
             document.querySelector(".result13-1").innerHTML = obj[0].a + "<br>";
             document.querySelector(".result13-2").innerHTML = obj[0].b + "<br>";
             document.querySelector(".result13-3").innerHTML = obj[1].c + "<br>";
@@ -897,6 +880,9 @@
                 c: "javascript"
             }
 
+            document.querySelector(".result14").addEventListener("click", function () {
+                document.querySelector(".result14 div").classList.toggle("show");
+            })
             document.querySelector(".result14-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result14-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result14-3").innerHTML = obj.b[0] + "<br>";
@@ -910,8 +896,14 @@
             const b = 200;
             const c = "javascript";
 
-            const obj = {a,b,c}
-
+            const obj = {
+                a,
+                b,
+                c
+            }
+            document.querySelector(".result15").addEventListener("click", function () {
+                document.querySelector(".result15 div").classList.toggle("show");
+            })
             document.querySelector(".result15-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result15-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result15-3").innerHTML = obj.c + "<br>";
@@ -924,19 +916,25 @@
                 b: [200, 300],
                 c: "javascript",
             }
+            document.querySelector(".result16").addEventListener("click", function () {
+                document.querySelector(".result16 div").classList.toggle("show");
+            })
             document.querySelector(".result16-1").innerHTML = obj.a + "<br>";
             document.querySelector(".result16-2").innerHTML = obj.b + "<br>";
             document.querySelector(".result16-3").innerHTML = obj.b[0] + "<br>";
             document.querySelector(".result16-4").innerHTML = obj.b[1] + "<br>";
             document.querySelector(".result16-5").innerHTML = obj.c + "<br>";
-            document.querySelector(".result16-5").innerHTML = "자바스크립트가 실행되었습니다."+ "<br>";
-            document.querySelector(".result16-7").innerHTML = obj.c + "가 실행되었습니다."+ "<br>";;
-            document.querySelector(".result16-8").innerHTML = obj.c + "가 실행되었습니다."+ "<br>";;
+            document.querySelector(".result16-5").innerHTML = "자바스크립트가 실행되었습니다." + "<br>";
+            document.querySelector(".result16-7").innerHTML = obj.c + "가 실행되었습니다." + "<br>";;
+            document.querySelector(".result16-8").innerHTML = obj.c + "가 실행되었습니다." + "<br>";;
         }
         //후..
         //sample17
         //17. 지역변수, 전역변수
         {
+            document.querySelector(".result17").addEventListener("click", function () {
+                document.querySelector(".result17 div").classList.toggle("show");
+            })
             let x = 100; //전역변수
             let y = 200;
             let z = "javascript";
@@ -965,6 +963,9 @@
         //sample18
         //18 . 변수의 변환
         {
+            document.querySelector(".result18").addEventListener("click", function () {
+                document.querySelector(".result18 div").classList.toggle("show");
+            })
             let x = 100;
             let y = "100";
 
@@ -987,6 +988,9 @@
         //변수: 숫자(Number), 문자(String), 함수(function), 배열(Object), 
         //      객체(object), 불린(boolen), 특수값(null, undefined), 심볼(symbol)
         {
+            document.querySelector(".result19").addEventListener("click", function () {
+                document.querySelector(".result19 div").classList.toggle("show");
+            })
             let num1 = 100;
             let str = "javascript"
             let fun = function () {};
