@@ -236,6 +236,7 @@ a {
 .view {
   padding: 20px;
   overflow: auto;
+  border: 1px solid #f2f2f2;
 }
 
 .view table {
@@ -396,7 +397,7 @@ a {
     max-width: 800px;
     overflow: auto;
   }
-
+  
   .view th {
     font-weight: normal;
   }
