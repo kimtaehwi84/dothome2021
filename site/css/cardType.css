@@ -484,7 +484,13 @@ body {
   margin-right: 5px;
 }
 .cardType06 .card-wrap .item .info .item-name3 {
-  width: 220px;
+  width: 210px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.cardType06 .card-wrap .item .info .item-name4 {
+  width: 170px;
   height: 22px;
   display: inline-block;
   margin-right: 5px;
