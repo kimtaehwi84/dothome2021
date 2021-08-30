@@ -436,11 +436,9 @@ body {
   padding: 100px 0;
 }
 
-.cardType06 h2.title {
-  font-size: 40px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 10px;
+.cardType06 .title {
+  display: block;
+  margin: 0 auto 10px auto;
 }
 
 .cardType06 p.sub {
@@ -469,14 +467,25 @@ body {
 }
 
 .cardType06 .card-wrap .item .info {
+  text-align: left;
   padding: 30px 0 0 40px;
 }
-
-.cardType06 .card-wrap .item .info div.item-name {
+.cardType06 .card-wrap .item .info .item-name {
+  width: 140px;
+  height: 22px;
   display: inline-block;
-  font-size: 24px;
-  font-weight: 800;
-  margin-bottom: 5px;
+  margin-right: 5px;
+}
+.cardType06 .card-wrap .item .info .item-name2 {
+  width: 200px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 5px;
+}
+.cardType06 .card-wrap .item .info .item-name3 {
+  width: 220px;
+  height: 22px;
+  display: inline-block;
   margin-right: 5px;
 }
 
@@ -484,15 +493,16 @@ body {
   display: inline-block;
   text-align: center;
   width: 43px;
-  height: 19px;
+  height: 10px;
   flex-grow: 0;
-  padding: 3px 2px 1px 2px;
+  padding: 3px 2px 8px 2px;
   border-radius: 10px;
   background-color: #fa615b;
   font-family: NanumSquare;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 900;
   color: #fff;
+  vertical-align: top;
 }
 
 .cardType06 .card-wrap .item .info p.desc {
