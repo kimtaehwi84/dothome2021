@@ -475,6 +475,7 @@ body {
   height: 22px;
   display: inline-block;
   margin-right: 5px;
+  margin-bottom: 7px;
 }
 .cardType06 .card-wrap .item .info .item-name2 {
   width: 200px;
@@ -509,7 +510,7 @@ body {
   font-size: 17px;
   line-height: 1.8;
   color: #4a4a4a;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 
 .cardType06 .card-wrap .item .button {
