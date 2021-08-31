@@ -1,37 +1,82 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>자바스크립트 함수</title>
+  <title>test</title>
 </head>
+
 <body>
   <script>
-    const obj = {
-      a: 1000,
-      b: 2000,
-      c: 3000
-    }
-    document.write(obj.a,"<br>");
-    document.write(obj.b, "<br>");
-    document.write(obj.c, "<br>");
-    document.write(obj.a + obj.b + obj.c, "<br>");
-    document.write(obj.b + obj.c, "<br>");
-    document.write(obj.a + obj.c, "<br>");
-    document.write(obj.a/obj.a, "<br>");
-    document.write(obj.b/obj.a, "<br>");
-    document.write(obj.c/obj.a, "<br>");
-    document.write(Object.keys(obj));
+    // const num = [100, 200, 300, 400, 500];
+    //for문
+    // {
+    //   for (let i = 0; i < num.length; i++) {
+    //     document.write(num[i]);
+    //   }
+    //   document.write("<br><br>");
+    // }
 
-    const obj2 = [
-      {a: 1000},
-      {b: 2000},
-      {c: 3000}
-    ]
-    document.write(obj[0].a,"<br>");
-    document.write(obj[0].b,"<br>");
-    document.write(obj[0].c,"<br>");
+    //forEach()
+    // {
+    //   num.forEach((element, index, array) => {
+    //     document.write(element + "<br>");
+    //     document.write(index + "<br>");
+    //     document.write(array + "<br><br>");
+    //   })
+    // }
+
+    //300만 빼고
+    // {
+    //   document.write(num.filter(el => el !== 300) + "<br>");
+
+    //   const result1 = num.splice(2, 1)
+    //   document.write(num + "<br><br>");
+
+    //   for (let i = 0; i < num.length; i++) {
+    //     if (i == 4) {
+    //       continue;
+    //     }
+    //     if (i > num.length) {
+    //       break;
+    //     }
+    //     document.write(num[i]);
+    //     document.write("<br>");
+    //   }
+
+    //   const text1 = num.slice(2, 3);
+    //   document.write("<br>" + num + "<br>");
+    // }
+
+    // const obj = [
+    //   {a:100},
+    //   {a:200},
+    //   {a:300}
+    // ]
+
+    // document.write(obj[0].a);
+    // document.write();
+    // document.write();
+    
+    // obj.map(el=> document.write(el.a))
+{
+    function func(num, name, job){
+      this.num = num;
+      this.name = name;
+      this.job = job;
+
+      this.result = function(){
+        document.write(`${num}. 내 이름은 ${name}이며 직업은 ${job} 입니다.`)
+      }
+    }
+    const info = new func("1", "웹쓰", "웹 퍼블리셔")
+    
+
+    //1. 내 이름은 웹쓰이며 직업은 웹 퍼블리셔 입니다.
+}
+
   </script>
 </body>
 
