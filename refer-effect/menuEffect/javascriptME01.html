@@ -38,7 +38,9 @@
         <div class="modal-bg">
             <div class="modal-cont">
                 <h2>Baby Blue - Luke Hemmings</h2>
-                <p>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a moment<br>Or stay for a lifetime<br><br>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a moment<br>Or stay for a lifetime</p>
+                <p>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a moment<br>Or stay for a
+                    lifetime<br><br>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a
+                    moment<br>Or stay for a lifetime</p>
                 <button>닫기</button>
             </div>
         </div>
@@ -48,16 +50,44 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        {
-            // Modal & Popup Style1
-            $(".info.bottom button").click(function () {
-                $("#modal").removeClass().addClass("show");
-            });
+        // {
+        //     // Modal & Popup Style1
+        //     $(".info.bottom button").click(function () {
+        //         $("#modal").removeClass().addClass("show");
+        //     });
 
-            $(".modal-cont button").click(function () {
-                $("#modal").addClass("hide");
-            });
-        }
+        //     $(".modal-cont button").click(function () {
+        //         $("#modal").addClass("hide");
+        //     });
+        // }
+
+        //9월1일 숙제 제이쿼리>자바스크립트 id는 # class는 .
+    
+        document.querySelector(".info button").addEventListener("click", function (){
+            document.querySelector("#modal").classList.remove("show", "hide");
+            document.querySelector("#modal").classList.add("show");
+        })
+        document.querySelector("#modal button").addEventListener("click", function (){
+            document.querySelector("#modal").classList.remove("show", "hide");
+            document.querySelector("#modal").classList.add("hide");
+        })
+
+
+        // 자바스크립트 결과보기 참고......
+        // document.querySelector(".result1").addEventListener("click", function () {
+        //         document.querySelector(".result1 div").classList.toggle("show");
+        //     })
+        // document.querySelectorAll(".result h3").forEach(el=>{
+        //            el.addEventListener("click", function () {
+        // e.preventDefault;
+        //          this.parentNode.classList.toggle("show");
+        // });
+        //      }); 으아악 
+        //제이쿼리로 변경하기 9월2일
+        // $(".result h3").click(function (e) {
+        //     e.preventDefault();
+        //     $(this).parents().toggleClass("show");
+        // });
     </script>
 </body>
 

@@ -414,3 +414,19 @@ nav li a:hover {
     transform: scale(0);
   }
 }
+@media (max-width: 800px) {
+  #contents h1 {
+    font-size: 15vw;
+  }
+
+  #nav ul {
+    text-align: center;
+    width: 100%;
+  }
+  #nav ul li a {
+    font-size: 11px;
+    width: 55px;
+    height: 26px;
+    line-height: 2.5;
+  }
+}
