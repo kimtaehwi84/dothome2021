@@ -216,11 +216,13 @@ nav {
     color: #fff;
     font-family: $font-Nexon1;
     padding: 20px;
+
     &.right {
         position: absolute;
         right: 0px;
         top: 0px;
     }
+
     &.bottom {
         position: absolute;
         bottom: 0;
@@ -235,13 +237,16 @@ nav {
         display: inline-block;
         margin-bottom: 10px;
     }
+
     p {
         font-weight: 300;
         font-size: 16px;
     }
+
     li {
         list-style: none;
         display: inline;
+
         a {
             display: inline-block;
             text-decoration: none;
@@ -255,6 +260,7 @@ nav {
             font-size: 12px;
             margin-bottom: 5px;
         }
+
         &.active {
             a {
                 background: #fff;
@@ -262,6 +268,7 @@ nav {
             }
         }
     }
+
     button {
         background: transparent;
         border: 1px solid #fff;
@@ -274,6 +281,25 @@ nav {
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
             color: #000;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    #nav {
+        min-width: 240px;
+        text-align: center;
+
+        ul {
+            li {
+                a {
+                    width: 65px;
+                    height: 30px;
+                    font-size: 12px;
+                    line-height: 30px;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }
