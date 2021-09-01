@@ -144,22 +144,42 @@ $gradient6: linear-gradient(to bottom, #fef9d7 0%, #d299c2 100%);
 
     &.game {
         background: $gradient2;
+
+        #contents h1 {
+            background-image: linear-gradient(to top, #ff958b 5%, #ffc3c3);
+        }
     }
 
     &.menu {
         background: $gradient3;
+
+        #contents h1 {
+            background-image: linear-gradient(to top, #ffb199 1%, #ff0844);
+        }
     }
 
     &.mouse {
         background: $gradient4;
+
+        #contents h1 {
+            background-image: linear-gradient(to top, #679999 1%, #8f5c74);
+        }
     }
 
     &.parallax {
         background: $gradient5;
+
+        #contents h1 {
+            background-image: linear-gradient(to top, #c192ee 1%, #55a2ee);
+        }
     }
 
     &.slider {
         background: $gradient6;
+
+        #contents h1 {
+            background-image: linear-gradient(to top, #fff4ad 1%, #bd71a7);
+        }
     }
 }
 
@@ -293,11 +313,11 @@ nav {
         ul {
             li {
                 a {
-                    width: 65px;
+                    width: 60px;
                     height: 30px;
-                    font-size: 12px;
+                    font-size: 13px;
                     line-height: 30px;
-                    margin-bottom: 10px;
+                    margin-bottom: 5px;
                 }
             }
         }

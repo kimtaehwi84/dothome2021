@@ -131,17 +131,32 @@ figcaption {
 #main.game {
   background: linear-gradient(to bottom, #f5efef 0%, #feada6 100%);
 }
+#main.game #contents h1 {
+  background-image: linear-gradient(to top, #ff958b 5%, #ffc3c3);
+}
 #main.menu {
   background: linear-gradient(to bottom, #ffb199 0%, #ff0844 100%);
+}
+#main.menu #contents h1 {
+  background-image: linear-gradient(to top, #ffb199 1%, #ff0844);
 }
 #main.mouse {
   background: linear-gradient(to bottom, #8baaaa 0%, #ae8b9c 100%);
 }
+#main.mouse #contents h1 {
+  background-image: linear-gradient(to top, #679999 1%, #8f5c74);
+}
 #main.parallax {
   background: linear-gradient(to bottom, #e0c3fc 0%, #8ec5fc 100%);
 }
+#main.parallax #contents h1 {
+  background-image: linear-gradient(to top, #c192ee 1%, #55a2ee);
+}
 #main.slider {
   background: linear-gradient(to bottom, #fef9d7 0%, #d299c2 100%);
+}
+#main.slider #contents h1 {
+  background-image: linear-gradient(to top, #fff4ad 1%, #bd71a7);
 }
 
 #contents h1 {
@@ -262,10 +277,10 @@ nav li a:hover {
     text-align: center;
   }
   #nav ul li a {
-    width: 65px;
+    width: 60px;
     height: 30px;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
