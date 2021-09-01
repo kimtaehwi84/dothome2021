@@ -429,8 +429,9 @@ nav {
 
     #nav {
         ul {
-            text-align: center;
-            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            gap: 10px;
             li {
                 a {
                     font-size: 11px;
