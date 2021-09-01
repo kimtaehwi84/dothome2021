@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Menu Effect</title>
 
     <link rel="stylesheet" href="../assets/css/style.css">
+
 </head>
+
 <body class="bg bg6">
     <!-- info -->
     <div class="info">
@@ -29,6 +32,33 @@
     <div class="info bottom">
         <button>소스 보기</button>
     </div>
+
+    <!-- #1 -->
+    <div id="modal">
+        <div class="modal-bg">
+            <div class="modal-cont">
+                <h2>Baby Blue - Luke Hemmings</h2>
+                <p>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a moment<br>Or stay for a lifetime<br><br>I’m on my way to wonderland <br>Take off my suit and wander in <br>For a moment<br>Or stay for a lifetime</p>
+                <button>닫기</button>
+            </div>
+        </div>
+    </div>
+    <!-- //#1 -->
     <!-- //info-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        {
+            // Modal & Popup Style1
+            $(".info.bottom button").click(function () {
+                $("#modal").removeClass().addClass("show");
+            });
+
+            $(".modal-cont button").click(function () {
+                $("#modal").addClass("hide");
+            });
+        }
+    </script>
 </body>
+
 </html>
