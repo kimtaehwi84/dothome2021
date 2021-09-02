@@ -485,6 +485,8 @@ nav li a:hover {
   }
   .code-view .view-cont code {
     font-size: 12px;
-    overflow: hidden;
+  }
+  .code-view .hljs {
+    overflow-x: scroll;
   }
 }

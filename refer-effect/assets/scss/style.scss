@@ -498,7 +498,12 @@ nav {
 
         .view-cont code {
             font-size: 12px;
-            overflow: hidden;
+        }
+        .view-cont .javascript {
+            
+        }
+        .hljs {
+            overflow-x: scroll;
         }
     }
     
