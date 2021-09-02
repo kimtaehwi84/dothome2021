@@ -216,15 +216,18 @@ nav {
     color: #fff;
     font-family: $font-Nexon1;
     padding: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     &.right {
-        position: absolute;
+        left: auto;
         right: 0px;
-        top: 0px;
     }
 
     &.bottom {
-        position: absolute;
+        top: auto;
+        left: auto;
         bottom: 0;
         right: 0;
     }
@@ -259,6 +262,7 @@ nav {
             text-align: center;
             font-size: 12px;
             margin-bottom: 5px;
+            padding: 1px 2px 0 0;
         }
 
         &.active {
@@ -277,6 +281,7 @@ nav {
         border-radius: 50px;
         box-shadow: 0 0 0 #fff inset;
         transition: all 0.4s;
+        cursor: pointer;
 
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
@@ -303,11 +308,6 @@ nav {
         justify-content: center;
 
         .modal-cont {
-            background: #fff;
-            padding: 3vw;
-            max-width: 50vw;
-            border-radius: 5px;
-
             h2 {
                 font-weight: 400;
                 font-size: 30px;
@@ -328,6 +328,7 @@ nav {
                 padding: 5px 10px;
                 cursor: pointer;
                 font-family: 'NEXONLv2Gothic';
+                margin-top: 10px
             }
         }
     }
@@ -400,6 +401,70 @@ nav {
     }
 }
 
+//code-view
+.code-view {
+    background: #fff;
+    width: 60vw;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .view-header {
+        border-bottom: 1px solid #f2f2f2;
+        .dot {
+            padding: 12px 10px 10px 15px;
+
+            span {
+                width: 12px; height: 12px;
+                display: inline-block;
+                border-radius: 50%;
+                margin : 0 2px;
+            }
+            span:nth-child(1){
+                background-color: #f56565;
+            }
+            span:nth-child(2){
+                background-color: #f6e05e;
+            }
+            span:nth-child(3){
+                background-color: #48bb78;
+            }
+        }
+    }
+    .view-title {
+        font-family: 'NEXONLv2Gothic';
+        border-bottom: 1px solid #f2f2f2;
+        padding: 0 11px;
+        li {
+            display: inline;
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #cccccc;
+                padding: 10px 10px 12px;
+                margin: 0 5px;
+                display: inline-block;
+            }
+            &.active a {
+                border-top: 2px solid #667eea;
+                color: #4a5568;
+            }
+        }
+    }
+    .view-cont {
+        height: 70vh;
+        overflow-y: scroll;
+        background: #F8F8F9;
+        > div {
+            display: none;
+        }
+        > div:nth-child(1){
+            display: block;
+        }
+    }
+}
+
+
 @media(max-width: 800px) {
     #contents {
         h1 {
@@ -423,4 +488,18 @@ nav {
             }
         }
     }
+    
+    .code-view {
+        width: 270px;
+
+        .view-title li a {
+            font-size: 12px;
+        }
+
+        .view-cont code {
+            font-size: 12px;
+            overflow: hidden;
+        }
+    }
+    
 }
