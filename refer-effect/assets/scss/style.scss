@@ -411,33 +411,41 @@ nav {
 
     .view-header {
         border-bottom: 1px solid #f2f2f2;
+
         .dot {
             padding: 12px 10px 10px 15px;
 
             span {
-                width: 12px; height: 12px;
+                width: 12px;
+                height: 12px;
                 display: inline-block;
                 border-radius: 50%;
-                margin : 0 2px;
+                margin: 0 2px;
             }
-            span:nth-child(1){
+
+            span:nth-child(1) {
                 background-color: #f56565;
             }
-            span:nth-child(2){
+
+            span:nth-child(2) {
                 background-color: #f6e05e;
             }
-            span:nth-child(3){
+
+            span:nth-child(3) {
                 background-color: #48bb78;
             }
         }
     }
+
     .view-title {
         font-family: 'NEXONLv2Gothic';
         border-bottom: 1px solid #f2f2f2;
         padding: 0 11px;
+
         li {
             display: inline;
             list-style: none;
+
             a {
                 text-decoration: none;
                 color: #cccccc;
@@ -445,20 +453,24 @@ nav {
                 margin: 0 5px;
                 display: inline-block;
             }
+
             &.active a {
                 border-top: 2px solid #667eea;
                 color: #4a5568;
             }
         }
     }
+
     .view-cont {
         height: 70vh;
         overflow-y: scroll;
         background: #F8F8F9;
-        > div {
+
+        >div {
             display: none;
         }
-        > div:nth-child(1){
+
+        >div:nth-child(1) {
             display: block;
         }
     }
@@ -488,18 +500,22 @@ nav {
             }
         }
     }
+
     .info {
         padding: 12px;
 
         h1 {
             font-size: 16px;
         }
+
         p {
             font-size: 10px;
         }
+
         &.bottom {
             bottom: 20px;
         }
+
         li {
             a {
                 width: 15px;
@@ -509,23 +525,18 @@ nav {
             }
         }
     }
+
     .code-view {
-        width: 300px;
+        .code-view {
+            width: 90vw;
+            font-size: 14px;
+            overflow: hidden;
+            padding-bottom: 10px;
+            background: #f8f8f8;
 
-        .view-title li a {
-            font-size: 12px;
-        }
-
-        .view-cont code {
-            height: 300px;
-            font-size: 10px;
-        }
-        .view-cont .javascript {
-            
-        }
-        .hljs {
-            overflow-x: scroll;
+            .view-cont {
+                height: 55vh;
+            }
         }
     }
-    
 }
