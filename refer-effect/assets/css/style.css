@@ -496,14 +496,14 @@ nav li a:hover {
     font-size: 5px;
   }
 
-  .code-view .code-view {
+  .code-view {
     width: 90vw;
     font-size: 14px;
     overflow: hidden;
     padding-bottom: 10px;
     background: #f8f8f8;
   }
-  .code-view .code-view .view-cont {
+  .code-view .view-cont {
     height: 55vh;
   }
 }
