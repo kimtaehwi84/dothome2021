@@ -69,18 +69,21 @@
             line-height: 1.6;
         }
 
-        @media (max-width: 800px){
+        @media (max-width: 800px) {
             #tab-menu {
                 width: 90%;
             }
+
             .tab-btn li a {
                 padding: 13px 10px 10px 10px;
                 font-size: 14px;
             }
-            .tab-cont > div h2 {
+
+            .tab-cont>div h2 {
                 font-size: 16px;
             }
-            .tab-cont > div p {
+
+            .tab-cont>div p {
                 font-size: 14px;
             }
         }
@@ -327,6 +330,12 @@ tabBtn.forEach((element, index) => {
                 tabCont[index].style.display = "block";
             });
         });
+
+        window.onload = function () {
+            // init();
+            // animate();
+            agentCheck(); //호환성 체크
+        };
     </script>
     </script>
 </body>

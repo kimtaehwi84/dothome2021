@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javascript</title>
+    <title>javascript Reference</title>
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font.css">
     <link rel="stylesheet" href="https://tistory4.daumcdn.net/tistory/2933724/skin/images/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.0/themes/prism-okaidia.min.css"
@@ -76,6 +76,19 @@
             <li>screen 객체 속성 : window.screen.availHeight : 실제 이용 가능한 화면의 세로 값을 가져옵니다.</li>
             <li>screen 객체 속성 : window.screen.colorDepth : 사용 가능한 색상 수</li>
             <li>screen 객체 속성 : window.screen.pixelDepth : 한 픽셀당 비트 수</li>
+            <br>
+            <li>navigator 객체 속성 : nav</li>
+            <li>navigator 객체 속성 : navigator.appCodeName : 브라우저의 코드명을 반환</li>
+            <li>navigator 객체 속성 : navigator.appName : 브라우저의 이름을 반환</li>
+            <li>navigator 객체 속성 : navigator.appVersion : 브라우저의 버전을 반환</li>
+            <li>navigator 객체 속성 : navigator.cookieEnabled : 브라우저의 쿠키 사용 가능 여부를 반환</li>
+            <li>navigator 객체 속성 : navigator.language : 브라우저에서 사용되는 언어를 반환</li>
+            <li>navigator 객체 속성 : navigator.onLine : 브라우저가 온라인인지 여부를 반환</li>
+            <li>navigator 객체 속성 : navigator.platform : 브라우저가 실행되는 플랫폼 정보를 반환</li>
+            <li>navigator 객체 속성 : navigator.product : 브라우저에서 사용되는 엔진 이름을 반환</li>
+            <li>navigator 객체 속성 : navigator.userAgent : 브라우저와 운영체제 정보를 반환</li>
+            <li>navigator 객체 속성 : navigator.onLine : 네트워크 상태 가져오기</li>
+
         </ol>
     </div>
     <hr>
@@ -279,7 +292,7 @@
         const screenL = window.screenLeft;
         const screenY = window.screenY;
         const screenX = window.screenX;
-        
+
         btn1.addEventListener("click", () => {
             document.querySelector(".text4-1").innerHTML = "당신이 보고 있는 브라우저의 화면 가로 값(innerWidth)은 " + innerW +
                 "px 입니다.";
@@ -340,6 +353,302 @@
         })
     </script>
     <!-- //sample04 -->
+
+    <!-- sample05 -->
+    <div id="sample05" class="sample">
+        <h2>05. screen<span class="dot"></span></h2>
+        <div class="view ex5">
+            <p class="text text5-1"></p>
+            <p class="text text5-2"></p>
+            <p class="text text5-3"></p>
+            <p class="text text5-4"></p>
+            <p class="text text5-5"></p>
+            <p class="text text5-6"></p>
+
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn5-1">클릭하면 화면의 가로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-2">클릭하면 화면의 세로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-3">클릭하면 화면의 실제 이용 가능한 화면의 가로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-4">클릭하면 화면의 실제 이용 가능한 화면의 세로 값을 가져옵니다.</a>
+            <a href="#c" class="btn5-5">클릭하면 사용 가능한 색상 수를 가져옵니다.</a>
+            <a href="#c" class="btn5-6">클릭하면 픽셀당 비트 수를 가져옵니다.</a>
+        </div>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const btn51 = document.querySelector(".btn5-1");
+    const btn52 = document.querySelector(".btn5-2");
+    const btn53 = document.querySelector(".btn5-3");
+    const btn54 = document.querySelector(".btn5-4");
+    const btn55 = document.querySelector(".btn5-5");
+    const btn56 = document.querySelector(".btn5-6");
+
+    let screenWidth = screen.width;
+    let screenHeight = screen.height;
+    let screenAvailWidth = screen.availWidth;
+    let screenAvailHeight = screen.availHeight;
+    let colorDepth = screen.colorDepth;
+    let pixelDepth = screen.pixelDepth;
+
+    btn51.addEventListener("click", () => {
+        document.querySelector(".text5-1").innerHTML = screenWidth;
+    });
+    btn52.addEventListener("click", () => {
+        document.querySelector(".text5-2").innerHTML = screenHeight;
+    });
+    btn53.addEventListener("click", () => {
+        document.querySelector(".text5-3").innerHTML = screenAvailWidth;
+    });
+    btn54.addEventListener("click", () => {
+        document.querySelector(".text5-4").innerHTML = screenAvailHeight;
+    });
+    btn55.addEventListener("click", () => {
+        document.querySelector(".text5-5").innerHTML = colorDepth;
+    });
+    btn56.addEventListener("click", () => {
+        document.querySelector(".text5-6").innerHTML = pixeDepth;
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        // const btn51 = document.querySelector(".btn5-1");
+        // const btn52 = document.querySelector(".btn5-2");
+        // const btn53 = document.querySelector(".btn5-3");
+        // const btn54 = document.querySelector(".btn5-4");
+        // const btn55 = document.querySelector(".btn5-5");
+        // const btn56 = document.querySelector(".btn5-6");
+
+        // let screenWidth = screen.width;
+        // let screenHeight = screen.height;
+        // let screenAvailWidth = screen.availWidth;
+        // let screenAvailHeight = screen.availHeight;
+        // let colorDepth = screen.colorDepth;
+        // let pixelDepth = screen.pixelDepth;
+
+        // btn51.addEventListener("click", () => {
+        //     document.querySelector(".text5-1").innerHTML = screenWidth;
+        // })
+        // btn52.addEventListener("click", () => {
+        //     document.querySelector(".text5-2").innerHTML = screenHeight;
+        // })
+        // btn53.addEventListener("click", () => {
+        //     document.querySelector(".text5-3").innerHTML = screenAvailWidth;
+        // })
+        // btn54.addEventListener("click", () => {
+        //     document.querySelector(".text5-4").innerHTML = screenAvailHeight;
+        // })
+        // btn55.addEventListener("click", () => {
+        //     document.querySelector(".text5-5").innerHTML = colorDepth;
+        // })
+        // btn56.addEventListener("click", () => {
+        //     document.querySelector(".text5-6").innerHTML = pixeDepth;
+        // })
+
+        // 범수
+        let screenWidth = screen.width;
+        let screenHeight = screen.height;
+        let screenAvailWidth = screen.availWidth;
+        let screenAvailHeight = screen.availHeight;
+        let colorDepth = screen.colorDepth;
+        let pixelDepth = screen.pixelDepth;
+        const screen1 = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, colorDepth, pixelDepth]
+        for (let i = 1; i <= 6; i++) {
+            document.querySelector(`.btn5-${i}`).addEventListener("click", () => {
+                document.querySelector(`.text5-${i}`).innerHTML = screen1[i - 1];
+            });
+        }
+
+        //쌤
+        // const name = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, colorDepth, pixelDepth]
+        // for (let i = 1; i <= name.length; i++) {
+        //     document.querySelector(".btn5-"+1).addEventListener("click", () => {
+        //         document.querySelector(".text5-"+1).innerHTML = name[i-1];
+        //     });
+        // }
+
+        // 지현
+        // let screenArr = [screenWidth, screenHeight, screenAvailWidth, screenAvailHeight, screenColorDepth,
+        //     screenPixelDepth
+        // ];
+        // document.querySelectorAll(".btn5>a").forEach(function (el, idx) {
+        //     el.addEventListener("click", function () {
+        //         document.querySelector(".text5-" + (idx + 1)).innerHTML = screenArr[idx];
+        //     });
+        // });
+
+        //준승
+        // value.forEach((element, index) => {
+        //     document.querySelector(`.btn5-${index+1}`).addEventListener("click", () => {
+        //         document.querySelector(`.text5-${index+1}`).innerHTML = value[index];
+        //     })
+        // });
+
+        // document.querySelector(".btn5-" + 1).forEach(el => {
+        //     el.addEventListener("click", function () {
+        //         document.querySelector(".text5-" + 1).innerHTML = screen[i - 1];
+        //     })
+        // }) 끙
+
+        // name.forEach((element, i) => {
+        //     document.querySelector(".btn5-"+1).addEventListener("click", () => {
+        //         document.querySelector(".text5-"+1).innerHTML = name[i-1];
+        //     });
+        // });
+    </script>
+    <!-- //sample05 -->
+
+    <!-- sample06 -->
+    <div id="sample06" class="sample">
+        <h2>06. navigator<span class="dot"></span></h2>
+        <div class="view ex6">
+            <p class="text text6-1"></p>
+            <p class="text text6-2"></p>
+            <p class="text text6-3"></p>
+            <p class="text text6-4"></p>
+            <p class="text text6-5"></p>
+            <p class="text text6-6"></p>
+            <p class="text text6-7"></p>
+            <p class="text text6-8"></p>
+            <p class="text text6-9"></p>
+
+        </div>
+        <div class="btn">
+            <a href="#c" class="btn6-1">클릭하면 브라우저의 코드명을 가져옵니다.</a>
+            <a href="#c" class="btn6-2">클릭하면 브라우저의 이름을 가져옵니다.</a>
+            <a href="#c" class="btn6-3">클릭하면 브라우저의 버전을 가져옵니다.</a>
+            <a href="#c" class="btn6-4">클릭하면 쿠키 사용 가능 여부 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-5">클릭하면 사용 가능한 색상 수를 가져옵니다.</a>
+            <a href="#c" class="btn6-6">클릭하면 브라우저에서 사용되는 언어 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-7">클릭하면 온라인 여부 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-8">클릭하면 플래폼 정보를 가져옵니다.</a>
+            <a href="#c" class="btn6-9">클릭하면 브라우저 엔진 이름을 가져옵니다.</a>
+        </div>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">{
+    const btn61 = document.querySelector(".btn6-1");
+    const btn62 = document.querySelector(".btn6-2");
+    const btn63 = document.querySelector(".btn6-3");
+    const btn64 = document.querySelector(".btn6-4");
+    const btn65 = document.querySelector(".btn6-5");
+    const btn66 = document.querySelector(".btn6-6");
+    const btn67 = document.querySelector(".btn6-7");
+    const btn68 = document.querySelector(".btn6-8");
+    const btn69 = document.querySelector(".btn6-9");
+
+    let nowAppCodeName = navigator.appCodeName;
+    let nowAppName = navigator.appName;
+    let nowAppVersion = navigator.appVersion;
+    let nowCookieEnabled = navigator.cookieEnabled;
+    let nowLanguage = navigator.language;
+    let nowOnLine = navigator.onLine;
+    let nowPlatform = navigator.platform;
+    let nowProduct = navigator.product;
+    let nowUserAgent = navigator.userAgent;
+
+    btn61.addEventListener("click", () => {
+        document.querySelector(".text6-1").innerHTML = nowAppCodeName;
+    });
+    btn62.addEventListener("click", () => {
+        document.querySelector(".text6-2").innerHTML = nowAppName;
+    });
+    btn63.addEventListener("click", () => {
+        document.querySelector(".text6-3").innerHTML = nowAppVersion;
+    });
+    btn64.addEventListener("click", () => {
+        document.querySelector(".text6-4").innerHTML = nowCookieEnabled;
+    });
+    btn65.addEventListener("click", () => {
+        document.querySelector(".text6-5").innerHTML = nowLanguage;
+    });
+    btn66.addEventListener("click", () => {
+        document.querySelector(".text6-6").innerHTML = nowOnLine;
+    });
+    btn67.addEventListener("click", () => {
+        document.querySelector(".text6-7").innerHTML = nowPlatform;
+    });
+    btn68.addEventListener("click", () => {
+        document.querySelector(".text6-8").innerHTML = nowProduct;
+    });
+    btn69.addEventListener("click", () => {
+        document.querySelector(".text6-9").innerHTML = nowUserAgent;
+    });
+}
+</code></pre>
+        </div>
+    </div>
+    <hr>
+    <script>
+        const btn61 = document.querySelector(".btn6-1");
+        const btn62 = document.querySelector(".btn6-2");
+        const btn63 = document.querySelector(".btn6-3");
+        const btn64 = document.querySelector(".btn6-4");
+        const btn65 = document.querySelector(".btn6-5");
+        const btn66 = document.querySelector(".btn6-6");
+        const btn67 = document.querySelector(".btn6-7");
+        const btn68 = document.querySelector(".btn6-8");
+        const btn69 = document.querySelector(".btn6-9");
+
+        let nowAppCodeName = navigator.appCodeName;
+        let nowAppName = navigator.appName;
+        let nowAppVersion = navigator.appVersion;
+        let nowCookieEnabled = navigator.cookieEnabled;
+        let nowLanguage = navigator.language;
+        let nowOnLine = navigator.onLine;
+        let nowPlatform = navigator.platform;
+        let nowProduct = navigator.product;
+        let nowUserAgent = navigator.userAgent;
+
+        // 노가다
+        // btn61.addEventListener("click", () => {
+        //     document.querySelector(".text6-1").innerHTML = nowAppCodeName;
+        // });
+        // btn62.addEventListener("click", () => {
+        //     document.querySelector(".text6-2").innerHTML = nowAppName;
+        // });
+        // btn63.addEventListener("click", () => {
+        //     document.querySelector(".text6-3").innerHTML = nowAppVersion;
+        // });
+        // btn64.addEventListener("click", () => {
+        //     document.querySelector(".text6-4").innerHTML = nowCookieEnabled;
+        // });
+        // btn65.addEventListener("click", () => {
+        //     document.querySelector(".text6-5").innerHTML = nowLanguage;
+        // });
+        // btn66.addEventListener("click", () => {
+        //     document.querySelector(".text6-6").innerHTML = nowOnLine;
+        // });
+        // btn67.addEventListener("click", () => {
+        //     document.querySelector(".text6-7").innerHTML = nowPlatform;
+        // });
+        // btn68.addEventListener("click", () => {
+        //     document.querySelector(".text6-8").innerHTML = nowProduct;
+        // });
+        // btn69.addEventListener("click", () => {
+        //     document.querySelector(".text6-9").innerHTML = nowUserAgent;
+        // });
+
+        //for문
+        // const nav = [nowAppCodeName, nowAppName, nowAppVersion, nowCookieEnabled, nowLanguage, nowOnLine, nowPlatform, nowProduct, nowUserAgent];
+        // for (let i = 1; i <= 9; i++) {
+        //     document.querySelector(`.btn6-${i}`).addEventListener("click", () => {
+        //         document.querySelector(`.text6-${i}`).innerHTML = nav[i - 1];
+        //     });
+        // }
+
+        const nav = [nowAppCodeName, nowAppName, nowAppVersion, nowCookieEnabled, nowLanguage, nowOnLine, nowPlatform, nowProduct, nowUserAgent];
+
+        nav.forEach((e, i)=> {
+            document.querySelector(".btn6-"+(i+1)).addEventListener("click", () => {
+                document.querySelector(".text6-"+(i+1)).innerHTML = nav[i];
+            });
+        });
+        
+        
+    </script>
+    <!-- //sample06 -->
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

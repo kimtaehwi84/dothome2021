@@ -110,6 +110,14 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
     top: 0;
 }
 
+//agent
+.iphone main {
+    padding: 10px;
+}
+.android main {
+    display: none;
+}
+
 //bg1
 .bg {
     position: relative;
