@@ -52,7 +52,6 @@ header .login a {
 }
 
 /*헤더 끝*/
-
 /*메인*/
 
 /*section1*/
@@ -71,12 +70,11 @@ header .login a {
 }
 
 .wrap {
+    width: 100%;
     position: absolute;
-    width: 70%;
     margin: 0 auto;
     text-align: center;
     top: 200px;
-    left: 250px;
 }
 
 .wrap .tit {
@@ -119,9 +117,8 @@ header .login a {
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: 450px;
     gap: 20px;
-    width: 50%;
-    margin: 0 auto;
     padding: 10px;
+    margin-left: 70px;
 }
 
 .wrap2 .tit {
@@ -209,9 +206,8 @@ header .login a {
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: 450px;
     gap: 20px;
-    width: 50%;
-    margin: 0 auto;
     padding: 10px;
+    margin-left: 70px;
 }
 
 
@@ -354,8 +350,7 @@ header .login a {
     grid-template-columns: repeat(2, 500px);
     grid-template-rows: 450px;
     gap: 20px;
-    width: 50%;
-    margin: 0 auto;
+    margin-left: 70px;
     padding: 10px;
 }
 
