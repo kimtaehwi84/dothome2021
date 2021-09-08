@@ -7,7 +7,7 @@ body {
 
 
 
-/*머리*/
+/*헤더*/
 header {
     width: 100%;
     position: fixed;
@@ -313,6 +313,8 @@ button {
     border: 0;
     outline: 0;
 }
+
+
 footer {
     background-color: #000;
     text-align: center;
