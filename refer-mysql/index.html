@@ -346,12 +346,12 @@ INSERT INTO mymember(youEmail, youName, youAge, youPassword,, youBirth, regTime)
 +------------+-----------------------+---------+---------+------------+---------+
 4 rows in set (0.01 sec)
 </code></pre>
-          <h4 class="pt20">email중에 webstoryboy로 시작하는 경우</h4>
+          <h4 class="pt20">email중에 songjiwon으로 시작하는 경우</h4>
           <pre class="language-js"><code>mysql> SELECT * FROM myMember WHERE youEmail LIKE 'webstoryboy%';
 +------------+-----------------------+---------+---------+------------+---------+
 | myMemberID | youEmail              | youName | youPass | youBirth   | regTime |
 +------------+-----------------------+---------+---------+------------+---------+
-|          1 | webstoryboy@naver.com | webs    | 1234    | 1993-03-04 |     333 |
+|          1 | songjiwon@naver.com   | jiwon   | 1234    | 1997-05-19 |     333 |
 +------------+-----------------------+---------+---------+------------+---------+
 1 row in set (0.00 sec)
 </code></pre>
@@ -361,7 +361,7 @@ INSERT INTO mymember(youEmail, youName, youAge, youPassword,, youBirth, regTime)
 +------------+-----------------------+---------+---------+------------+---------+
 | myMemberID | youEmail              | youName | youPass | youBirth   | regTime |
 +------------+-----------------------+---------+---------+------------+---------+
-|          1 | webstoryboy@naver.com | webs    | 1234    | 1993-03-04 |     333 |
+|          1 | songjiwon@naver.com   | jiwon   | 1234    | 1997-05-19 |     333 |
 |          2 | imjihyeon00@gmail.com | jiji    | 1234    | 1994-01-26 |     111 |
 |          3 | younyc0413@gmail.com  | youn    | 0413    | 1992-04-13 |     333 |
 |          5 | wow2002r@naver.com    | Ripia   | 1234    | 1994-11-04 |     333 |
@@ -373,7 +373,7 @@ INSERT INTO mymember(youEmail, youName, youAge, youPassword,, youBirth, regTime)
 +------------+-----------------------+---------+---------+------------+---------+
 | myMemberID | youEmail              | youName | youPass | youBirth   | regTime |
 +------------+-----------------------+---------+---------+------------+---------+
-|          2 | imjihyeon00@gmail.com | jiji    | 1234    | 1994-01-26 |     111 |
+|          2 | songjiwon@naver.com   | jiwon   | 1234    | 1997-05-19 |     333 |
 |          3 | younyc0413@gmail.com  | youn    | 0413    | 1992-04-13 |     333 |
 |          4 | billiejeong08@gmail   | billie  | 1234    | 1995-08-12 |     333 |
 |          5 | wow2002r@naver.com    | Ripia   | 1234    | 1994-11-04 |     333 |
@@ -415,6 +415,143 @@ INSERT INTO mymember(youEmail, youName, youAge, youPassword,, youBirth, regTime)
         </div>
         <!-- //Intro6 -->
 
+        <!-- Intro7 -->
+        <div class="bs-docs-section">
+          <h2 id="intro7" class="page-header">테이블 Join</h2>
+<pre class="language-js"><code>create table myMember(
+  myMemberID int(10) unsigned auto_increment,
+  youID varchar(15) not null,
+  youName varchar(10) not null,
+  youPass varchar(30) not null,
+  youEmail varchar(30) not null,
+  regTime int(11) not null,
+  PRIMARY KEY (myMemberID)
+) charset=utf8;
+
+create table myReview(
+  myReviewID int(10) unsigned auto_increment,
+  myMemberID int(10) unsigned,
+  youCont tinytext not null,
+  regTime int(11) not null,
+  PRIMARY KEY (myReviewID)
+)  charset=utf8;
+
+mysql> show tables;
++------------------+
+| Tables_in_test01 |
++------------------+
+| mymember         |
+| myreview         |
++------------------+
+2 rows in set (0.00 sec)
+
+mysql> desc mymember;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myMemberID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| youID      | varchar(15)      | NO   |     | NULL    |                |
+| youName    | varchar(10)      | NO   |     | NULL    |                |
+| youPass    | varchar(30)      | NO   |     | NULL    |                |
+| youEmail   | varchar(30)      | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+6 rows in set (0.01 sec)
+
+mysql> desc myreview;
++------------+------------------+------+-----+---------+----------------+
+| Field      | Type             | Null | Key | Default | Extra          |
++------------+------------------+------+-----+---------+----------------+
+| myReviewID | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| myMemberID | int(10) unsigned | YES  |     | NULL    |                |
+| youCont    | tinytext         | NO   |     | NULL    |                |
+| regTime    | int(11)          | NO   |     | NULL    |                |
++------------+------------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('songjiwon', '송지원', '1234', 'jiwon@naver.com', '1112');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('seojiyoung', '서지영', '1234', 'wldud@naver.com', '1112');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('kimcs', '김철수', 'kimcs@naver.com', '1112');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('woowaaa', '박우와', '1234', 'woowaaa@naver.com', '1112');
+INSERT INTO mymember(youID, youName, youPass, youEmail, regTime) VALUES('parkjiwon', '박지원', '1234', 'pjiwon@naver.com', '1112');
+
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(3, '이 가방 너무 좋네요!! 당장 사야쥐', '1112');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(3, '이거 사지 마세요~~~ 사기예요~~~', '1112');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(1, '여기 제품 좋습니다. 다 알바생이에요~', '1112');
+INSERT INTO myreview(myMemberID, youCont, regTime) VALUES(2, '이거 엄청 좋네요~~ 굳 추천!!', '1112');
+
+ALTER TABLE mymember MODIFY regTime int(30);
+ALTER TABLE myreview MODIFY regTime int(30);
+
+mysql> select * from mymember;
++------------+------------+---------+---------+-------------------+---------+
+| myMemberID | youID      | youName | youPass | youEmail          | regTime |
++------------+------------+---------+---------+-------------------+---------+
+|          1 | songjiwon  | 송지원  | 1234    | jiwon@naver.com   |    1112 |
+|          2 | seojiyoung | 서지영  | 1234    | wldud@naver.com   |    1112 |
+|          3 | woowaaa    | 박우와  | 1234    | woowaaa@naver.com |    1112 |
+|          4 | parkjiwon  | 박지원  | 1234    | pjiwon@naver.com  |    1112 |
++------------+------------+---------+---------+-------------------+---------+
+4 rows in set (0.00 sec)
+
+mysql> select * from myreview;
++------------+------------+--------------------------------------+---------+
+| myReviewID | myMemberID | youCont                              | regTime |
++------------+------------+--------------------------------------+---------+
+|          1 |          3 | 이 가방 너무 좋네요!! 당장 사야쥐      |    1112 |
+|          2 |          3 | 이거 사지 마세요~~~ 사기예요~~~        |   1112 |
+|          3 |          1 | 여기 제품 좋습니다. 다 알바생이에요~   |    1112 |
+|          4 |          2 | 이거 엄청 좋네요~~ 굳 추천!!           |   1112 |
++------------+------------+--------------------------------------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+
+          <h3 id="intro7-1" class="pt30">Join문 사용하기</h3>
+          <div class="bs-callout bs-callout-info">
+            SELECT 필드명 FROM 테이블명 앨리어스 JOIN 연결할 테이블명 앨리어스 ON(조건문)
+          </div>
+          <h4>두 개의 테이블 Join 하기</h4>
+          <pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+--------------------------------------+---------+
+| youName | youCont                              | regTime |
++---------+--------------------------------------+---------+
+| 송지원  | 여기 제품 좋습니다. 다 알바생이에요~   |    1112 |
+| 서지영  | 이거 엄청 좋네요~~ 굳 추천!!          |    1112 |
+| 박우와  | 이 가방 너무 좋네요!! 당장 사야쥐      |    1112 |
+| 박우와  | 이거 사지 마세요~~~ 사기예요~~~        |    1112 |
++---------+--------------------------------------+---------+
+4 rows in set (0.00 sec)
+</code></pre>
+          <h4>필드명을 변경하여 표시하는 방법</h4>
+<pre class="language-js"><code>SELECT m.youName, r.youCont, r.regTime AS reviewTime FROM mymember m JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+--------------------------------------+------------+
+| youName | youCont                              | reviewTime |
++---------+--------------------------------------+------------+
+| 송지원  | 여기 제품 좋습니다. 다 알바생이에요~   |       1112 |
+| 서지영  | 이거 엄청 좋네요~~ 굳 추천!!          |       1112 |
+| 박우와  | 이 가방 너무 좋네요!! 당장 사야쥐      |       1112 |
+| 박우와  | 이거 사지 마세요~~~ 사기예요~~~        |       1112 |
++---------+--------------------------------------+------------+
+4 rows in set (2.30 sec)
+</code></pre>
+          <h4>필드 내용이 없는 경우 표시하는 방법</h4>
+<pre class="language-js"><code>
+  SELECT m.youName, r.youCont, r.regTime FROM mymember m LEFT JOIN myreview r ON (m.myMemberID = r.myMemberID);
++---------+--------------------------------------+---------+
+| youName | youCont                              | regTime |
++---------+--------------------------------------+---------+
+| 박우와  | 이 가방 너무 좋네요!! 당장 사야쥐      |    1112 |
+| 박우와  | 이거 사지 마세요~~~ 사기예요~~~        |    1112 |
+| 송지원  | 여기 제품 좋습니다. 다 알바생이에요~   |    1112 |
+| 서지영  | 이거 엄청 좋네요~~ 굳 추천!!         |    1112 |
+| 박지원  | NULL                                 |    NULL |
++---------+--------------------------------------+---------+
+5 rows in set (2.29 sec)
+</code></pre>
+
+        </div>
+        <!-- //Intro7 -->
+
       </div>
       <!-- //col-md-9 -->
 
@@ -454,6 +591,11 @@ INSERT INTO mymember(youEmail, youName, youAge, youPassword,, youBirth, regTime)
                 <li><a href="#intro6-2">데이터 불러오기</a></li>
                 <li><a href="#intro6-3">데이터 수정하기</a></li>
                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
+              </ul>
+            </li>
+            <li><a href="#intro7">테이블 Join</a>
+              <ul class="nav bs-sidenav">
+                <li><a href="#intro7-1">Join문 사용하기</a></li>
               </ul>
             </li>
           </ul>
