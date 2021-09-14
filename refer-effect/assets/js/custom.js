@@ -47,12 +47,26 @@ function agentCheck() {
         }
     }
 }
-
-// Code View
+//code view
 document.addEventListener('DOMContentLoaded', (event) => {
     document.querySelectorAll('pre code').forEach((el) => {
-        hljs.highlightElement(el);
+      hljs.highlightElement(el);
     });
+});
+
+// Code tab
+const viewBtn = document.querySelectorAll(".view-title ul li");
+const viewCont = document.querySelectorAll(".view-cont > div");
+
+viewBtn.forEach((btn, index) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    viewBtn.forEach(el => el.classList.remove("active"));
+    btn.classList.add("active");
+
+    viewCont.forEach(el => el.style.display = "none");
+    viewCont[index].style.display = "block";
+  });
 });
 
 // Modal
