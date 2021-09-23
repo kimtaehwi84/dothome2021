@@ -164,7 +164,7 @@
         </div>
         <div class="footerInfo">
             <h2>jquery</h2>
-            <ul> 
+            <ul>
                 <li class="active"><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
                 <li><a href="jqueryPE03.html">3</a></li>
@@ -197,7 +197,7 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">Jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -539,83 +539,32 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">document.querySelectorAll(".paraNav ul li a").forEach(el => {
-    el.addEventListener("click", e => {
-        e.preventDefault();
-        document.querySelector(el.getAttribute("href")).scrollIntoView({
-            behavior: "smooth"
-        });
+                            <pre><code class="language-javascript">$('.paraNav ul li').click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $('.paraCont > section').eq(index);
+    let offset = section.offset().top;
+
+    $('html, body').animate({ scrollTop: offset }, 600);
     });
-});
 
-window.addEventListener("scroll", function () {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+    $(window).scroll(function () {
+    let scrollTop = $(window).scrollTop();
 
-    if (scrollTop >= document.getElementById("section1").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(1)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section2").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(2)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section3").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(3)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section4").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(4)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section5").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(5)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section6").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(6)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section7").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(7)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section8").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(8)").classList.add("active");
-    }
-    if (scrollTop >= document.getElementById("section9").offsetTop - 2) {
-        document.querySelectorAll(".paraNav ul li").forEach(el => {
-            el.classList.remove("active");
-        });
-        document.querySelector(".paraNav ul li:nth-child(9)").classList.add("active");
-    }
+    $('.content-item').each(function (i) {
+        if (scrollTop >= $(this).offset().top - 2) {
+        $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
+        }
+    });
 
+    //info
+    $('.paraScroll span').text(parseInt(scrollTop));
 
-    // info
-    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
-
-    for (let i = 1; i &lt;= 9; i++) {
-        document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" +
-                i)
-            .offsetTop) + "px";
+    for (let i = 1; i &lt;= $('.content-item').length; i++) {
+        $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
     }
-});
+    });
 </code></pre>
                         </div>
                     </div>
@@ -635,57 +584,33 @@ window.addEventListener("scroll", function () {
     <script>
         modal();
 
-        $(".paraNav ul li").click(function (e) {
+        $('.paraNav ul li').click(function (e) {
             e.preventDefault();
             let target = $(this);
             let index = target.index();
-            let section = $(".paraCont > section").eq(index);
+            let section = $('.paraCont > section').eq(index);
             let offset = section.offset().top;
-            $("html, body").animate({scrollTop: offset}, 600);
+
+            $('html, body').animate({
+                scrollTop: offset
+            }, 600);
         });
 
         $(window).scroll(function () {
             let scrollTop = $(window).scrollTop();
 
-            // each()
-            $(".content-item").each(function (index) {
+            $('.content-item').each(function (i) {
                 if (scrollTop >= $(this).offset().top - 2) {
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                    $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
                 }
             });
 
-            // for문
-            // for (let i = 0; i >= $(".paraCont > section").eq().length; i++) {
-            //     if (scrollTop >= $("content-item").eq(i).offset().top - 2) {
-            //         $(".paraNav ul li").eq(i).addClass("active").siblings().removeClass("active");
-            //     }
-            // }
+            //info
+            $('.paraScroll span').text(parseInt(scrollTop));
 
-            // info
-            $(".paraScroll span").text(parseInt(scrollTop));
-
-            // for문
-            for (let i = 1; i <= 9; i++) {
-                $(".offset" + i).text(parseInt($("#section" + i).offset().top) + "px");
+            for (let i = 1; i <= $('.content-item').length; i++) {
+                $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
             }
-        });
-
-        const viewBtn = document.querySelectorAll(".view-title li");
-        const viewCont = document.querySelectorAll(".view-cont > div");
-
-        viewBtn.forEach((element, index) => {
-            element.addEventListener("click", () => {
-                viewBtn.forEach(el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
-
-                viewCont.forEach(el => {
-                    el.style.display = "none";
-                });
-
-                viewCont[index].style.display = "block";
-            });
         });
     </script>
 </body>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -153,7 +152,27 @@
     ​
     <!-- footer -->
     <footer class="paraFooter">
-        ​
+        <h1>Parallax <em>Srolling</em></h1>
+        <div class="footerInfo">
+            <h2>자바스크립트</h2>
+            <ul>
+                <li class="active"><a href="javascriptPE01.html">1</a></li>
+                <li><a href="javascriptPE02.html">2</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE04.html">4</a></li>
+                <li><a href="javascriptPE05.html">5</a></li>
+            </ul>
+        </div>
+        <div class="footerInfo">
+            <h2>제이쿼리</h2>
+            <ul>
+                <li><a href="jqueryPE01.html">1</a></li>
+                <li><a href="jqueryPE02.html">2</a></li>
+                <li><a href="jqueryPE03.html">3</a></li>
+                <li><a href="jqueryPE04.html">4</a></li>
+                <li><a href="jqueryPE05.html">5</a></li>
+            </ul>
+        </div>
     </footer>
     <!-- //footer -->
     ​
@@ -561,49 +580,36 @@ window.addEventListener("scroll", function () {
     <script>
         modal();
 
-        document.querySelectorAll(".paraNav ul li a").forEach(el => {
-            el.addEventListener("click", e => {
+        document.querySelectorAll('.paraNav ul li a').forEach((el, idx) => {
+            el.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(el.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                });
-            });
+                document.querySelector(el.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                })
+            })
         });
 
-        window.addEventListener("scroll", function () {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+        window.addEventListener('scroll', function () {
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset; //구버전
+
 
             document.querySelectorAll('.paraNav ul li').forEach((el, idx) => {
                 if (scrollTop >= document.getElementById('section' + (idx + 1)).offsetTop - 2) {
-                    document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove('active'));
-                    document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add('active');
+                    document.querySelectorAll('.paraNav ul li').forEach(el => el.classList.remove(
+                        'active'));
+                    document.querySelector('.paraNav ul li:nth-child(' + (idx + 1) + ')').classList.add(
+                        'active');
                 }
             });
 
 
-            // info
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop) + "px";
+            //info
+            document.querySelector('.paraScroll span').innerText = parseInt(scrollTop) + 'px';
 
-            for (let i = 1; i <= 9; i++) {
-                document.querySelector(".offset" + i).innerText = parseInt(document.getElementById("section" + i).offsetTop) + "px";
-            }
-        });
-
-        const viewBtn = document.querySelectorAll(".view-title li");
-        const viewCont = document.querySelectorAll(".view-cont > div");
-
-        viewBtn.forEach((element, index) => {
-            element.addEventListener("click", () => {
-                viewBtn.forEach(el => {
-                    el.classList.remove("active");
-                });
-                element.classList.add("active");
-
-                viewCont.forEach(el => {
-                    el.style.display = "none";
-                });
-
-                viewCont[index].style.display = "block";
+            document.querySelectorAll('.content-item').forEach((el, idx) => {
+                document.querySelector('.offset' + (idx + 1)).innerText = parseInt(document
+                    .querySelector('#section' + (
+                        idx + 1)).offsetTop) + 'px';
             });
         });
     </script>

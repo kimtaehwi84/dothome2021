@@ -130,7 +130,7 @@
 
     <!-- info -->
     <div class="info">
-        <h1>jquery Menu Effect01</h1>
+        <h1><a href="index.html">jQuery Menu Effect01</a></h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
@@ -304,45 +304,22 @@ tabBtn.click(function () {
     <script src="../assets/js/highlight.min.js"></script>
     <script>
         window.onload = function () {
-                // init();
-                // animate();
-                agentCheck();
-            }
-
             modal();
+            agentCheck();
+        }
+        
+        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당
+        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
 
-            const tabBtn = $(".tab-btn ul li"); // 5개의 버튼을 변수에 할당
-            const tabCont = $(".tab-cont > div"); // 5개의 컨텐츠를 변수에 할당
+        tabBtn.click(function(){
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
 
-            // 1. 버튼 클릭 시 클릭한 버튼을 active
-            // 2. 버튼을 클릭 하지 않은 다른 버튼은 active 제거
-            // 3. 버튼 인덱스 설정
-            // 4. 첫 번째 버튼은 첫 번째 컨텐츠 연결 ... 5는 5..
-            // 5. 모든 컨텐츠를 안보이게 설정
-            // 6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
-
-            tabBtn.click(function () {
-                let target = $(this);
-                tabBtn.removeClass("active");
-                target.addClass("active");
-
-                let index = target.index();
-                tabCont.css("display", "none");
-                tabCont.eq(index).css("display", "block");
-            });
-
-            const viewBtn = $(".view-title li");
-            const viewCont = $(".view-cont > div");
-
-            viewBtn.click(function () {
-                let target = $(this);
-                viewBtn.removeClass("active");
-                target.addClass("active");
-
-                let index = target.index();
-                viewCont.css("display", "none");
-                viewCont.eq(index).css("display", "block");
-            });
+            let index = target.index();
+            tabCont.css("display","none");
+            tabCont.eq(index).css("display","block");
+        });
     </script>
     </script>
 </body>
