@@ -423,7 +423,8 @@ $(window).scroll(function () {
 
             $('.content-item').each(function (index) {
                 if (scrollTop >= $(this).offset().top - 2) {
-                    $('.paraNav ul li').eq(index).addClass('active').siblings().removeClass('active');
+                    $('.paraNav ul li').eq(index).addClass('active')
+                        .siblings().removeClass('active');
                 }
             });
 
