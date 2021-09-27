@@ -411,14 +411,14 @@ body {
     top: 0;
 }
 
-.video {
+.gif {
     display: table-cell;
     width: 50%;
     height: 670px;
     vertical-align: middle;
 }
 
-.video img {
+.gif img {
     display: block;
     width: 100%;
     border-style: none;
@@ -533,6 +533,7 @@ body {
 
     .container {
         width: 90%;
+        height: 600px;
     }
 
     .logo {
@@ -622,6 +623,7 @@ body {
         width: 15%;
     }
 
+
     
     /*선택자*/
     #main section:nth-child(even) {
@@ -638,7 +640,7 @@ body {
         padding-left: 0;
     }
 
-    #main section:nth-child(even) .video {
+    #main section:nth-child(even) .gif {
         position: absolute;
         top: 45%;
         left: 50%;
@@ -707,12 +709,12 @@ body {
         height: 40px;
     }
 
-    .video {
-        padding-bottom: 80px;
+    .gif {
         display: block;
         width: 82.8%;
         text-align: center;
         margin: 10% auto 0;
+        height: 200px;
     }
 
     #content7 img {
