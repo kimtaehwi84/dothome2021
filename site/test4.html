@@ -6,981 +6,200 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naver Whale</title>
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/test4.css">
 
-    <!-- 나눔스퀘어 웹 폰트 -->
+    <!-- 나눔 스퀘어 웹폰트 -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-
-    <!-- style -->
-    <style>
-        .container4 {
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        #header {
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 90px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            box-sizing: border-box;
-            border-bottom: 1px solid #eee;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        #header .logo_whale {
-            width: 200px;
-            height: 40px;
-        }
-
-        #header nav li {
-            display: inline;
-            margin-right: 25px;
-
-        }
-
-        #header nav li a {
-            padding: 10px 20px;
-            margin: 20px;
-            display: inline-block;
-            font-size: 18px;
-            font-weight: 600;
-            line-height: 90px;
-            color: #0e141c;
-
-        }
-
-        #header .headerRight {
-            width: 125px;
-            height: 50px;
-            font-size: 18px;
-            text-align: center;
-            line-height: 50px;
-            border: 1px solid #15c5aa;
-            -webkit-border-radius: 5px;
-        }
-
-        #header .headerRight a {
-            color: #15c5aa;
-        }
-
-        #main .section1 .sectionWrap {
-            width: 100%;
-            height: 700px;
-            background-image: url(img/top_tasking_bg.jpg);
-            background-size: cover;
-        }
-
-        .section2 .sectionWrap {
-            margin-top: 90px;
-            background: #333;
-            height: 70px;
-            background-color: #333;
-            color: #838383;
-            width: 100%;
-            text-align: center;
-        }
-
-        .section1 .sectionWrap {
-            width: 100%;
-            height: 100%;
-        }
-
-        .sectionWrap ul li {
-            display: inline-block;
-            font-size: 18px;
-            padding: 20px 30px;
-            cursor: pointer;
-            display: inline-block;
-            width: 32%;
-            text-align: center;
-            max-width: 330px;
-            height: 70px;
-        }
-
-        .textgreen {
-            color: #05d6b4;
-        }
-
-        .textline {
-            box-sizing: border-box;
-            border-right: 1px solid #838383;
-            border-left: 1px solid #838383;
-        }
-
-        .section1 .wrap {
-            padding-top: 200px;
-            color: #fff;
-        }
-
-        .section1 .wrap .tit {
-            font-size: 50px;
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
-        .section1 .wrap .desc {
-            font-size: 30px;
-            color: #fff;
-            padding: 30px 0 50px;
-        }
-
-        .section1 .wrap .button {
-            display: inline-block;
-            width: 250px;
-            text-align: center;
-            font-size: 30px;
-            color: #fff;
-            border-radius: 45px;
-            height: 77px;
-            line-height: 77px;
-            position: relative;
-            background: #05d6b4;
-        }
-
-        .section3 {
-            height: 470px;
-            background: #ecedf1;
-            padding-top: 200px;
-            vertical-align: middle;
-        }
-
-        .section3 .whaleonimg {
-            width: 640px;
-        }
-
-        .section3 .whaleon {
-            display: flex;
-            gap: 50px;
-        }
-
-        .section3 .left {
-            width: 640px;
-        }
-
-        .section3 .left h3 {
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_05.png) no-repeat top left;
-
-        }
-
-        .section3 .left span img {
-            color: #000;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .section3 .left span {
-            color: #000;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .section3 .left .desc {
-            color: #333130;
-            font-size: 26px;
-            margin: 30px 0 50px;
-        }
-
-        .section3 .left .desc2 {
-            display: inline-block;
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-        }
-
-        .section3 .left .btn {
-            margin-top: 30px;
-        }
-
-        .section3 .left .pcBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section3 .left .mBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        /*section4*/
-        .section4 {
-            height: 470px;
-            padding-top: 200px;
-            vertical-align: middle;
-        }
-
-        .section4 .whaleonimg {
-            width: 640px;
-        }
-
-        .section4 .whaleon {
-            display: flex;
-            gap: 50px;
-        }
-
-        .section4 .left {
-            width: 640px;
-        }
-
-        .section4 .left h3 {
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_01.png) no-repeat top left;
-
-        }
-
-        .section4 .left span img {
-            color: #000;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .section4 .left span {
-            color: #000;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .section4 .left .desc {
-            color: #333130;
-            font-size: 26px;
-            margin: 30px 0 50px;
-        }
-
-        .section4 .left .desc2 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .section4 .left .desc3 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-        }
-
-
-        .section4 .left .pcBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section4 .left .mBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        /*section5*/
-        .section5 {
-            background: #ecedf1;
-            height: 470px;
-            padding-top: 200px;
-            vertical-align: middle;
-        }
-
-        .section5 .whaleonimg {
-            width: 640px;
-        }
-
-        .section5 .whaleon {
-            display: flex;
-            gap: 50px;
-        }
-
-        .section5 .left {
-            width: 640px;
-        }
-
-        .section5 .left h3 {
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_02.png) no-repeat top left;
-
-        }
-
-        .section5 .left span img {
-            color: #000;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .section5 .left span {
-            color: #000;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .section5 .left .desc {
-            color: #333130;
-            font-size: 26px;
-            margin: 30px 0 50px;
-        }
-
-        .section5 .left .desc2 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .section5 .left .desc3 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-        }
-
-        .section5 .left .pcBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section5 .left .mBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section6 {
-            height: 470px;
-            padding-top: 200px;
-            vertical-align: middle;
-        }
-
-        .section6 .whaleonimg {
-            width: 640px;
-        }
-
-        .section6 .whaleon {
-            display: flex;
-            gap: 50px;
-        }
-
-        .section6 .left {
-            width: 640px;
-        }
-
-        .section6 .left h3 {
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_03.png) no-repeat top left;
-
-        }
-
-        .section6 .left span img {
-            color: #000;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .section6 .left span {
-            color: #000;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .section6 .left .desc {
-            color: #333130;
-            font-size: 26px;
-            margin: 30px 0 50px;
-        }
-
-        .section6 .left .desc2 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .section6 .left .desc3 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-        }
-
-        .section6 .left .pcBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section6 .left .mBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        /*section7*/
-        .section7 {
-            background: #ecedf1;
-            height: 470px;
-            padding-top: 200px;
-            vertical-align: middle;
-        }
-
-        .section7 .whaleonimg {
-            width: 640px;
-        }
-
-        .section7 .whaleon {
-            display: flex;
-            gap: 50px;
-        }
-
-        .section7 .left {
-            width: 640px;
-        }
-
-        .section7 .left h3 {
-            color: #000;
-            position: relative;
-            padding-left: 80px;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_why_tab1_04.png) no-repeat top left;
-
-        }
-
-        .section7 .left span img {
-            color: #000;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-
-        .section7 .left span {
-            color: #000;
-            height: 70px;
-            line-height: 70px;
-            font-size: 50px;
-            font-weight: bold;
-        }
-
-        .section7 .left .desc {
-            color: #333130;
-            font-size: 26px;
-            margin: 30px 0 50px;
-        }
-
-        .section7 .left .desc2 {
-            color: #2d68d2;
-            line-height: 20px;
-            font-size: 16px;
-        }
-
-        .section7 .left .btn {
-            margin-top: 30px;
-        }
-
-        .section7 .left .pcBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_pc.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        .section7 .left .mBtn {
-            display: inline-block;
-            background: url(https://whale.naver.com/_resource/img/whywhale/icon_m.png) no-repeat bottom center;
-            background-size: 100%;
-            width: 118px;
-            height: 76px;
-        }
-
-        /*section8*/
-
-
-        .section8 {
-            height: 470px;
-            padding-top: 200px;
-            vertical-align: middle;
-            text-align: center;
-        }
-
-        .download-btn a {
-            display: inline-block;
-            width: 250px;
-            text-align: center;
-            font-size: 30px;
-            color: #fff;
-            border-radius: 45px;
-            height: 77px;
-            line-height: 77px;
-            position: relative;
-            background: #05d6b4;
-        }
-
-        /* footer */
-        #footer {
-            padding: 50px 0;
-            width: 100%;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        #footer .container {
-            position: relative;
-            vertical-align: middle;
-            height: auto;
-        }
-
-        #footer h2 {
-            display: inline-block;
-            margin: 0 0 20px;
-            max-width: 141px;
-        }
-
-        #footer h2 a {}
-
-        #footer h2 a img {
-            display: block;
-            width: 100%;
-        }
-
-        #footer ul li {
-            display: inline-block;
-            position: relative;
-            margin: 10px 20px 0;
-            text-align: center;
-        }
-
-        #footer li a {
-            font-size: 16px;
-            font-weight: 400;
-            color: #c0c0c0;
-        }
-
-        #footer li a::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            right: -21px;
-            width: 1px;
-            height: 18px;
-            background: #dadada;
-        }
-
-        #footer p {
-            display: inline-block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            text-align: center;
-            border: 1px solid #c0c0c0;
-            border-radius: 5px;
-        }
-
-        #footer p a {
-            padding: 0 15px 0 45px;
-            height: 43px;
-            color: #c0c0c0;
-            font-size: 16px;
-            line-height: 43px;
-        }
-
-        #footer p a::before {
-            content: '';
-            display: block;
-            position: absolute;
-            top: calc(50% - 10px);
-            left: calc(50% - 55px);
-            width: 20px;
-            height: 20px;
-            background: url(https://whale.naver.com/_resource/img/main/beta.svg) no-repeat;
-        }
-
-
-        /* 모바일 */
-        @media (max-width: 800px) {
-            #header {
-                height: 60px;
-                width: 360px;
-            }
-
-            #header .logo_whale {}
-
-            #header .headerRight {
-                display: none;
-            }
-
-            #header nav {
-                display: none;
-            }
-
-            .section1 .wrap {
-                text-align: center;
-            }
-
-            .section1 .wrap .tit {
-                font-size: 30px;
-            }
-
-            .section1 .wrap .desc {
-                font-size: 25px;
-            }
-
-            .section1 .wrap .button a {
-                font-size: 15px;
-            }
-
-            .section2 .sectionWrap {
-                background-color: #333;
-                color: #fff;
-                width: 100%;
-                text-align: center;
-            }
-
-            .section2 .sectionWrap ul li {
-                font-size: 10px;
-            }
-
-            .section1 .wrap {
-                font-size: 32px;
-            }
-
-            .section3,
-            .section4,
-            .section5,
-            .section6,
-            .section7 {
-                padding-top: 50px;
-            }
-
-            .section .whaleon {
-                display: block;
-            }
-
-            .section .whaleonimg {
-                width: 360px;
-            }
-
-            .section .left h3 {
-                font-size: 32px;
-            }
-
-            .section .left .btn {
-                margin-bottom: 30px;
-            }
-
-            .section8 .whaleon img {
-                width: 360px;
-            }
-
-            .section2 .sectionWrap ul {
-                width: 360px;
-            }
-
-            .section1 .wrap .button {
-                font-size: 25px;
-                width: 150px;
-            }
-
-            #footer p {
-                display: none;
-            }
-
-            .section3,
-            .section4,
-            .section5,
-            .section6,
-            .section7 {
-                height: 650px;
-            }
-
-            .section .btn {}
-
-            .section8 {
-                height: 250px;
-            }
-
-            .section8 .download-btn a {
-                font-size: 20px;
-                width: 180px;
-            }
-
-            .section2 .sectionWrap ul li {
-                width: 110px;
-                padding: 0;
-                vertical-align: middle;
-            }
-            
-        }
-    </style>
 </head>
 
 <body>
-    <!--header-->
     <header id="header">
-        <img class="logo_whale" src="img/logo_whale.svg" alt="whale">
-        <nav>
-            <ul>
-                <li><a href="#">Why We Whale</a></li>
-                <li><a href="#">가이드</a></li>
-                <li><a href="#">스토어</a></li>
-                <li><a href="#">연구소</a></li>
-                <li><a href="#">웨일 스페이스</a></li>
-                <li><a href="#">웨일북</a></li>
-            </ul>
-        </nav>
-        <div class="headerRight">
-            <a href="#">다운로드</a>
+        <div class="header-inner">
+            <h1 class="logo">
+                <a href="#">logo</a>
+            </h1>
+            <nav class="menu-wrap">
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">Why We Whale</a></li>
+                        <li><a href="#">가이드</a></li>
+                        <li><a href="#">스토어</a></li>
+                        <li><a href="#">연구소</a></li>
+                        <li><a href="#">웨일 스페이스</a></li>
+                        <li><a href="#">웨일북</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+            <div class="mobile">
+                <p class="li">
+                    <span></span>
+                </p>
+            </div>
+            <a href="#" class="download">다운로드</a>
         </div>
     </header>
-    <!--//header-->
-
-
+    <!-- //header -->
+    
     <main id="main">
-        <!--section2-->
-        <section class="section section2">
-            <div class="sectionWrap">
-                <ul>
-                    <li class="textgreen">옴니태스킹</li>
-                    <li class="textline">강력한 보안</li>
-                    <li>커스터마이징</li>
+        <article id="topmenu">
+            <div class="topmenu-wrap">
+                <ul class="topmenu">
+                    <li class="topmenu-contents topmenu1">
+                        <div class="topmenu-content">옴니태스킹</div>
+                    </li>
+                    <li class="topmenu-contents topmenu2">
+                        <div class="topmenu-content">강력한 보안</div>
+                    </li>
+                    <li class="topmenu-contents topmenu3">
+                        <div class="topmenu-content">커스터마이징</div>
+                    </li>
                 </ul>
             </div>
+        </article>
+        <!-- //topmenu -->
 
-        </section>
-        <!--//section2-->
-        <!--section1-->
-        <section class="section section1">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="wrap">
-                        <div class="tit">하고 싶은 일들, 해야 할 일들<br>네이버 웨일로 한 번에!</div>
-                        <div class="desc">네이버 웨일의 다양한 기능을 만나보세요!</div>
-                        <div class="button">다운로드</div>
+        <seciton id="content1">
+            <div class="container">
+                <div class="banner">
+                    <h3>하고 싶은 일들, <br class="banner-br">해야 할 일들 <br>네이버 웨일로 한 번에!</h3>
+                    <p>네이버 웨일의 다양한 기능을 만나보세요!</p>
+                    <div class="download-btn">
+                        <a href="#">다운로드</a>
                     </div>
                 </div>
             </div>
+        </seciton>
+        <!-- section1 -->
 
+        <section id="content2">
+            <div class="container">
+                <div class="text">
+                    <h3>웨일온(Whale ON)</h3>
+                    <p>시간제한 없는 무료 화상회의!</p>
+                    <ul>
+                        <li><a href="#">웨일온,어떻게 사용하나요?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_on.gif" alt="웨일온(Whale ON)">
+                </div>
+            </div>
         </section>
-        <!--//section1-->
+        <!-- section2 -->
 
-        <!--section3-->
-        <section class="section section3">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <div class="left">
-                            <h3>웨일온(Whale ON)</h3>
-                            <div class="desc">시간제한 없는 무료 화상회의!</div>
-                            <div class="desc2">웨일온, 어떻게 사용하나요?</div>
-                            <div class="btn">
-                                <span class="pcBtn"></span>
-                                <span class="mBtn"></span>
-                            </div>
-
-
-                        </div>
-                        <div class="right">
-                            <img class="whaleonimg" src="img/ww_01_on.gif" alt="whaleon">
-                        </div>
+        <section id="content3">
+            <div class="container">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_sidebar.gif" alt="사이드바">
+                </div>
+                <div class="text">
+                    <h3>사이드바</h3>
+                    <p>휴대폰 열지 말고 웨일에서 보세요!</p>
+                    <ul>
+                        <li><a href="#">사이드바, 어떻게 사용하나요?</a></li>
+                        <li><a href="#">어떤 확장앱이 있는지 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
                     </div>
                 </div>
             </div>
-
         </section>
-        <!--//section3-->
-        <!--section4-->
-        <section class="section section4">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <div class="right">
-                            <img class="whaleonimg" src="https://whale.naver.com/_resource/img/gif/ww_01_sidebar.gif"
-                                alt="whaleon">
-                        </div>
-                        <div class="left">
-                            <h3>사이드바</h3>
-                            <div class="desc">휴대폰 열지 말고 웨일에서 보세요!</div>
-                            <div class="desc2">사이드바, 어떻게 사용하나요?</div>
-                            <div class="desc3">어떤 확장앱이 있는지 궁금하다면?</div>
-                            <div class="btn">
-                                <span class="pcBtn"></span>
-                                <span class="mBtn"></span>
-                            </div>
+        <!-- section3 -->
 
+        <section id="content4">
+            <div class="container">
+                <div class="text">
+                    <h3>퀵서치 & 번역</h3>
+                    <p>궁금한 부분? 드래그해서 바로 확인!</p>
+                    <ul>
+                        <li><a href="#">퀵서치, 어떤 기능까지 지원하나요?</a></li>
+                        <li><a href="#">번역의 자세한 기능이 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
+                    </div>
+                </div>
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_quick.gif" alt="퀵서치&번역">
+                </div>
+            </div>
+        </section>
+        <!-- section4 -->
 
-                        </div>
-
+        <section id="content5">
+            <div class="container">
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_02_duletab.gif" alt="듀얼 탭 & 한글뷰어">
+                </div>
+                <div class="text">
+                    <h3>듀얼 탭 & 한글뷰어</h3>
+                    <p>뒤로 가기는 이제 그만!</p>
+                    <ul>
+                        <li><a href="#">듀얼 탭의 자세한 기능이 궁금하다면?</a></li>
+                        <li><a href="#">한글 문서, 웨일에서 어떻게 볼 수 있나요?</a></li>
+                    </ul>
+                    <div class="btn2">
+                        <span class="btnt">듀얼 탭</span>
+                        <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
+                        <span class="btnt">한글뷰어</span>
+                        <span class="pcBtn"></span>
+                    </div>
+                    <div class="btn2">
+                        <span class="mBtn"></span>
                     </div>
                 </div>
             </div>
-
         </section>
-        <!--//section4-->
-        <!--section5-->
-        <section class="section section5">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <div class="left">
-                            <h3>퀵서치 & 번역</h3>
-                            <div class="desc">궁금한 부분? 드래그해서 바로 확인!</div>
-                            <div class="desc2">퀵서치, 어떤 기능까지 지원하나요?</div>
-                            <div class="desc3">번역의 자세한 기능이 궁금하다면?</div>
-                            <div class="btn">
-                                <span class="pcBtn"></span>
-                                <span class="mBtn"></span>
-                            </div>
+        <!-- section5 -->
 
-
-                        </div>
-                        <div class="right">
-                            <img class="whaleonimg" src="https://whale.naver.com/_resource/img/gif/ww_01_quick.gif"
-                                alt="whaleon">
-                        </div>
+        <section id="content6">
+            <div class="container">
+                <div class="text">
+                    <h3>편리한 캡처</h3>
+                    <p>클릭 한 번으로 원하는 영역을 깔끔하게!</p>
+                    <ul>
+                        <li><a href="#">캡처의 자세한 기능이 궁금하다면?</a></li>
+                    </ul>
+                    <div class="btn">
+                        <span class="pcBtn"></span>
+                        <span class="mBtn"></span>
                     </div>
                 </div>
-            </div>
-
-        </section>
-        <!--//section5-->
-        <!--section6-->
-        <section class="section section6">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <div class="right">
-                            <img class="whaleonimg" src="https://whale.naver.com/_resource/img/gif/ww_02_duletab.gif"
-                                alt="whaleon">
-                        </div>
-                        <div class="left">
-                            <h3>듀얼 탭 & 한글뷰어</h3>
-                            <div class="desc">뒤로 가기는 이제 그만!</div>
-                            <div class="desc2">듀얼 탭의 자세한 기능이 궁금하다면?</div>
-                            <div class="desc3">한글 문서, 웨일에서 어떻게 볼 수 있나요?</div>
-                            <div class="btn">
-                                <span class="pcBtn"></span>
-                                <span class="pcBtn"></span>
-                                <span class="mBtn"></span>
-                            </div>
-
-
-                        </div>
-
-                    </div>
+                <div class="video">
+                    <img src="https://whale.naver.com/_resource/img/gif/ww_01_capture.gif" alt="편리한 캡처">
                 </div>
             </div>
-
         </section>
-        <!--//section6-->
-        <!--section7-->
-        <section class="section section7">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <div class="left">
-                            <h3>편리한 캡처</h3>
-                            <div class="desc">클릭 한 번으로 원하는 영역을 깔끔하게!</div>
-                            <div class="desc2">캡처의 자세한 기능이 궁금하다면?</div>
-                            <div class="btn">
-                                <span class="pcBtn"></span>
-                                <span class="mBtn"></span>
-                            </div>
+        <!-- section6 -->
 
-
-                        </div>
-                        <div class="right">
-                            <img class="whaleonimg" src="https://whale.naver.com/_resource/img/gif/ww_01_capture.gif"
-                                alt="whaleon">
-                        </div>
-                    </div>
+        <section id="content7">
+            <div class="container">
+                <img src="	https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="why we whale" class="download2">
+                <div class="download-btn">
+                    <a href="#">다운로드</a>
                 </div>
             </div>
-
         </section>
-        <!--//section7-->
-
-        <!--section8-->
-        <section class="section section8">
-            <div class="sectionWrap">
-                <div class="container4">
-                    <div class="whaleon">
-                        <img src="	https://whale.naver.com/_resource/img/gif/whywewhale.gif" alt="why we whale"
-                            class="downsec_gif">
-                        <div class="download-btn">
-                            <a href="#">다운로드</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <!--//section8-->
     </main>
+    <!-- //main -->
 
-    <!-- //footer -->
     <footer id="footer">
         <div class="container">
-            <h2><a href="#"><img src="	https://whale.naver.com/_resource/img/main/logo_whale_gray.svg"
-                        alt="whale logo"></a></h2>
+            <h2><a href="#"><img src="	https://whale.naver.com/_resource/img/main/logo_whale_gray.svg" alt="whale logo"></a></h2>
             <ul>
                 <li><a href="#">이용약관</a></li>
                 <li><a href="#">개인정보 처리방침</a></li>
@@ -993,9 +212,6 @@
         </div>
     </footer>
     <!-- footer -->
-
-
-
 </body>
 
 </html>
