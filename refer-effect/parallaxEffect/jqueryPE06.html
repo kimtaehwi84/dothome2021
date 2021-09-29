@@ -14,22 +14,69 @@
 
     <style>
         .paraNav {
-            top: -200px;
-            transition: top .5s ease;
-        }
-
-        .paraNav.show {
             top: 20px;
+            transition: top 0.4s ease;
         }
-
+        .paraNav.hide {
+            top: -200px;
+        }
         .paraNav li a {
             width: auto;
-            padding: 5px 20px;
+            padding: 5px;
+            width: 30px; height: 30px;
         }
-
         .paraNav li.active a {
             border-radius: 30px;
         }
+
+        /* 한번에 나타나기 */
+        /* .content-item {
+            opacity: 0;
+            transition: all 1s;
+        }
+        .content-item.show {
+            opacity: 1;
+            transform: translateY(0);
+        } */
+
+        /* 개별적으로 나타나기  !important;우선순위 : 스크립트 스타일 그다음 스타일,, 그다음링크..*/  
+        .content-item .num {
+            opacity: 0 !important;
+            transform: translateY(200px);
+            transition: all 1s .1s ease-in;
+        }
+        .content-item .title {
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 1s .3s ease-in;
+        }
+        .content-item .img-wrap {
+            opacity: 0;
+            transform: translateY(200px) rotate(30deg);
+            transition: all 1s .6s ease-in;
+        }
+        .content-item .desc {
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: all 1s .9s ease-in;
+        }
+        .content-item.show .num {
+            opacity: 0.07 !important;
+            transform: translateY(0);
+        }
+        .content-item.show .title {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .content-item.show .img-wrap {
+            opacity: 1;
+            transform: translateY(0) rotate(0);
+        }
+        .content-item.show .desc {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
     </style>
 </head>
 
@@ -37,8 +84,8 @@
     ​
     <!-- header -->
     <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect03 - javascript</a></h1>
-        <p>패랠랙스 스크로링 효과 - 숨김 메뉴</p>
+        <h1><a href="index.html">Parallax Effect06 - jQuery</a></h1>
+        <p>패랠랙스 스크로링 효과 - 이질감</p>
     </header>
     <!-- //header -->
     ​
@@ -48,15 +95,15 @@
 
         <div class="paraNav">
             <ul>
-                <li class="active"><a href="#section1">메뉴1</a></li>
-                <li><a href="#section2">메뉴2</a></li>
-                <li><a href="#section3">메뉴3</a></li>
-                <li><a href="#section4">메뉴4</a></li>
-                <li><a href="#section5">메뉴5</a></li>
-                <li><a href="#section6">메뉴6</a></li>
-                <li><a href="#section7">메뉴7</a></li>
-                <li><a href="#section8">메뉴8</a></li>
-                <li><a href="#section9">메뉴9</a></li>
+                <li class="active"><a href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
             </ul>
         </div>
         <!-- //nav -->
@@ -164,7 +211,7 @@
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
-                <li class="active"><a href="javascriptPE03.html">3</a></li>
+                <li><a href="javascriptPE03.html">3</a></li>
                 <li><a href="javascriptPE04.html">4</a></li>
                 <li><a href="javascriptPE05.html">5</a></li>
                 <li><a href="javascriptPE06.html">6</a></li>
@@ -180,7 +227,7 @@
                 <li><a href="jqueryPE03.html">3</a></li>
                 <li><a href="jqueryPE04.html">4</a></li>
                 <li><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
+                <li class="active"><a href="jqueryPE06.html">6</a></li>
                 <li><a href="jqueryPE07.html">7</a></li>
                 <li><a href="jqueryPE08.html">8</a></li>
             </ul>
@@ -210,7 +257,7 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
+                            <li><a href="#">Jquery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
@@ -238,42 +285,21 @@
     <!-- script -->
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
         modal();
-
-        document.querySelectorAll(".paraNav ul li a").forEach((element) => {
-            element.addEventListener("click", (e) => {
-                e.preventDefault();
-                document.querySelector(element.getAttribute("href")).scrollIntoView({
-                    behavior: "smooth"
-                })
-            });
+        
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
         });
-
-        window.addEventListener("scroll", function () {
-            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
-
-            document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
-
-            //숨김메뉴
-            if (scrollTop > 10) {
-                document.querySelector(".paraNav").classList.add("show");
-            } else {
-                document.querySelector(".paraNav").classList.remove("show");
-            }
+        
             
 
-            document.querySelectorAll(".content-item").forEach((item, index) => {
-                    if (scrollTop >= item.offsetTop - 2) {
-                        document.querySelectorAll(".paraNav ul li").forEach(li => {
-                            li.classList.remove("active");
-                        });
-                        document.querySelector(".paraNav ul li:nth-child(" + (index + 1) + ")").classList
-                            .add("active");
-                    }
-            });
-        });
+
+            //출력
+            // $(".paraScroll span").text(parseInt(scrollTop));
+        
     </script>
 </body>
 
