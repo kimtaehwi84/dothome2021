@@ -336,116 +336,100 @@
         const questionQuiz = document.querySelector(".question__quiz");
         const questionAnswerConfirm = document.querySelector(".question__answer__confirm");
         const questionAnswerView = document.querySelector(".question__answer__view");
-        const questionAnswerEx = document.querySelector(".question__answer__ex");
-        
+        const questionAnswerEx =  document.querySelector(".question__answer__ex");
+
         //문제 정보
         const quizInfo = [
             {
-                quizNum : 1,
+                quizNum : 1, 
                 quizAsk : "다음 중 디자인의 기본 요소들로 옳은 것은?",
                 quizChoice : {
-                    1: "선, 색체, 공간, 수량", 
-                    2: "점, 선, 면, 질감", 
-                    3: "시간, 수량, 구조, 공간", 
-                    4: "면, 구조, 공간, 수량"
+                    1 : "선, 색체 , 공간, 수량", 
+                    2 : "점, 선, 면, 질감", 
+                    3 : "점, 선, 입체, 공간", 
+                    4 : "선, 면, 색체, 시간" 
                 },
                 quizAnswer : 2,
                 quizEx : "디자인의 기본 요소는 점, 선, 면, 질감으로 이루어져 있습니다."
             },
             {
-                quizNum : 2,
+                quizNum : 2, 
                 quizAsk : "다음 중 시각 디자인의 4대 매체가 아닌 것은?",
                 quizChoice : {
-                    1: "포스터 디자인", 
-                    2: "신문 광고 디자인", 
-                    3: "TV 광고 디자인", 
-                    4: "텍스타일 디자인"
+                    1 : "포스터 디자인", 
+                    2 : "신문 광고 디자인", 
+                    3 : "TV 광고 디자인", 
+                    4 : "텍스타일 디자인" 
                 },
                 quizAnswer : 4,
-                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
+                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV광고 디자인, 잡지 광고 디자인 입니다."
             },
             {
-                quizNum : 3,
-                quizAsk : "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨깐 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
+                quizNum : 3, 
+                quizAsk : "다음과 가장 관계있는 디자인 원리는?<br> [바다 위에 빨간 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 보름달, 평평한 벽에 생긴 갈라진 틈 등]",
                 quizChoice : {
-                    1: "조화", 
-                    2: "통일", 
-                    3: "점증", 
-                    4: "강조"
+                    1 : "조화", 
+                    2 : "통일", 
+                    3 : "점증",
+                    4 : "강조" 
                 },
                 quizAnswer : 4,
-                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
+                quizEx : "포인트되는 물체가 있을때 강조의 원리입니다."
             },
-            {
-                quizNum : 3,
-                quizAsk : "다음과 가장 관계 있는 디자인 원리는? [바다 위의 빨깐 등대, 무성한 나뭇잎들 사이에서 핀 꽃, 별이 총총한 밤하늘에 뜬 달, 평평한 벽에 생긴 갈라진 틈 등]",
-                quizChoice : {
-                    1: "조화", 
-                    2: "통일", 
-                    3: "점증", 
-                    4: "강조"
-                },
-                quizAnswer : 4,
-                quizEx : "시각 디자인의 4대 매체는 포스터 디자인, 신문 광고 디자인, TV 광고 디자인, 잡지 광고 디자인입니다."
-            }
         ]
-
         //문제 만들기
         function updateQuiz(){
             const output = [];
 
-            quizInfo.forEach((currentQuestion, questioinNumber) => {
+            quizInfo.forEach((currentQuestion, questionNumber) => {
                 output.push(`
-                    <div class="quizWrap">
-                        <h2>웹디자인 기능사 16년도 03회</h2>
-                        <div class="question__quiz">
-                            <h3 class="question__title">
-                                <span class="question__title__num">${currentQuestion.quizNum}</span>
-                                <span class="question__title__ask">${currentQuestion.quizAsk}</span>
-                            </h3>
-                            <div class="question__answer">
-                                <div class="question__answer__selects">
-                                    <label>
-                                        <input class="select" type="radio" name="select${questioinNumber}" value="1">
-                                        <span class="choice">${currentQuestion.quizChoice[1]}</span>
-                                    </label>
-                                    <label>
-                                        <input class="select" type="radio" name="select${questioinNumber}" value="2">
-                                        <span class="choice">${currentQuestion.quizChoice[2]}</span>
-                                    </label>
-                                    <label>
-                                        <input class="select" type="radio" name="select${questioinNumber}" value="3">
-                                        <span class="choice">${currentQuestion.quizChoice[3]}</span>
-                                    </label>
-                                    <label>
-                                        <input class="select" type="radio" name="select${questioinNumber}" value="4">
-                                        <span class="choice">${currentQuestion.quizChoice[4]}</span>
-                                    </label>
-                                </div>
+                <div class="quizWrap">
+                    <h2>웹디자인 기능사 16년도 3회차</h2>
+                    <div class="question__quiz">
+                        <h3 class="question__title">
+                            <span class="question__title__num">${currentQuestion.quizNum}</span>
+                            <span class="question__title__ask">${currentQuestion.quizAsk}</span>
+                        </h3>
+                        <div class="question__answer">
+                            <div class="question__answer__selects">
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="1">
+                                    <span class="choice">${currentQuestion.quizChoice[1]}</span>
+                                </label>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="2">
+                                    <span class="choice">${currentQuestion.quizChoice[2]}</span>
+                                </label>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="3">
+                                    <span class="choice">${currentQuestion.quizChoice[3]}</span>
+                                </label>
+                                <label>
+                                    <input class="select" type="radio" name="select${questionNumber}" value="4">
+                                    <span class="choice">${currentQuestion.quizChoice[4]}</span>
+                                </label>
+                            
                             </div>
                         </div>
                     </div>
+                </div>
                 `)
             });
             quiz.innerHTML = output.join(' ');
-            questionAnswerView.style.display = "none";
         }
         updateQuiz();
 
-        
-
         //결과 확인하기
         function showResults(){
-            const questionAnswerSelects = document.querySelectorAll(".question__answer__selects");
+            const questionAnswerSelects =  document.querySelectorAll(".question__answer__selects");
             let nowScore = 0;
-
-            quizInfo.forEach((currentQuestion, questioinNumber) => {
-                const selectContainer = questionAnswerSelects[questioinNumber];
-                const selectChecked = `input[name=select${questioinNumber}]:checked`;
+            quizInfo.forEach((currentQuestion, questionNumber) => {
+                const selectContainer = questionAnswerSelects[questionNumber];
+                const selectChecked = `input[name=select${questionNumber}]:checked`;
                 const selectResult = (selectContainer.querySelector(selectChecked) || {}).value;
-
-                if(selectResult == currentQuestion.quizAnswer ){
-                    //alert("정답입니다.");
+                
+                if( selectResult == currentQuestion.quizAnswer ){
+                    //alert("정답입니다")
                     nowScore++;
                     selectContainer.style.color = "red";
                 } else {
@@ -453,13 +437,15 @@
                     selectContainer.style.color = "blue";
                     const p = document.createElement("p");
                     selectContainer.appendChild(p).innerHTML = currentQuestion.quizEx;
+
                 }
             });
-            questionAnswerView.innerHTML = `${quizInfo.length} 문제 중에 ${nowScore} 문제를 맞추었습니다.`;
+            questionAnswerView.innerHTML = `${quizInfo.length} 문제 중에 ${nowScore} 문제를 맞췄습니다.`;
             questionAnswerConfirm.style.display = "none";
-        }
 
+        }
         questionAnswerConfirm.addEventListener("click", showResults);
+
 
         //메뉴
         document.querySelector(".ham").addEventListener("click", () => {
