@@ -298,6 +298,11 @@
         function scrollProgress(){
             let scrollTop = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window.innerHeight/2;
 
+            //forEach
+            document.querySelectorAll(".content-item").forEach(item => {
+                scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
+            });
+            
             // if(scrollTop > document.getElementById("section1").offsetTop){
             //     document.getElementById("section1").classList.add("show")
             // }
@@ -308,10 +313,7 @@
             //     }
             // }
 
-            //forEach
-            document.querySelectorAll(".content-item").forEach(item => {
-                scrollTop > item.offsetTop ? item.classList.add("show") : item.classList.remove("show");
-            });
+            
 
 
             //출력

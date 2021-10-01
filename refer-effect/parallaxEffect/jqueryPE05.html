@@ -302,6 +302,14 @@
         $(window).scroll(function() {
             let scrollTop = $(window).scrollTop() + $(window).height()/2;
 
+            //each()
+            $(".content-item").each(function(index, element){
+                if( scrollTop > $(this).offset().top ){
+                    $(this).addClass("show");
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+
             // if(scrollTop >= $("#secrion1").offset().top){
             //     $("#section1").addClass("show");
             // }
@@ -312,13 +320,7 @@
             //     }
             // }
 
-            //each()
-            $(".content-item").each(function(index, element){
-                if( scrollTop > $(this).offset().top ){
-                    $(this).addClass("show");
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-                }
-            });
+            
             
 
 
