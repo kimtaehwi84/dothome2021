@@ -17,13 +17,16 @@
             top: 20px;
             transition: top 0.4s ease;
         }
+
         .paraNav.hide {
             top: -200px;
         }
+
         .paraNav li a {
             width: auto;
             padding: 5px 15px;
         }
+
         .paraNav li.active a {
             border-radius: 30px;
         }
@@ -240,13 +243,15 @@
     <script>
         modal();
 
-        $(".paraNav ul li").click(function(e){
+        $(".paraNav ul li").click(function (e) {
             e.preventDefault();
             let target = $(this);
             let index = target.index();
             let section = $(".content-item").eq(index);
             let offset = section.offset().top;
-            $("html, body").animate({scrollTop:offset}, 600, "easeInOutCirc");
+            $("html, body").animate({
+                scrollTop: offset
+            }, 600, "easeInOutCirc");
         });
         // $(window).scroll(function(){
         //     let scrollTop = $(this).scrollTop();
@@ -262,13 +267,19 @@
         // });
         let nowScrollTop;
         let lastScrollTop = 0;
-        $(window).scroll(function(){
+        $(window).scroll(function () {
             nowScrollTop = true;
             setInterval(() => {
-                if( nowScrollTop ){nowScrollTop = false; hasScroll();} }, 1000) });
-        function hasScroll(){
+                if (nowScrollTop) {
+                    nowScrollTop = false;
+                    hasScroll();
+                }
+            }, 1000)
+        });
+
+        function hasScroll() {
             let scrollTop = $(this).scrollTop();
-            if(scrollTop > lastScrollTop){
+            if (scrollTop > lastScrollTop) {
                 $(".paraNav").addClass("hide");
             } else {
                 $(".paraNav").removeClass("hide");
@@ -276,17 +287,17 @@
             lastScrollTop = scrollTop;
         };
 
-        // $(window).scroll(function(){
-        //     let scrollTop = $(window).scrollTop();
-        //     //버튼용
-        //     $(".content-item").each(function(index, elemnet){
-        //         if( scrollTop >= $(this).offset().top - 2){
-        //             $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-        //         }
-        //     });
-        //     //출력문
-        //     $(".paraScroll span").text(scrollTop);
-        // });
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            //버튼용
+            $(".content-item").each(function(index, elemnet){
+                if( scrollTop >= $(this).offset().top - 2){
+                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+                }
+            });
+            //출력문
+            $(".paraScroll span").text(scrollTop);
+        });
     </script>
 </body>
 
