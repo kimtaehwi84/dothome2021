@@ -348,7 +348,60 @@
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">
+                            <pre><code class="language-javascript">document.querySelectorAll(".paraNav ul li a").forEach(li => {
+    li.addEventListener("click", e => { e.preventDefault();
+        document.querySelector(li.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
+
+
+let nowScrollTop;
+let lastScrollTop = 0;
+
+function scrollProgress() {
+    nowScrollTop = true;
+
+    setInterval(() => {
+        if (nowScrollTop) {
+            nowScrollTop = false;
+            hasScroll();
+        }
+    }, 500)
+}
+
+function hasScroll() {
+    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+    
+
+    if( scrollTop >= lastScrollTop ){
+        document.querySelector(".paraNav").classList.add("hide");
+    } else {
+        document.querySelector(".paraNav").classList.remove("hide");
+    }
+    lastScrollTop = scrollTop;
+
+
+    //메뉴
+    document.querySelectorAll(".content-item").forEach((item, index) => {
+        if( scrollTop >= item.offsetTop -2 ){
+            document.querySelectorAll(".paraNav ul li").forEach(li => {
+                li.classList.remove("active");
+            });
+            document.querySelector(".paraNav ul li:nth-child("+(index+1)+")").classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", scrollProgress);
+
+window.addEventListener("scroll", function () {
+    let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+    document.querySelector(".paraScroll span").innerText = parseInt(scrollTop);
+});
 </code></pre>
                         </div>
                     </div>

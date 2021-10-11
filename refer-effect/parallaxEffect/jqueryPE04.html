@@ -215,15 +215,186 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">
+                            <pre><code class="language-html">&lt;!-- main --&gt;
+&lt;main&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;&lt;!-- //scroll --&gt;
+
+    &lt;div class="paraNav"&gt;
+        &lt;ul&gt;
+            &lt;li class="active"&gt;&lt;a href="#section1"&gt;메뉴1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section2"&gt;메뉴2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section3"&gt;메뉴3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section4"&gt;메뉴4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section5"&gt;메뉴5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section6"&gt;메뉴6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section7"&gt;메뉴7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section8"&gt;메뉴8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#section9"&gt;메뉴9&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- //nav --&gt;
+
+    &lt;div class="paraCont"&gt;
+        &lt;section id="section1" class="content-item"&gt;
+            &lt;span class="num"&gt;01&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Doesn't this guitar&lt;br&gt;sound so good?&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section1 --&gt;
+        ​
+        &lt;section id="section2" class="content-item"&gt;
+            &lt;span class="num"&gt;02&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Mmm, mmm, mmm&lt;br&gt;So sweet&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section2 --&gt;
+        ​
+        &lt;section id="section3" class="content-item"&gt;
+            &lt;span class="num"&gt;03&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;Living in this big blue world&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section3 --&gt;
+        ​
+        &lt;section id="section4" class="content-item"&gt;
+            &lt;span class="num"&gt;04&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;With my head up&lt;br&gt;in outer space&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section4 --&gt;
+        ​
+        &lt;section id="section5" class="content-item"&gt;
+            &lt;span class="num"&gt;05&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section5 --&gt;
+        ​
+        &lt;section id="section6" class="content-item"&gt;
+            &lt;span class="num"&gt;06&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section6 --&gt;
+        ​
+        &lt;section id="section7" class="content-item"&gt;
+            &lt;span class="num"&gt;07&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;When I see trouble&lt;br&gt;come my way&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section7 --&gt;
+        ​
+        &lt;section id="section8" class="content-item"&gt;
+            &lt;span class="num"&gt;08&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;I be makin' lemonade&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section8 --&gt;
+        ​
+        &lt;section id="section9" class="content-item"&gt;
+            &lt;span class="num"&gt;09&lt;/span&gt;
+            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+            &lt;figure class="img-wrap"&gt;
+                &lt;div class="img"&gt;&lt;/div&gt;
+            &lt;/figure&gt;
+            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+        &lt;/section&gt;
+        &lt;!-- //section9 --&gt;
+    &lt;/div&gt;
+    &lt;!-- //contents --&gt;
+&lt;/main&gt;
+&lt;!-- //main --&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">
+                            <pre><code class="language-css">.paraNav {
+        top: 20px;
+        transition: top 0.4s ease;
+    }
+
+    .paraNav.hide {
+        top: -200px;
+    }
+
+    .paraNav li a {
+        width: auto;
+        padding: 5px 15px;
+    }
+
+    .paraNav li.active a {
+        border-radius: 30px;
+    }
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">
+                            <pre><code class="language-javascript">$(".paraNav ul li").click(function (e) {
+    e.preventDefault();
+    let target = $(this);
+    let index = target.index();
+    let section = $(".content-item").eq(index);
+    let offset = section.offset().top;
+    $("html, body").animate({
+        scrollTop: offset
+    }, 600, "easeInOutCirc");
+});
+
+let nowScrollTop;
+let lastScrollTop = 0;
+$(window).scroll(function () {
+    nowScrollTop = true;
+    setInterval(() => {
+        if (nowScrollTop) {
+            nowScrollTop = false;
+            hasScroll();
+        }
+    }, 1000)
+});
+
+function hasScroll() {
+    let scrollTop = $(this).scrollTop();
+    if (scrollTop > lastScrollTop) {
+        $(".paraNav").addClass("hide");
+    } else {
+        $(".paraNav").removeClass("hide");
+    }
+    lastScrollTop = scrollTop;
+};
+
+$(window).scroll(function(){
+    let scrollTop = $(window).scrollTop();
+    //버튼용
+    $(".content-item").each(function(index, elemnet){
+        if( scrollTop >= $(this).offset().top - 2){
+            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+        }
+    });
+    //출력문
+    $(".paraScroll span").text(scrollTop);
+});
 </code></pre>
                         </div>
                     </div>

@@ -142,16 +142,93 @@
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">
+                            <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;div class="moveWrap"&gt;
+        &lt;article class="mouseCont"&gt;
+            &lt;div class="moveImage"&gt;
+                &lt;div class="mImg"&gt;&lt;img src="../assets/img/bg10.jpg" alt="image"&gt;&lt;/div&gt;
+                &lt;div class="mText"&gt;
+                    &lt;p&gt;고통은 잠깐이다. 포기는 영원히 남는다.&lt;/p&gt;
+                    &lt;p&gt;Pain is temporary. Quitting lasts forever.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">
+                            <pre><code class="language-css">.moveWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100vh;
+}
+.moveImage {
+    position: relative;
+}
+.moveImage .mImg {
+    width: 50vw;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    transition : transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.moveImage:hover .mImg {
+    transform: scale(1.025);
+}
+.moveImage .mImg img {
+    width: 100%;
+    position: absolute;
+    left: -5%; top: -5%;
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    transition : transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.moveImage .mText {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform : translate(-50% , -50%);
+    text-align: center;
+    font-size: 1.3vw;
+    white-space: nowrap;
+    color : #fff;
+    padding: 1vw;
+    background: rgb(161, 151, 151, 0.4);
+    font-family: "NEXON Lv1 Gothic OTF";
+}
+.cursor {
+    position: absolute;
+    width: 20px; height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1000;
+    user-select: none;
+    pointer-events: none;
+}
 </code></pre>
                         </div>
                         <div class="jquery">
-                            <pre><code class="language-js">
+                            <pre><code class="language-js">$(".moveImage").mousemove(function(e){
+    let pageX = e.pageX,
+        pageY = e.pageY;
+    gsap.to(".cursor" , {duration : .2, left: e.pageX -10 , top : e.pageY -10})
 
+    //1. 좌표값 가운데 정렬
+    let standardX = $(window).width()/2 -pageX;
+    let standardY = $(window).height()/2  -pageY;
+
+    //2. img x -> 마우스 값 / 20 y -> 마우스 값
+    $(".mImg img").attr({"style": "transform : translate("+standardX/20+"px, "+standardY/20 + "px)"});
+
+
+    $(".pageX").text(pageX);
+    $(".pageY").text(pageY);
+    $(".standardX").text(standardX);
+    $(".standardY").text(standardY);
+});
 </code></pre>
                         </div>
                     </div>
@@ -191,7 +268,7 @@
             $(".pageY").text(pageY);
             $(".standardX").text(standardX);
             $(".standardY").text(standardY);
-        })
+        });
         
     </script>
 </body>
