@@ -252,48 +252,82 @@ setInterval(function() {
         }
         modal();
 
-        //슬라이더1
+        // sample1
+        const sliderImg1 = document.querySelector(".slider-img1");
         const sliderInner1 = document.querySelector(".slider-inner1");
-        const slider1 = document.querySelectorAll(".slider1");
+        const slider1 = document.querySelector(".slider1");
+
         let currentIndex1 = 0;
-        let sliderHeight1 = document.querySelector(".slider1").offsetHeight;
-        let sliderCount1 = slider1.length;
-        let sliderPosition1 = currentIndex1 * -sliderHeight1 + "px";
-        sliderInner1.style.transition = "all .4s";
-        sliderInner1.style.top = sliderPosition1;
-        setInterval(function(){
-            if(currentIndex1 < sliderCount1 -1 ){
-                currentIndex1++;
-            } else {
-                currentIndex1 = 0;
-            }
+        let sliderHeight1 = slider1.offsetHeight;
+
+        sliderInner1.style.transition = "all 0.3s";
+        sliderInner1.style.top = "0px";
+
+        setInterval(() => {
+            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+
             let sliderPosition1 = currentIndex1 * -sliderHeight1 + "px";
-            sliderInner1.style.transition = ".4s";
+
+            sliderInner1.style.transition = "all 0.3s";
             sliderInner1.style.top = sliderPosition1;
-        }, 3000);
+        }, 2000);
 
 
+        // sample2
+        const sliderImg2 = document.querySelector(".slider-img2");
         const sliderInner2 = document.querySelector(".slider-inner2");
-        const slider2 = document.querySelectorAll(".slider2");
+        const slider2 = document.querySelector(".slider2");
+
         let currentIndex2 = 0;
         let sliderHeight2 = slider2.offsetHeight;
+        let sliderCount2 = document.querySelectorAll(".slider2").length;
+
         let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
         sliderInner2.appendChild(sliderClone);
-        let sliderCount = document.querySelectorAll(".slider2").length;
 
-        setInterval(()=>{
+        setInterval(() => {
             currentIndex2++;
-            sliderInner2.style.transition = "all 0.3s"; 
-            sliderInner2.style.transform = "translateY("+ -sliderHeight2 * currentIndex2 +"px)";
+            sliderInner2.style.transition = "all 0.3s";
+            sliderInner2.style.transform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
 
-            if( currentIndex2 == sliderCount ) {
-                setTimeout(()=>{
-                    sliderInner2.style.transition = "all 0.3s"; 
+            if (currentIndex2 == sliderCount2) {
+                setTimeout(() => {
+                    sliderInner2.style.transition = "0s";
                     sliderInner2.style.transform = "translateY(0)";
-                    }, 300);
-                    currentIndex2 = 0;
+                }, 300);
+                currentIndex2 = 0;
             }
-        }, 3000);
+        }, 2000);
+
+        // sample2
+        // const sliderImg2 = document.querySelector(".slider-img2");
+        // const sliderInner2 = document.querySelector(".slider-inner2");
+        // const slider2 = document.querySelectorAll(".slider2");
+
+        // let currentIndex2 = 0;
+        // let sliderHeight2 = slider2.height();
+
+        // setInterval(function () {
+        //     sliderInner2.animate({
+        //         top: -sliderHeight2
+        //     }, 600, "easeOutExpo", function () {
+        //         $(".slider2:first-child").appendTo(sliderInner2);
+        //         sliderInner2.css("top", "");
+        //     });
+        // }, 2000);
+
+        const viewBtn = $(".view-title li");
+        const viewCont = $(".view-cont > div");
+
+        viewBtn.click(function () {
+            let target = $(this);
+            viewBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            viewCont.css("display", "none");
+            viewCont.eq(index).css("display", "block");
+        });
 
 
     </script>
