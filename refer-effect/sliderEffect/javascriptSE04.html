@@ -108,6 +108,7 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li class="active"><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
+            <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -115,6 +116,7 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
+            <li><a href="jquerySE06.html">6</a></li>
         </ul>
     </div>
 
@@ -252,82 +254,51 @@ setInterval(function() {
         }
         modal();
 
-        // sample1
-        const sliderImg1 = document.querySelector(".slider-img1");
-        const sliderInner1 = document.querySelector(".slider-inner1");
-        const slider1 = document.querySelector(".slider1");
+        //슬라이드 1번
+        const sliderImg1 = document.querySelector('.slider-img1');
+        const sliderInner1 = document.querySelector('.slider-inner1');
+        const slider1 = document.querySelector('.slider1');
 
         let currentIndex1 = 0;
         let sliderHeight1 = slider1.offsetHeight;
 
         sliderInner1.style.transition = "all 0.3s";
-        sliderInner1.style.top = "0px";
-
+        sliderInner1.style.top = '0';
         setInterval(() => {
-            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+        currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
 
-            let sliderPosition1 = currentIndex1 * -sliderHeight1 + "px";
+        let sliderPosition = currentIndex1 * -sliderHeight1 + "px";
+        sliderInner1.style.transition = "all 0.3s";
+        sliderInner1.style.top = sliderPosition;
+        }, 3000);
 
-            sliderInner1.style.transition = "all 0.3s";
-            sliderInner1.style.top = sliderPosition1;
-        }, 2000);
 
-
-        // sample2
-        const sliderImg2 = document.querySelector(".slider-img2");
-        const sliderInner2 = document.querySelector(".slider-inner2");
-        const slider2 = document.querySelector(".slider2");
+        //슬라이드 2번
+        const sliderImg2 = document.querySelector('.slider-img2');
+        const sliderInner2 = document.querySelector('.slider-inner2');
+        const slider2 = document.querySelectorAll('.slider2');
 
         let currentIndex2 = 0;
-        let sliderHeight2 = slider2.offsetHeight;
-        let sliderCount2 = document.querySelectorAll(".slider2").length;
+        let sliderHeight2 = document.querySelector('.slider2').offsetHeight;
+        let sliderCount = slider2.length;
 
         let sliderClone = sliderInner2.firstElementChild.cloneNode(true);
         sliderInner2.appendChild(sliderClone);
 
         setInterval(() => {
-            currentIndex2++;
-            sliderInner2.style.transition = "all 0.3s";
-            sliderInner2.style.transform = "translateY(" + -sliderHeight2 * currentIndex2 + "px)";
+        currentIndex2++;
+        sliderInner2.style.transition = "all 0.3s";
+        sliderInner2.style.transform = 'translatey(' + -sliderHeight2 * currentIndex2 + 'px)';
 
-            if (currentIndex2 == sliderCount2) {
-                setTimeout(() => {
-                    sliderInner2.style.transition = "0s";
-                    sliderInner2.style.transform = "translateY(0)";
-                }, 300);
-                currentIndex2 = 0;
-            }
-        }, 2000);
+        if (currentIndex2 == sliderCount) {
+            setTimeout(() => {
+            sliderInner2.style.transition = "0s";
+            sliderInner2.style.transform = 'translatey(0)';
+            }, 300);
+            currentIndex2 = 0;
+        }
 
-        // sample2
-        // const sliderImg2 = document.querySelector(".slider-img2");
-        // const sliderInner2 = document.querySelector(".slider-inner2");
-        // const slider2 = document.querySelectorAll(".slider2");
-
-        // let currentIndex2 = 0;
-        // let sliderHeight2 = slider2.height();
-
-        // setInterval(function () {
-        //     sliderInner2.animate({
-        //         top: -sliderHeight2
-        //     }, 600, "easeOutExpo", function () {
-        //         $(".slider2:first-child").appendTo(sliderInner2);
-        //         sliderInner2.css("top", "");
-        //     });
-        // }, 2000);
-
-        const viewBtn = $(".view-title li");
-        const viewCont = $(".view-cont > div");
-
-        viewBtn.click(function () {
-            let target = $(this);
-            viewBtn.removeClass("active");
-            target.addClass("active");
-
-            let index = target.index();
-            viewCont.css("display", "none");
-            viewCont.eq(index).css("display", "block");
-        });
+        }, 3000);
 
 
     </script>
