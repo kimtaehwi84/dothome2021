@@ -975,6 +975,7 @@ table {
   }
   #mainCont .main__cont {
     top: 10%;
+    right: 5%;
   }
   #mainCont br {
     display: block;
