@@ -11,65 +11,81 @@
     <link rel="stylesheet" href="../assets/css/highlight.css">
     <style>
         .mouseCont {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        color: #fff;
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        font-family: 'NEXONLv1sGothicOTF';
-        cursor: none;
-        position: relative;
-        z-index: 10;   
-        /* z-index는 position이랑 같이 사용해야 먹힌다 */
-        }
-        .mouseCont p {
-                font-size: 2.5vw;
-                line-height: 2;
-                font-weight: 300;
-        }
-        .mouseCont h2 {
-                font-size: 3vw;
-                font-weight: normal;
-        }
-        .mouseCont em {
-                font-style: normal;
-                border-bottom: 0.2vw dashed #fff;
-                color:  orange;
-        }
-        .cursor {
-            position: absolute;
-            left: 0; top: 0;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            z-index: 9999;
-            background-color: #fff;
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-            mix-blend-mode: difference;
-        }
-        .box-wrap {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            color: #fff;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'S-CoreDream';
+            cursor: none;
+            position: relative;
+        }
+
+        .mouseCont p {
+            font-size: 2.5vw;
+            line-height: 2.3;
+            font-weight: 200;
+        }
+
+        .mouseCont h2 {
+            font-size: 3vw;
+            font-weight: 500;
+        }
+
+        .mouseCont em {
+            font-style: normal;
+            border-bottom: 0.2vw dashed orange;
+            color: orange;
+        }
+
+        .cursor {
             position: absolute;
-            left: 0; top: 0;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            z-index: 9999;
+            background-color: rgba(255, 255, 255, 1);
+            /* 아무것도 못하게 해줌 */
+            user-select: none;
+            pointer-events: none;
+            transition: transform .3s;
+        }
+
+        .cursor.active {
+            transform: scale(20);
+            border: 1px solid orange;
+            mix-blend-mode: difference;
+        }
+
+        .box-wrap {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 7%;
             width: 100%;
             height: 100vh;
         }
+
         .box-item {
             display: grid;
-            grid-template-columns: repeat(10, 50px);
-            grid-template-rows: repeat(4, 50px);
-            grid-gap: 30px;
+            grid-template-columns: repeat(10, 60px);
+            grid-template-rows: repeat(10, 60px);
+            grid-gap: 20px;
+            z-index: -1;
         }
+
         .box-item .item {
-            background-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
+        
         .box-item.two .item {
             border-radius: 50%;
             transform: scale(0.2);
@@ -157,16 +173,35 @@
                 <div class="item"></div>
                 <div class="item"></div>
                 <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
             </div>
         </div>
-
     </main>
-    <!-- //contents-->
+    <!-- //contents -->
 
     <!-- info -->
     <div class="info">
         <h1><a href="index.html">Mouse Effect08 - Javascript</a></h1>
-        <p>마우스 이펙트 - 브랜딩 이펙트</p>
+        <p>마우스 이펙트 - 마우스 오버 효과</p>
     </div>
 
     <div class="info right">
@@ -316,27 +351,40 @@
         }
         modal();
 
-        const w = document.querySelector(".cursor").offsetWidth / 2;
-        const h = document.querySelector(".cursor").offsetHeight / 2;
-        document.addEventListener("mousemove", (e)=>{
+        window.addEventListener("mousemove", function (e) {
+            const w = document.querySelector('.cursor').clientWidth / 2;
+            const y = document.querySelector('.cursor').clientHeight / 2;
             const mouseX = e.clientX;
             const mouseY = e.clientY;
-            document.querySelectorAll(".item").forEach(item=>{
+
+            const items = document.querySelectorAll(".item");
+            items.forEach((item, index) => {
                 // const itemX = item.offsetLeft + 25;
                 // const itemY = item.offsetTop + 25;
                 // const diffX = mouseX - itemX;
                 // const diffY = mouseY - itemY;
                 // const radians = Math.atan2(diffY, diffX);
                 // const angle = radians * 180 / Math.PI;
+
                 // item.style.transform = "rotate("+angle+"deg)";
+
                 const itemX = item.offsetLeft - mouseX;
                 const itemY = item.offsetTop - mouseY;
+
                 const dist = Math.sqrt(itemX * itemX + itemY * itemY);
                 const score = Math.exp(dist * -0.003);
+
                 item.style.transform = `scale(${score})`;
+
             });
-            //움직임 효과
-            gsap.to(".cursor", {duration: 0.3, left: e.pageX - w, top: e.pageY - h});
+
+
+            //커서
+            gsap.to('.cursor', {
+                duration: .5,
+                left: e.pageX - w,
+                top: e.pageY - y
+            });
         });
     </script>
 </body>

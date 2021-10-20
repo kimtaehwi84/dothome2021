@@ -19,27 +19,25 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            font-family: 'NEXONLv2Gothic';
-            /* cursor: none; */
+            font-family: 'S-CoreDream';
+            cursor: none;
             position: relative;
-            z-index: 10;
         }
 
         .mouseCont p {
             font-size: 2.5vw;
             line-height: 2.3;
-            font-weight: 300;
+            font-weight: 200;
         }
 
         .mouseCont h2 {
             font-size: 3vw;
-            font-weight: normal;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .mouseCont em {
             font-style: normal;
-            border-bottom: 0.2vw dashed rgb(255, 255, 255);
+            border-bottom: 0.2vw dashed orange;
             color: orange;
         }
 
@@ -51,43 +49,43 @@
             height: 10px;
             border-radius: 50%;
             z-index: 9999;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 1);
+            /* 아무것도 못하게 해줌 */
             user-select: none;
             pointer-events: none;
-            transition: transform 0.3s;
-            mix-blend-mode: difference;
+            transition: transform .3s;
         }
 
         .cursor.active {
             transform: scale(20);
+            border: 1px solid orange;
+            mix-blend-mode: difference;
         }
 
-        .info.left.list li.active {
-            text-decoration: underline;
-            color: orange;
+        .box-wrap {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 10%;
+            width: 100%;
+            height: 100vh;
         }
 
         .box-item {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            padding: 0 10%;
-            height: 100vh;
-            box-sizing: border-box;
-            overflow: hidden;
-            display: flex;
-            align-content: center;
-            justify-content: center;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(10, 60px);
+            grid-template-rows: repeat(10, 60px);
+            grid-gap: 20px;
+            z-index: -1;
         }
 
         .box-item .item {
-            width: 50px;
-            height: 50px;
-            margin: 20px;
-            background-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
+
 
         .info.right {
             z-index: 10;
@@ -106,56 +104,97 @@
             <p>고통은 잠깐이다. 포기는 <em>영원히</em> 남는다.</p>
             <h2>Pain is temporary. Quitting lasts forever.</h2>
         </article>
-        <div class="box-item">
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
-            <div class="item"></div>
+        <div class="box-wrap">
+            <div class="box-item">
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
         </div>
-
     </main>
-    <!-- //contents-->
+    <!-- //contents -->
 
     <!-- info -->
     <div class="info">
         <h1><a href="index.html">Mouse Effect08 - jQuery</a></h1>
-        <p>마우스 이펙트 - 브랜딩 이펙트</p>
+        <p>마우스 이펙트 - 마우스 오버 효과</p>
     </div>
 
     <div class="info right">
@@ -337,6 +376,8 @@ $('.info.left.list li').click(function () {
         modal();
 
         $(window).mousemove(function (e) {
+            const width = $('.cursor').width() / 2;
+            const height = $('.cursor').height() / 2;
             const mouseX = e.clientX;
             const mouseY = e.clientY;
 
@@ -345,25 +386,21 @@ $('.info.left.list li').click(function () {
                 const itemY = $(this).offset().top + 25;
                 const diffX = mouseX - itemX;
                 const diffY = mouseY - itemY;
+
                 const radians = Math.atan2(diffY, diffX);
-                const angle = radians * 100 / Math.PI;
+                const angle = radians * 180 / Math.PI;
 
                 $(this).css({
                     "transform": "rotate(" + angle + "deg)"
                 });
             });
 
-            //커서
-            gsap.to(".cursor", {duration: 0.3, x: e.clientX -20, y: e.clientY -20});
-
-
-            //출력
-            $(".itemX").text(itemX);
-            $(".itemY").text(itemY);
-            $(".diffX").text(diffX);
-            $(".diffY").text(diffY);
-            $(".radians").text(radians);
-            $(".angle").text(angle);
+            //마우스 움직임
+            gsap.to('.cursor', {
+                duration: 0.4,
+                left: e.pageX - width,
+                top: e.pageY - height
+            });
         });
     </script>
 </body>
