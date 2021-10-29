@@ -323,6 +323,13 @@
             font-size: 8vw;
             white-space: nowrap;
         }
+        .s5Text2 {
+            color: #fff;
+            font-size: 3vw;
+            text-align: center;
+            line-height: 1.5;
+            margin-top: 50px;
+        }
 
     </style>
 </head>
@@ -1939,11 +1946,22 @@
                 data-71100="opacity:0; scale(1);"
                 data-71101="opacity:1; transform: translate(-50%, -50%) scale(1);"
                 data-72000="opacity:1; transform: translate(-50%, -50%) scale(1);"
-                data-73000="opacity:1; transform: translate(-50%, -150%) scale(0.8);"
+                data-72200="opacity:0.5; transform: translate(-50%, -50%) scale(1);"
+                data-72400="opacity:1; transform: translate(-50%, -50%) scale(1);"
+                data-72600="opacity:0.5; transform: translate(-50%, -50%) scale(1);"
+                data-72800="opacity:1; transform: translate(-50%, -50%) scale(1);"
+                data-73000="opacity:0.5; transform: translate(-50%, -50%) scale(1);"
+                data-73999="opacity:1; transform: translate(-50%, -50%) scale(1);"
+                data-74800="opacity:1; transform: translate(-50%, -150%) scale(0.8);"
                 
             >
-                <span>CONTACT ME</span>
+                <span>CONTACT ME !</span>
             </div>
+            <div class="s5Text2 fixed"
+                data-74700="opacity:0;"
+                data-74799="opacity:0;"
+                data-74800="opacity:1; transform: translate(-50%, -50%);"
+            >010-0000-0000<br>thdwlzl7184@gmail.com</div>
         </section>
         <!--//section5-->
         <section id="section6"></section>
@@ -1954,11 +1972,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
         var s = skrollr.init();
+
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
-            document.querySelector(".scroll").innerHTML = scrollTop;
-        })
+            document.querySelector(".scroll").innerHTML = parseInt(scrollTop);
+        });
     </script>
 </body>
 
