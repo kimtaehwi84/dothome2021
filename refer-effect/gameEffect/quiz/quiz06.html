@@ -343,6 +343,26 @@
             border-radius: 100px;
             cursor: pointer;
         }
+        .question_result {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            backdrop-filter: blur(10px);
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            display: none;
+        }
+        .question_result.show {
+            display: block;
+        }
+        .question_score {
+            margin-bottom: 10px;
+        }
+
         @media (max-width:1200px) {
             .ham {
                 display: block;
@@ -446,6 +466,14 @@
             </div>
         </div>
         <div class="question_start active"><span>start</span></div>
+        <div class="question_result">
+            <div>퀴즈를 다 풀었습니다. 축하합니다!!!</div>
+            <div class="score">
+                <!-- 축하합니다. 당신은 <span>몇</span> 문제 중에   <span>몇</span> 문제를 맞추었습니다. -->
+            </div>
+            <button class="restart">다시 도전하기</button>
+            <button class="quit">끝내기</button>
+        </div>
     </div>
 
     <!-- script --> 
@@ -499,11 +527,14 @@
         const questionLength = quizWrap.querySelector(".question_answer_count");
         const questionTimer = quizWrap.querySelector(".question_timer_sec");
         const questionTimerLine = quizWrap.querySelector(".question_timer_line");
+        const questionResult = quizWrap.querySelector(".question_result");
+        const questionScore = quizWrap.querySelector(".question_result .score");
 
         let quizCount = 0;
         let quizNum = 1;
         let conter;
         let conterLine;
+        let userScore = 0;
 
 
         // 시작 버튼 클릭
@@ -573,13 +604,26 @@
             }
             
         }
-        //다음 문제 클릭할 때
+        //다음 문제 클릭시
         questionNext.onclick = () => {
-            quizCount++;
-            quizNum++;
-            showQuestion(quizCount);
-            questionCount(quizNum);
+            if( quizCount < quizInfo.length -1 ){
+                quizCount++;
+                quizNum++;
+                showQuestion(quizCount);
+                questionCount(quizNum);
+
+                questionNext.classList.remove("show");
+                clearInterval(counter);
+                clearInterval(counterLine);
+                startTimer(15);
+                startTimerLine(0);
+            } else {
+                clearInterval(counter);
+                clearInterval(counterLine);
+                showResult();
+            }
         }
+
         //문제 카운팅
         function questionCount(index){
             let totalCountTag = `<span>${index}</span> / <span>${quizInfo.length}</span>`;
@@ -634,6 +678,13 @@
             
         }
         
+        //결과 보여주기
+        function showResult(){
+            questionResult.classList.add("show");
+
+            const scoreTag = `축하합니다. 당신은 <span>몇</span> 문제 중에   <span>몇</span> 문제를 맞추었습니다.`;
+            questionScore.innerHTML = scoreTag;
+        }
     </script>
 </body>
 
