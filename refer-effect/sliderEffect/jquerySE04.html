@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -9,35 +10,31 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
-        /* slider */
         .slider-wrap {
             display: flex;
-            height: 100vh;
             align-items: center;
             justify-content: center;
+            height: 100vh;
         }
-        .slider-img img {
-            width: 100%;
-        }
+
         .slider-img {
             width: 600px;
             height: 360px;
             overflow: hidden;
             margin: 10px;
         }
-        
+
+        .slider-img img {
+            width: 100%;
+        }
+
         .slider-inner {
             position: relative;
             width: 600px;
             height: 1800px;
             overflow: hidden;
-        }
-        .slider-inner .slider {
-            float: left;
-            width: 600x;
-            height: 360px;
-            position: relative;
         }
 
         .slider {
@@ -48,57 +45,71 @@
         }
 
         .slider::before {
-            content: "이미지1";
             position: absolute;
             left: 5px;
             top: 5px;
-            background: rgba(0, 0, 0, .4);
+            background: rgba(0, 0, 0, 0.4);
             color: #fff;
             padding: 5px 10px 3px;
             font-family: "NEXONLv1Gothic";
         }
 
-        .slider:nth-child(1){z-index: 5;}
-        .slider:nth-child(2){z-index: 4;}
-        .slider:nth-child(3){z-index: 3;}
-        .slider:nth-child(4){z-index: 2;}
-        .slider:nth-child(5){z-index: 1;}
-        .slider::before {content: attr(data-name);}
-    </style>
+        .slider:nth-child(1) {
+            z-index: 5;
+        }
 
+        .slider:nth-child(2) {
+            z-index: 4;
+        }
+
+        .slider:nth-child(3) {
+            z-index: 3;
+        }
+
+        .slider:nth-child(4) {
+            z-index: 2;
+        }
+
+        .slider:nth-child(5) {
+            z-index: 1;
+        }
+
+        .slider::before {
+            content: attr(data-name);
+        }
+    </style>
 </head>
 
-<body class="bg bg2 brown">
-
+<body class="bg bg8 brown">
     <!-- contents -->
     <main>
         <div class="slider-wrap">
             <div class="slider-img slider-img1">
                 <div class="slider-inner slider-inner1">
-                    <div class="slider slider1" data-name="이미지1"><img src="../assets/img/bg01.jpg" alt="이미지1"></div>
-                    <div class="slider slider1" data-name="이미지2"><img src="../assets/img/bg02.jpg" alt="이미지2"></div>
-                    <div class="slider slider1" data-name="이미지3"><img src="../assets/img/bg03.jpg" alt="이미지3"></div>
-                    <div class="slider slider1" data-name="이미지4"><img src="../assets/img/bg04.jpg" alt="이미지4"></div>
-                    <div class="slider slider1" data-name="이미지5"><img src="../assets/img/bg05.jpg" alt="이미지5"></div>
+                    <div class="slider slider1" data-name="이미지1"><img src="../assets/img/bg1.jpg" alt="이미지1"></div>
+                    <div class="slider slider1" data-name="이미지2"><img src="../assets/img/bg6.jpg" alt="이미지2"></div>
+                    <div class="slider slider1" data-name="이미지3"><img src="../assets/img/bg3.jpg" alt="이미지3"></div>
+                    <div class="slider slider1" data-name="이미지4"><img src="../assets/img/bg4.jpg" alt="이미지4"></div>
+                    <div class="slider slider1" data-name="이미지5"><img src="../assets/img/bg5.jpg" alt="이미지5"></div>
                 </div>
             </div>
             <div class="slider-img slider-img2">
                 <div class="slider-inner slider-inner2">
-                    <div class="slider slider2" data-name="이미지1"><img src="../assets/img/bg01.jpg" alt="이미지1"></div>
-                    <div class="slider slider2" data-name="이미지2"><img src="../assets/img/bg02.jpg" alt="이미지2"></div>
-                    <div class="slider slider2" data-name="이미지3"><img src="../assets/img/bg03.jpg" alt="이미지3"></div>
-                    <div class="slider slider2" data-name="이미지4"><img src="../assets/img/bg04.jpg" alt="이미지4"></div>
-                    <div class="slider slider2" data-name="이미지5"><img src="../assets/img/bg05.jpg" alt="이미지5"></div>
+                    <div class="slider slider2" data-name="이미지1"><img src="../assets/img/bg1.jpg" alt="이미지1"></div>
+                    <div class="slider slider2" data-name="이미지2"><img src="../assets/img/bg6.jpg" alt="이미지2"></div>
+                    <div class="slider slider2" data-name="이미지3"><img src="../assets/img/bg3.jpg" alt="이미지3"></div>
+                    <div class="slider slider2" data-name="이미지4"><img src="../assets/img/bg4.jpg" alt="이미지4"></div>
+                    <div class="slider slider2" data-name="이미지5"><img src="../assets/img/bg5.jpg" alt="이미지5"></div>
                 </div>
             </div>
         </div>
     </main>
-    <!-- //contents-->
+    <!-- //contents -->
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">Slider Effect04 - jQuery</a></h1>
-        <p>이미지 슬라이드 - 위로 움직이기</p>
+        <h1><a href="index.html">jQuery Slider Effect04</a></h1>
+        <p>이미지 슬라이드 - 위로 움직이기(연속)</p>
     </div>
 
     <div class="info right">
@@ -108,7 +119,6 @@
             <li><a href="javascriptSE03.html">3</a></li>
             <li><a href="javascriptSE04.html">4</a></li>
             <li><a href="javascriptSE05.html">5</a></li>
-            <li><a href="javascriptSE06.html">6</a></li>
         </ul>
         <ul>
             <li><a href="jquerySE01.html">1</a></li>
@@ -116,15 +126,15 @@
             <li><a href="jquerySE03.html">3</a></li>
             <li class="active"><a href="jquerySE04.html">4</a></li>
             <li><a href="jquerySE05.html">5</a></li>
-            <li><a href="jquerySE06.html">6</a></li>
         </ul>
     </div>
 
     <div class="info bottom">
-        <button>소스 보기</button>
+        <button>소스보기</button>
     </div>
+    <!-- //info -->
 
-    <!-- #1 -->
+    <!-- modal -->
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
@@ -140,99 +150,230 @@
                         <ul>
                             <li class="active"><a href="#">Html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Jquery</a></li>
+                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
                             <pre><code class="language-html">&lt;main&gt;
-    &lt;div class="slider-wrap"&gt;
-        &lt;div class="slider-img"&gt;
-            &lt;div class="slider-inner"&gt;
-                &lt;div class="slider" data-name="이미지1"&gt;&lt;img src="../assets/img/bg01.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지2"&gt;&lt;img src="../assets/img/bg02.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지3"&gt;&lt;img src="../assets/img/bg03.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지4"&gt;&lt;img src="../assets/img/bg04.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider" data-name="이미지5"&gt;&lt;img src="../assets/img/bg05.jpg" alt="이미지5"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;&lt;span class="style1"&gt;Better&lt;/span&gt; the &lt;span class="style2"&gt;last smile&lt;/span&gt; than the &lt;span
+                class="style3"&gt;first laughter&lt;/span&gt;.&lt;/p&gt;
+        &lt;h2&gt;&lt;span class="style4"&gt;처음의 큰 웃음&lt;/span&gt;보다 &lt;span class="style5"&gt;마지막 미소&lt;/span&gt;가 &lt;span class="style6"&gt;더
+                좋다.&lt;/span&gt;&lt;/h2&gt;
+    &lt;/article&gt;
 &lt;/main&gt;
+&lt;!-- //contents --&gt;
+
+&lt;!-- info --&gt;
+&lt;div class="info"&gt;
+    &lt;h1&gt;&lt;a href="index.html"&gt;Javascript Mouse Effect01&lt;/a&gt;&lt;/h1&gt;
+    &lt;p&gt;마우스 이펙트 - 마우스 따라다니기&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="info right"&gt;
+    &lt;ul&gt;
+        &lt;li class="active"&gt;&lt;a href="javascriptME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="javascriptME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="jqueryME01.html"&gt;1&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME02.html"&gt;2&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME03.html"&gt;3&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME04.html"&gt;4&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="jqueryME05.html"&gt;5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;div class="info left list"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;clientX : &lt;span class="clientX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;clientY : &lt;span class="clientY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;offsetX : &lt;span class="offsetX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;offsetY : &lt;span class="offsetY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;screenX : &lt;span class="screenX"&gt;0&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;screenY : &lt;span class="screenY"&gt;0&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">.slider-wrap {
+                            <pre><code class="language-css">.mouseCont {
+    font-family: "NEXONLv1Gothic";
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-}
-.slider-img img {
-    width: 100%;
-}
-.slider-img {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    width: 800px;
-    height: 480px;
-    overflow: hidden;
-}
-
-
-.slider-inner {
-    position: relative;
-    width: 4000px;
-    height: 480px;
-    overflow: hidden;
-}
-
-.slider {
-    float: left;
-    width: 800px;
-    height: 480px;
-    position: relative;
-}
-
-.slider::before {
-    content: "이미지1";
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    background: rgba(0, 0, 0, .4);
+    flex-direction: column;
     color: #fff;
-    padding: 5px 10px 3px;
-    font-family: "NEXONLv1Gothic";
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    cursor: none;
 }
 
-.slider:nth-child(1){z-index: 5;}
-.slider:nth-child(2){z-index: 4;}
-.slider:nth-child(3){z-index: 3;}
-.slider:nth-child(4){z-index: 2;}
-.slider:nth-child(5){z-index: 1;}
-.slider::before {content: attr(data-name);}
+.mouseCont p {
+    font-size: 2.5vw;
+    line-height: 2.3;
+    font-weight: 300;
+}
+
+.mouseCont h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    font-weight: 400;
+}
+
+.mouseCont span {
+    font-style: normal;
+    border-bottom: 0.2vw dashed #fff;
+}
+
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: background-color .2s,
+        border-color .2s,
+        border-radius .2s,
+        transform .6s;
+}
+
+.cursor.style1 {
+    background-color: #96d0ff80;
+    border-color: #96d0ff;
+}
+
+.cursor.style2 {
+    background-color: #c796ff80;
+    border-color: #b296ff;
+    transform: rotateY(720deg) scale(2);
+}
+
+.cursor.style3 {
+    background-color: #96ffca80;
+    border-color: #96ffd3;
+    border-radius: 0%;
+    width: 230px;
+}
+
+.cursor.style3.mouseCont .style3 {
+    color: #000;
+}
+
+.cursor.style4 {
+    background-color: #fff8e380;
+    border-color: #ffffff;
+    border-width: 0px;
+    transform: scale(2);
+}
 </code></pre>
                         </div>
-                        <div class="jquery">
-                            <pre><code class="language-js">const sliderWrap = $(".slider-wrap");
-const sliderImg = $(".slider-img");
-const sliderInner = $(".slider-inner");
-const slider = $(".slider");
+                        <div class="jQuery">
+                            <pre><code class="language-javascript">// 출력용
+window.addEventListener("mousemove", function (e) {
+    document.querySelector(".clientX").innerText = e.clientX + "px"; //브라우저 Y좌표 기준
+    document.querySelector(".clientY").innerText = e.clientY + "px"; //브라우저 Y좌표 기준
+    document.querySelector(".offsetX").innerText = e.offsetX + "px"; //요소 X좌표 기준
+    document.querySelector(".offsetY").innerText = e.offsetY + "px"; //요소 Y좌표 기준
+    document.querySelector(".pageX").innerText = e.pageX + "px"; //페이지 X좌표 기준
+    document.querySelector(".pageY").innerText = e.pageY + "px"; //페이지 Y좌표 기준
+    document.querySelector(".screenX").innerText = e.screenX + "px"; //디바이스 X좌표 기준
+    document.querySelector(".screenY").innerText = e.screenY + "px"; //디바이스 Y좌표 기준
+});
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = slider.width();
-let sliderDuration = 600;
-let sliderEasing = "easeOutExpo";
+// 마우스 움직이기
+window.addEventListener("mousemove", function (e) {
+    // document.querySelector(".cursor").style.left = e.clientX - 25 + "px";
+    // document.querySelector(".cursor").style.top = e.clientY - 25 + "px";
 
-setInterval(function() {
-    (currentIndex &lt; sliderCount - 1) ? currentIndex++ : currentIndex = 0
+    let x = e.clientX - 25 + "px";
+    let y = e.clientY - 25 + "px";
 
-    let sliderPosition = currentIndex * -800;
-    sliderInner.animate({ left: sliderPosition }, sliderDuration, sliderEasing);
+    document.querySelector(".cursor").style.cssText = "left: " + x + "; top:" + y;
+});
 
-}, 2000);
-                                
+// document.querySelector(".mouseCont .style1").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style1");
+// });
+// document.querySelector(".mouseCont .style1").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style1");
+// });
+// document.querySelector(".mouseCont .style2").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style2");
+// });
+// document.querySelector(".mouseCont .style2").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style2");
+// });
+// document.querySelector(".mouseCont .style3").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style3");
+// });
+// document.querySelector(".mouseCont .style3").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style3");
+// });
+// document.querySelector(".mouseCont .style4").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style4");
+// });
+// document.querySelector(".mouseCont .style4").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style4");
+// });
+// document.querySelector(".mouseCont .style5").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style5");
+// });
+// document.querySelector(".mouseCont .style5").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style5");
+// });
+// document.querySelector(".mouseCont .style6").addEventListener("mouseover", function(){
+//     document.querySelector(".cursor").classList.add("style6");
+// });
+// document.querySelector(".mouseCont .style6").addEventListener("mouseout", function(){
+//     document.querySelector(".cursor").classList.remove("style6");
+// });
+
+// for문
+// for( let i=1; i&lt;=6; i++ ){
+//     document.querySelector(".mouseCont .style"+i).addEventListener("mouseover", function(){
+//         document.querySelector(".cursor").classList.add("style"+i);
+//     });
+//     document.querySelector(".mouseCont .style"+i).addEventListener("mouseout", function(){
+//         document.querySelector(".cursor").classList.remove("style"+i);
+//     });
+// }
+
+// forEach
+// document.querySelectorAll(".mouseCont span").forEach((element, index) => {
+//     element.addEventListener("mouseover", () => {
+//         document.querySelector(".cursor").classList.add("style"+ (index+1));
+//     });
+//     element.addEventListener("mouseout", () => {
+//         document.querySelector(".cursor").classList.remove("style"+ (index+1));
+//     });
+// })
+
+// getAtrribute()
+document.querySelectorAll(".mouseCont span").forEach((element) => {
+    let style = element.getAttribute("class");
+    element.addEventListener("mouseover", () => {
+        document.querySelector(".cursor").classList.add(style);
+    });
+    element.addEventListener("mouseout", () => {
+        document.querySelector(".cursor").classList.remove(style);
+    });
+})
 </code></pre>
                         </div>
                     </div>
@@ -241,121 +382,62 @@ setInterval(function() {
             </div>
         </div>
     </div>
-    <!-- //#1 -->
-    <!-- //info-->
+    <!-- //modal -->
 
-
-
+    <!-- script -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        window.onload = function () {
-            // init();
-            // animate();
-            agentCheck();
-        }
         modal();
 
-        // const sliderWrap = $(".slider-wrap");
-        // const sliderImg1 = $(".slider-img1");
-        // const sliderInner1 = $(".slider-inner1");
-        // const slider1 = $(".slider1");
-
-        // const sliderImg2 = $(".slider-img2");
-        // const sliderInner2 = $(".slider-inner2");
-        // const slider2 = $(".slider2");
-
-        // let currentIndex1 = 0;
-        // let currentIndex2 = 0;
-        // let sliderHeight1 = slider1.height();
-        // let sliderHeight2 = slider2.height();
-
-
-
-        //콜백함수(함수 여러번 쓰기)와 재귀함수 
-        // setInterval(()=>{
-        //     sliderInner1.animate({top: -sliderHeight1 }, 400, function(){
-        //         $(".slider1:first-child").appendTo(sliderInner1);
-        //         sliderInner1.css("top","");
-        //     });
-        //     sliderInner2.animate({top: -sliderHeight2 }, 400, function(){
-        //         $(".slider2:first-child").appendTo(sliderInner2);
-        //         sliderInner2.css("top","");
-        //     });
-
-        // }, 3000);
-
-        // const sliderImg1 = $(".slider-img1");
-        // const sliderInner1 = $(".slider-inner1");
-        // const slider1 = $(".slider1");
-
-        // let currentIndex1 = 0;
-        // let sliderHeight1 = slider1.height();
-
-        // let sliderCount = slider1.length; 
-        // let sliderDuration = 600;
-        // let sliderEasing = "easeOutExpo";
-        
-
-
-        // setInterval(function(){
-        // (currentIndex < sliderCount -1) ? currentIndex++ : currentIndex = 0;
-        
-        // let sliderPosition = currentIndex * -sliderHeight;
-        // sliderInner1.animate({top: sliderPosition}, sliderDuration, sliderEasing);
-        
-        // }, 3000);
-
-        // const sliderImg2 = $(".slider-img2");
-        // const sliderInner2 = $(".slider-inner2");
-        // const slider2 = $(".slider2");
-
-        // let currentIndex2 = 0;
-        // let sliderHeight2 = slider2.height();
-
-        // setInterval(()=>{
-        //     sliderInner2.animate({ top: -sliderHeight2 }, 600, "easeOutExop", function(){
-        //         $(".slider2:first-child").appendTo(sliderInner2);
-        //         sliderInner2.css("top","");
-        //     });
-        // }, 3000);
-
-    
-        const sliderWrap = $(".slider-wrap");
-        const sliderImg = $(".slider-img");
+        // sample1
         const sliderImg1 = $(".slider-img1");
-        const sliderImg2 = $(".slider-img2");
-        const sliderInner = $(".slider-inner");
-        const sliderInner2 = $(".slider-inner2");
         const sliderInner1 = $(".slider-inner1");
-        const slider = $(".slider");
         const slider1 = $(".slider1");
+
+        let currentIndex1 = 0;
+        let sliderHeight1 = slider1.height();
+
+        setInterval(function () {
+            currentIndex1 < 4 ? currentIndex1++ : currentIndex1 = 0;
+
+            let sliderPosition = currentIndex1 * -sliderHeight1;
+            sliderInner1.animate({
+                top: sliderPosition
+            }, 600, "easeOutExpo");
+        }, 2000);
+
+        // sample2
+        const sliderImg2 = $(".slider-img2");
+        const sliderInner2 = $(".slider-inner2");
         const slider2 = $(".slider2");
-        let currentIndex = 0;
-        let sliderHeight = slider.height();
-        let sliderCount = slider1.length; 
-        let sliderDuration = 600;
-        let sliderEasing = "easeOutExpo";
-        
-        setInterval(function(){
-            (currentIndex < sliderCount -1) ? currentIndex++ : currentIndex = 0;
-            
-            let sliderPosition = currentIndex * -sliderHeight;
-            sliderInner1.animate({top: sliderPosition}, sliderDuration, sliderEasing);
-            
-        }, 3000);
-        setInterval(function(){
-            sliderInner2.animate({ top: -sliderHeight }, 600, "easeOutExpo", function(){
-                $(".slider2:first-child").appendTo(sliderInner2);  //append 의 반대 preppend//
-                sliderInner2.css("top","");
+
+        let currentIndex2 = 0;
+        let sliderHeight2 = slider2.height();
+
+        setInterval(function () {
+            sliderInner2.animate({
+                top: -sliderHeight2
+            }, 600, "easeOutExpo", function () {
+                $(".slider2:first-child").appendTo(sliderInner2);
+                sliderInner2.css("top", "");
             });
-        }, 3000);
+        }, 2000);
 
+        const viewBtn = $(".view-title li");
+        const viewCont = $(".view-cont > div");
 
+        viewBtn.click(function () {
+            let target = $(this);
+            viewBtn.removeClass("active");
+            target.addClass("active");
 
-
+            let index = target.index();
+            viewCont.css("display", "none");
+            viewCont.eq(index).css("display", "block");
+        });
     </script>
 </body>
 

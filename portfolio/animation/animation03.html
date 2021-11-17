@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation03</title>
+    <style>
+        @font-face {
+            font-family: 'Binggrae-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0;}    
+
+        body {
+            background: #EFEBAF;
+        }
+        svg {
+            font-family: 'Binggrae-Bold';
+            position: absolute;
+            width: 100%; height: 100%;
+        }
+        svg text {
+            text-transform: uppercase;
+            font-size: 140px;
+            animation: stroke 5s infinite alternate;
+        }
+        @keyframes stroke {
+            0% {fill: rgba(192,202,51,0); stroke: rgba(130,119,23,1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 2;
+            }
+            70% {fill: rgba(192,202,51,0); stroke: rgba(130,119,23,1)}
+            80% {fill: rgba(192,202,51,0); stroke: rgba(130,119,23,1);
+                stroke-width: 3;
+            }
+            100% {fill: rgba(192,202,51,1); stroke: rgba(130,119,23,0);
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+                stroke-width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy="40px" text-anchor="middle">TheWhi</text>
+    </svg>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -6,75 +7,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallax Effect</title>
-    ​
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
-    ​
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
     <style>
         .paraNav {
             top: 20px;
-            transition: top 0.4s ease;
+            transition: top .5s ease;
         }
+
         .paraNav.hide {
             top: -200px;
         }
+
         .paraNav li a {
             width: auto;
             padding: 5px;
-            width: 30px; height: 30px;
+            width: 30px;
+            height: 30px;
         }
+
         .paraNav li.active a {
             border-radius: 30px;
         }
 
-        /*한번에 나타나기*/
+        /* 한번에 나타나기 */
         /* .content-item .desc {
-            opacity: 0;
-            transform: translateY(100px) skewX(30deg);
-            transition: all 0.33s ease-in-out;
-        }
-        .content-item .desc.show {
-            opacity: 1;
-            transform: translateY(0) skewX(0);
-        } */
+        opacity: 0;
+        transform: translateY(100px) skewX(30deg);
+        transition: all .33s ease-in-out;
+    }
 
-        /*한 글자씩 나타나기*/
+    .content-item .desc.show {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+    } */
+
+        /* 한 글자씩 나타나기 */
         /* .content-item .desc span {
-            opacity: 0;
-            transform: translateY(100px) skewX(30deg);
-            transition: all 0.33s ease-in-out;
-        }
-        .content-item .desc span.show {
-            opacity: 1;
-            transform: translateY(0) skewX(0);
-        } */
+        opacity: 0;
+        transform: translateY(100px) skewX(30deg);
+        transition: all .33s ease-in-out;
+    }
 
-        /* GSAP 한 글 자씩 나타나기 */
+    .content-item .desc span.show {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+    } */
+
+        /* gsap 한 글자씩 나타나기 */
         .content-item .desc span {
             opacity: 0;
             display: inline-block;
             min-width: 1vw;
-            transform: translateY(100px) rotate(90deg) scale(2);
+            transform: translateY(100px) rotate(90deg) scale(3);
         }
-        
     </style>
 </head>
 
 <body class="parallax">
-    ​
+
     <!-- header -->
     <header class="paraInfo">
         <h1><a href="index.html">Parallax Effect07 - jQuery</a></h1>
         <p>패랠랙스 스크로링 효과 - 텍스트 효과</p>
     </header>
     <!-- //header -->
-    ​
+
+
     <!-- main -->
     <main>
-        <div class="paraScroll">scrollTop() : <span>0</span></div><!-- //scroll -->
+        <div class="paraScroll">scrollTop() : <span>0</span>px</div>
 
+        <!--//scroll-->
         <div class="paraNav">
             <ul>
                 <li class="active"><a href="#section1">s1</a></li>
@@ -91,105 +99,107 @@
         <!-- //nav -->
 
         <div class="paraCont">
+
             <section id="section1" class="content-item">
                 <span class="num">01</span>
                 <h2 class="title">Section1</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Doesn't this guitar sound so good?</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section1 -->
-            ​
+            <!-- section1 -->
+
             <section id="section2" class="content-item">
                 <span class="num">02</span>
                 <h2 class="title">Section2</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Mmm, mmm, mmm So sweet</p>
+                <p class="desc">Pain past is pleasure</p>
             </section>
-            <!-- //section2 -->
-            ​
+            <!-- section2 -->
+
             <section id="section3" class="content-item">
                 <span class="num">03</span>
                 <h2 class="title">Section3</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">Living in this big blue world</p>
+                <p class="desc">아름다운 순이(順伊)의 얼굴이어린다.</p>
             </section>
-            <!-- //section3 -->
-            ​
+            <!-- section3 -->
+
             <section id="section4" class="content-item">
                 <span class="num">04</span>
                 <h2 class="title">Section4</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">With my head up<br>in outer space</p>
+                <p class="desc">Love what you do</p>
             </section>
-            <!-- //section4 -->
-            ​
+            <!-- section4 -->
+
             <section id="section5" class="content-item">
                 <span class="num">05</span>
                 <h2 class="title">Section5</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
+                <p class="desc">This too shall pass away</p>
             </section>
-            <!-- //section5 -->
-            ​
+            <!-- section5 -->
+
             <section id="section6" class="content-item">
                 <span class="num">06</span>
                 <h2 class="title">Section6</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
+                <p class="desc">If not now, then when?</p>
             </section>
-            <!-- //section6 -->
-            ​
+            <!-- section6 -->
+
             <section id="section7" class="content-item">
                 <span class="num">07</span>
                 <h2 class="title">Section7</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">When I see trouble come my way</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section7 -->
-            ​
+            <!-- section7 -->
+
             <section id="section8" class="content-item">
                 <span class="num">08</span>
                 <h2 class="title">Section8</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">I be makin' lemonade</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section8 -->
-            ​
+            <!-- section8 -->
+
             <section id="section9" class="content-item">
                 <span class="num">09</span>
                 <h2 class="title">Section9</h2>
-                <figure class="img-wrap">
+                <figure class="img-Wrap">
                     <div class="img"></div>
                 </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
+                <p class="desc">Don't dwell on the past</p>
             </section>
-            <!-- //section9 -->
+            <!-- section9 -->
+
         </div>
         <!-- //contents -->
     </main>
     <!-- //main -->
-    ​
+
     <!-- footer -->
     <footer class="paraFooter">
-        <h1>Parallax <em>Scrolling</em></h1>
+        <h1>Parallax <em>Srolling</em></h1>
         <div class="footerInfo">
-            <h2>javascript</h2>
+            <h2>자바스크립트</h2>
             <ul>
                 <li><a href="javascriptPE01.html">1</a></li>
                 <li><a href="javascriptPE02.html">2</a></li>
@@ -202,7 +212,7 @@
             </ul>
         </div>
         <div class="footerInfo">
-            <h2>jquery</h2>
+            <h2>제이쿼리</h2>
             <ul>
                 <li><a href="jqueryPE01.html">1</a></li>
                 <li><a href="jqueryPE02.html">2</a></li>
@@ -216,19 +226,20 @@
         </div>
     </footer>
     <!-- //footer -->
-    ​
+
     <!-- source -->
-    <div class="info bottom">
-        <button>소스 보기</button>
+    <div class="source">
+        <button>소스보기</button>
     </div>
     <!-- //source -->
-    ​
+
     <!-- modal -->
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
                 <div class="code-view">
                     <div class="view-header">
+                        <!-- aria : 접근성 / aria-hidden=true : 빈칸을 읽지 않음 -->
                         <div class="dot" aria-hidden="true">
                             <span></span>
                             <span></span>
@@ -237,122 +248,125 @@
                     </div>
                     <div class="view-title">
                         <ul>
-                            <li class="active"><a href="#">Html</a></li>
+                            <li class="active"><a href="#">HTML</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Jquery</a></li>
+                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">&lt;!-- main --&gt;
+                            <pre><code class="language-html"> &lt;!-- main --&gt;
 &lt;main&gt;
-    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;&lt;!-- //scroll --&gt;
+    &lt;div class="paraScroll"&gt;scrollTop() :&lt;span&gt;0&lt;/span&gt;px&lt;/div&gt;
 
+    &lt;!--//scroll--&gt;
     &lt;div class="paraNav"&gt;
         &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+            &lt;li class="active"&gt;&lt;a&gt; href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a&gt; href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;!-- //nav --&gt;
+    &lt;!-- //scroll --&gt;
 
     &lt;div class="paraCont"&gt;
+
         &lt;section id="section1" class="content-item"&gt;
             &lt;span class="num"&gt;01&lt;/span&gt;
             &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;Doesn't this guitar sound so good?&lt;/p&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section1 --&gt;
-        ​
+        &lt;!-- section1 --&gt;
+
         &lt;section id="section2" class="content-item"&gt;
             &lt;span class="num"&gt;02&lt;/span&gt;
             &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;Mmm, mmm, mmm So sweet&lt;/p&gt;
+            &lt;p class="desc"&gt;Pain past is pleasure&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section2 --&gt;
-        ​
+        &lt;!-- section2 --&gt;
+
         &lt;section id="section3" class="content-item"&gt;
             &lt;span class="num"&gt;03&lt;/span&gt;
             &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;Living in this big blue world&lt;/p&gt;
+            &lt;p class="desc"&gt;Don't give up easily even if you failed&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section3 --&gt;
-        ​
+        &lt;!-- section3 --&gt;
+
         &lt;section id="section4" class="content-item"&gt;
             &lt;span class="num"&gt;04&lt;/span&gt;
             &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;With my head up&lt;br&gt;in outer space&lt;/p&gt;
+            &lt;p class="desc"&gt;Love what you do&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section4 --&gt;
-        ​
+        &lt;!-- section4 --&gt;
+
         &lt;section id="section5" class="content-item"&gt;
             &lt;span class="num"&gt;05&lt;/span&gt;
             &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+            &lt;p class="desc"&gt;This too shall pass away&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section5 --&gt;
-        ​
+        &lt;!-- section5 --&gt;
+
         &lt;section id="section6" class="content-item"&gt;
             &lt;span class="num"&gt;06&lt;/span&gt;
             &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+            &lt;p class="desc"&gt;If not now, then when?&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section6 --&gt;
-        ​
+        &lt;!-- section6 --&gt;
+
         &lt;section id="section7" class="content-item"&gt;
             &lt;span class="num"&gt;07&lt;/span&gt;
             &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;When I see trouble come my way&lt;/p&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section7 --&gt;
-        ​
+        &lt;!-- section7 --&gt;
+
         &lt;section id="section8" class="content-item"&gt;
             &lt;span class="num"&gt;08&lt;/span&gt;
             &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;I be makin' lemonade&lt;/p&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section8 --&gt;
-        ​
+        &lt;!-- section8 --&gt;
+
         &lt;section id="section9" class="content-item"&gt;
             &lt;span class="num"&gt;09&lt;/span&gt;
             &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
+            &lt;figure class="img-Wrap"&gt;
                 &lt;div class="img"&gt;&lt;/div&gt;
             &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
+            &lt;p class="desc"&gt;Don't dwell on the past&lt;/p&gt;
         &lt;/section&gt;
-        &lt;!-- //section9 --&gt;
+        &lt;!-- section9 --&gt;
+
     &lt;/div&gt;
     &lt;!-- //contents --&gt;
 &lt;/main&gt;
@@ -362,187 +376,256 @@
                         <div class="css">
                             <pre><code class="language-css">.paraNav {
     top: 20px;
-    transition: top 0.4s ease;
+    transition: top .5s ease;
 }
+
 .paraNav.hide {
     top: -200px;
 }
+
 .paraNav li a {
     width: auto;
     padding: 5px;
-    width: 30px; height: 30px;
+    width: 30px;
+    height: 30px;
 }
+
 .paraNav li.active a {
     border-radius: 30px;
 }
-/* GSAP 한 글 자씩 나타나기 */
+
+/* 한번에 나타나기 */
+/* .content-item .desc {
+        opacity: 0;
+        transform: translateY(100px) skewX(30deg);
+        transition: all .33s ease-in-out;
+    }
+
+    .content-item .desc.show {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+} */
+
+/* 한 글자씩 나타나기 */
+/* .content-item .desc span {
+        opacity: 0;
+        transform: translateY(100px) skewX(30deg);
+        transition: all .33s ease-in-out;
+    }
+
+    .content-item .desc span.show {
+        opacity: 1;
+        transform: translateY(0) skewX(0);
+} */
+
+/* gsap 한 글자씩 나타나기 */
 .content-item .desc span {
     opacity: 0;
     display: inline-block;
     min-width: 1vw;
-    transform: translateY(100px) rotate(90deg) scale(2);
+    transform: translateY(100px) rotate(90deg) scale(3);
 }
 </code></pre>
                         </div>
                         <div class="javascript">
-                            <pre><code class="language-javascript">$('.paraNav ul li').click(function (e) {
-    e.preventDefault();
-    let target = $(this);
-    let index = target.index();
-    let section = $('.paraCont > section').eq(index);
-    let offset = section.offset().top;
+                            <pre><code class="language-js">//글씨 쪼개기(한개)
+// let text = $('#section1 .desc').text();
+// let split = text.split('').join('</span><span>');
+// split = '<span>'+split+'</span>';
 
-    $('html, body').animate({
-        scrollTop: offset
-    }, 600);
-});
+// $('#section1 .desc').html(split);
 
-$(".content-item .desc").each(function(){
+//글씨 쪼개기(여러개) each()
+$('.content-item .desc').each(function(index, item){
     let text = $(this).text();
-    let split = text.split('').join("</span><span aria-hidden='true'>");    // aria-hidden='true' 접근성
-    split = "<span aria-hidden='true'>"+ split +"</span>";
-    $(this).html(split).attr("aria-label", text);    //this = content-item .desc
-});
+    let split = text.split('').join('</span><span aria-hidden="true">');
+    split = '<span aria-hidden="true">'+split+'</span>';
 
+    $(this).html(split).attr('aria-label', text);
+});
 
 $(window).scroll(function(){
-    let scrollTop = $(window).scrollTop();
-    $(".content-item").each(function(index){
-        if( $(window).scrollTop() >= $(this).offset().top -2 ){
-            gsap.to( $(this).find(".desc span"), {
+    // if($(window).scrollTop() > $('#section1').offset().top){
+    //     $('#section1 .desc').addClass('show');
+    // } else {
+    //     $('#section1 .desc').removeClass('show');
+    // }
+    // if($(window).scrollTop() > $('#section2').offset().top){
+    //     $('#section2 .desc').addClass('show');
+    // } else {
+    //     $('#section2 .desc').removeClass('show');
+    // }
+    // $('.content-item .desc').each(function(index,item){
+    //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+    //         $(this).addClass('show');
+    //     } else {
+    //         $(this).removeClass('show');
+    //     }
+    // });
+
+    //한 글자씩 나타나기
+    // if($(window).scrollTop() > $('#section1').offset().top){
+    //     $('#section1 .desc span').each(i => {
+    //         setTimeout(() => {
+    //             $('#section1 .desc span').eq(i).addClass('show');
+    //         }, 50 * i);
+    //     });
+    // }
+
+    //for
+    // for(let i=1; i&lt;=$('.content-item').length;i++){
+    //     if($(window).scrollTop() > $('#section'+ i).offset().top){
+    //         $('#section'+ i+' .desc span').each(idx => {
+    //             setTimeout(() => {
+    //                 $('#section'+ i+' .desc span').eq(idx).addClass('show');
+    //             }, 50 * idx);
+    //         });
+    //     }
+    // }
+
+    //each()
+    // $('.content-item').each(function(index,item){
+    //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+    //         $(this).find('.desc span').each(idx => {
+    //             setTimeout(()=>{
+    //                 $(this).find('.desc span').eq(idx).addClass('show');
+    //             },50*idx);
+    //         });
+    //     }
+    // });
+
+    //gsap
+    $('.content-item').each(function(index){
+        if($(window).scrollTop() >= $(this).offset().top){
+            gsap.to($(this).find(".desc span"), {
                 duration: .5,
                 opacity: 1,
-                stagger: 0.05,
+                stagger: .05,
                 y: 0,
-                ease: "power3.out",
+                scale: 1,
+                ease: "power2.out",
                 rotation: 0,
-                scale: 1
             });
-            $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
+            //메뉴
+            $('.paraNav ul li').eq(index).addClass('active').siblings().removeClass('active');
         }
+
     });
-    //출력
-    $(".paraScroll span").text(parseInt(scrollTop));
 });
 </code></pre>
                         </div>
                     </div>
                 </div>
-
                 <button>닫기</button>
             </div>
         </div>
     </div>
     <!-- //modal -->
-    ​
+
+
     <!-- script -->
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+    <script src="../assets/js/highlight.min.js"></script>
     <script>
-        modal();
-
-        //글씨 쪼개기
-        // let text = $("#section1 .desc").text();
-        // let split = text.split('').join("</span><span>");
-        // split = "<span>"+ split +"</span>";
-        // $("#section1 .desc").html(split);
-
-        //글씨 쪼개기(여러개) each()
-
         $('.paraNav ul li').click(function (e) {
             e.preventDefault();
             let target = $(this);
             let index = target.index();
-            let section = $('.paraCont > section').eq(index);
+            let section = $('.content-item').eq(index);
             let offset = section.offset().top;
 
+            //화면 이동
             $('html, body').animate({
                 scrollTop: offset
             }, 600);
         });
+        //글씨 쪼개기(한개)
+        // let text = $('#section1 .desc').text();
+        // let split = text.split('').join('</span><span>');
+        // split = '<span>'+split+'</span>';
 
-        $(".content-item .desc").each(function(){
+        // $('#section1 .desc').html(split);
+
+        //글씨 쪼개기(여러개) each()
+        $('.content-item .desc').each(function (index, item) {
             let text = $(this).text();
-            let split = text.split('').join("</span><span aria-hidden='true'>");    // aria-hidden='true' 접근성
-            split = "<span aria-hidden='true'>"+ split +"</span>";
-            $(this).html(split).attr("aria-label", text);    //this = content-item .desc
+            let split = text.split('').join('</span><span aria-hidden="true">');
+            split = '<span aria-hidden="true">' + split + '</span>';
+
+            $(this).html(split).attr('aria-label', text);
         });
 
-
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
-            // if($(window).scrollTop()>$("#section1").offset.top){
-            //     $("#section1 .desc1").addClass("show");
+        $(window).scroll(function () {
+            // if($(window).scrollTop() > $('#section1').offset().top){
+            //     $('#section1 .desc').addClass('show');
             // } else {
-            //     $("#section1 .desc1").removeClass("show");
+            //     $('#section1 .desc').removeClass('show');
             // }
-            //each()
-            // $(".content-item .desc").each(function(){
-            //     if( $(window).scrollTop() >= $(this).offset().top - $(window).height()/2 ){
-            //         $(this).addClass("show");
+            // if($(window).scrollTop() > $('#section2').offset().top){
+            //     $('#section2 .desc').addClass('show');
+            // } else {
+            //     $('#section2 .desc').removeClass('show');
+            // }
+            // $('.content-item .desc').each(function(index,item){
+            //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
+            //         $(this).addClass('show');
             //     } else {
-            //         $(this).removeClass("show");
+            //         $(this).removeClass('show');
             //     }
             // });
 
             //한 글자씩 나타나기
-            // if( $(window).scrollTop() >= $("#section1").offset().top){
-            //     $("#section1 .desc span").each(i=>{
-            //         setTimeout(()=>{
-            //             $("#section1 .desc span").eq(i).addClass("show");
-            //         }, 50 * i)
-            //     })
+            // if($(window).scrollTop() > $('#section1').offset().top){
+            //     $('#section1 .desc span').each(i => {
+            //         setTimeout(() => {
+            //             $('#section1 .desc span').eq(i).addClass('show');
+            //         }, 50 * i);
+            //     });
             // }
 
-            //for문
-            // for( let i=1; i<=$(".content-item").length; i++ ){
-            //     if( $(window).scrollTop() >= $("#section"+i).offset().top){
-            //         $("#section"+i+" .desc span").each(i=>{
-            //             setTimeout(()=>{
-            //                 $("#section"+i+" .desc span").eq(i).addClass("show");
-            //             }, 50 * i)
-            //         })
+            //for
+            // for(let i=1; i<=$('.content-item').length;i++){
+            //     if($(window).scrollTop() > $('#section'+ i).offset().top){
+            //         $('#section'+ i+' .desc span').each(idx => {
+            //             setTimeout(() => {
+            //                 $('#section'+ i+' .desc span').eq(idx).addClass('show');
+            //             }, 50 * idx);
+            //         });
             //     }
             // }
 
             //each()
-            // $(".content-item").each(function(index){
+            // $('.content-item').each(function(index,item){
             //     if($(window).scrollTop() >= $(this).offset().top - $(window).height()/2){
-            //         $(this).find(".desc span").each(i => {
+            //         $(this).find('.desc span').each(idx => {
             //             setTimeout(()=>{
-            //                 $(this).find(".desc span").eq(i).addClass("show");
-            //             },50*i);
+            //                 $(this).find('.desc span').eq(idx).addClass('show');
+            //             },50*idx);
             //         });
             //     }
             // });
 
-            $(".content-item").each(function(index){
-                if( $(window).scrollTop() >= $(this).offset().top -2 ){
-                    gsap.to( $(this).find(".desc span"), {
+            //gsap
+            $('.content-item').each(function (index) {
+                if ($(window).scrollTop() >= $(this).offset().top) {
+                    gsap.to($(this).find(".desc span"), {
                         duration: .5,
                         opacity: 1,
-                        stagger: 0.05,
+                        stagger: .05,
                         y: 0,
-                        ease: "power3.out",
+                        scale: 1,
+                        ease: "power2.out",
                         rotation: 0,
-                        scale: 1
                     });
-                    $(".paraNav ul li").eq(index).addClass("active").siblings().removeClass("active");
-
+                    //메뉴
+                    $('.paraNav ul li').eq(index).addClass('active').siblings().removeClass('active');
                 }
+
             });
-            //출력
-            $(".paraScroll span").text(parseInt(scrollTop));
-
-            
         });
-
-            
-
-
     </script>
 </body>
 

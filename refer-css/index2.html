@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 
@@ -232,7 +231,7 @@
 <body>
     <header id="header">
         <h1>라인 중학교 1학년 코딩반</h1>
-        <strong>송지원</strong>
+        <strong>눈누난나</strong>
     </header>
     <!-- //header -->
 
@@ -240,49 +239,51 @@
         <h2>CSS <em>레퍼런스 북</em></h2>
         <ul class="page">
             <li><a href="../refer-html/index.html">HTML</a></li>
-            <li><a href="/refer-javascript/index.html">JAVASCRIPT</a></li>
+            <li><a href="../refer-css/index.html">CSS</a></li>
+            <li><a href="../javascript/javascriptRefer01.html">JAVASCRIPT</a></li>
         </ul>
         <section class="refer">
-            <h3><a href="index.html">Alphabet</a></h3>
+            <h3><a href="index.html">Alpahbet</a></h3>
             <h3 class="active"><a href="index2.html">Topics</a></h3>
             <h3><a href="transform.html">Transform</a></h3>
 
             <ul class="link">
                 <li><a href="#sample01">기본 선택자</a></li>
-                <li><a href="#sample02">계층 선택자</a></li>
-                <li><a href="#sample03">속성 선택자</a></li>
-                <li><a href="#sample04">가상 요소</a></li>
-                <li><a href="#sample05">가상 클래스</a></li>
-                <li><a href="#sample06">링크 가상 클래스</a></li>
-                <li><a href="#sample07">폼 클래스</a></li>
+                <li><a href="#sample01">계층 선택자</a></li>
+                <li><a href="#sample01">속성 선택자</a></li>
+                <li><a href="#sample01">가상 요소</a></li>
+                <li><a href="#sample01">가상 클래스</a></li>
+                <li><a href="#sample01">링크 가상 클래스</a></li>
+                <li><a href="#sample01">폼 클래스</a></li>
             </ul>
             <ul class="link">
-                <li><a href="#sample08">animation</a></li>
-                <li><a href="#sample09">background</a></li>
-                <li><a href="#sample10">box</a></li>
+                <li><a href="#sample01">animation</a></li>
+                <li><a href="#sample02">background</a></li>
+                <li><a href="#sample03">box</a></li>
             </ul>
 
-            <!-- sample01 -->
+
+            <!-- sample00 -->
             <h4>선택자</h4>
-            <div id="sample01">
+            <div id="sample00">
                 <table>
                     <colgroup>
-                        <col style="width: 10%;">
+                        <col style="width: 15%;">
                         <col style="width: 20%;">
-                        <col style="width: 20%;">
-                        <col style="width: 50%;">
+                        <col style="width: 15%;">
+                        <col style="width: 45%;">
                     </colgroup>
                     <thead>
                         <tr>
-                            <th></th>
+                            <th>선택자</th>
                             <th>종류</th>
                             <th>예시</th>
-                            <th>이름</th>
+                            <th>설명</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th rowspan="5" id="sample01">기본 선택자</th>
+                            <th rowspan="5">기본 선택자</th>
                             <td>태그 선택자</td>
                             <td>p {color:#fff;}</td>
                             <td>p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
@@ -295,7 +296,7 @@
                         <tr>
                             <td>아이디 선택자</td>
                             <td>#id {color:#fff;}</td>
-                            <td>id 아이디를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
+                            <td>id 아이드를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <td>그룹 선택자</td>
@@ -308,14 +309,14 @@
                             <td>전체 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="4" id="sample02">계층 선택자</th>
+                            <th rowspan="4">계층 선택자</th>
                             <td>하위 선택자(Descendant Selector)</td>
                             <td>div p {color:#fff;}</td>
                             <td>div 태그의 모든 자식 중 p 태그를 모두 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
                             <td>자식 선택자(Child Selector)</td>
-                            <td>iv > p {color:#fff;}</td>
+                            <td>div &gt; p {color:#fff;}</td>
                             <td>div 태그의 모든 자식 중 첫번째 자식 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
@@ -329,7 +330,7 @@
                             <td>div 태그의 인접한 형제 첫번째 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="7" id="sample03">속성 선택자</th>
+                            <th rowspan="7">속성 선택자</th>
                             <td>[name]</td>
                             <td>a[href]</td>
                             <td>a 태그 속성 중에 href가 있으면 선택합니다.</td>
@@ -337,7 +338,7 @@
                         <tr>
                             <td>[name="value"]</td>
                             <td>a[href="#header"]</td>
-                            <td>a 태그 href 속성의 값이 '#header'이면 선택합니다.</td>
+                            <td>a 태그 href 속성의 값이 '#header'이면 선택합니다. </td>
                         </tr>
                         <tr>
                             <td>[name~="value"]</td>
@@ -365,7 +366,7 @@
                             <td>a 태그 href 속성의 값이 'com'으로 끝나는 태그를 선택합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="5" id="sample04">가상 요소</th>
+                            <th rowspan="5">가상 요소</th>
                             <td>::first-line</td>
                             <td>p:first-line {color:#fff;}</td>
                             <td>문단의 첫 줄에 컬러색을 하얀색으로 변경합니다.</td>
@@ -391,7 +392,8 @@
                             <td>드래그로 선택하였을 경우 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="13" id="sample05">가상 클래스</th>
+                            <th rowspan="14">가상 클래스</th>
+                        <tr>
                             <td>:first-child</td>
                             <td>li:first-line {color:#fff;}</td>
                             <td>li 자식 요소 중 첫 번째 자식 요소에게 컬러를 하얀색으로 변경합니다.</td>
@@ -457,7 +459,8 @@
                             <td>컨텐츠 요소가 없는 요소의 컬러를 하얀색으로 변경합니다.</td>
                         </tr>
                         <tr>
-                            <th rowspan="4" id="sample06">링크 가상 클래스</th>
+                            <th rowspan="5">가상 클래스</th>
+                        <tr>
                             <td>:link</td>
                             <td>a:link {color:#fff;}</td>
                             <td>방문하지 않는 링크의 글씨 색을 하얀색으로 설정합니다.</td>
@@ -477,8 +480,9 @@
                             <td>a:active {color:#fff;}</td>
                             <td>링크가 활성화되었을 경우 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
+
                         <tr>
-                            <th rowspan="4" id="sample07">폼 클래스</th>
+                            <th rowspan="4">폼 관련</th>
                             <td>:checked</td>
                             <td>input:checked {color:#fff;}</td>
                             <td>input 태그가 체크되었을 때 글씨 색을 하얀색으로 변경합니다.</td>
@@ -498,16 +502,284 @@
                             <td>input:disabled {color:#fff;}</td>
                             <td>input 태그가 사용 가능하지 않으면 글씨 색을 하얀색으로 변경합니다.</td>
                         </tr>
+                        <tr>
+                            <th rowspan="53">CSS Selector</th>
+                        <tr>
+                            <td>.</td>
+                            <td>.class {color:#fff;}</td>
+                            <td>클래스 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td>.id {color:#fff;}</td>
+                            <td>아이디 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>* {color:#fff;}</td>
+                            <td>전체 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element</td>
+                            <td>p {color:#fff;}</td>
+                            <td>요소 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element, element</td>
+                            <td>p, div {color:#fff;}</td>
+                            <td>그룹 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element element</td>
+                            <td>div p {color:#fff;}</td>
+                            <td>후손 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element &gt; element</td>
+                            <td>div &gt; p {color:#fff;}</td>
+                            <td>이웃 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element + element</td>
+                            <td>div &gt; p {color:#fff;}</td>
+                            <td>자식 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>element ~ element</td>
+                            <td>div ~ p {color:#fff;}</td>
+                            <td>형제 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute]</td>
+                            <td>p [class] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute=value]</td>
+                            <td>p [class="white"] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute~=value]</td>
+                            <td>p [class~="white"] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute^=value]</td>
+                            <td>p [attr^="w"] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute*=value]</td>
+                            <td>p [attr*="white"] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>[attribute$=value]</td>
+                            <td>p [attr$="w"] {color:#fff;}</td>
+                            <td>속성 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>:link</td>
+                            <td>a:link {color:#fff;}</td>
+                            <td>방문하지 않은 링크</td>
+                        </tr>
+                        <tr>
+                            <td>:visited</td>
+                            <td>a:visited {color:#fff;}</td>
+                            <td>방문한 링크</td>
+                        </tr>
+                        <tr>
+                            <td>:hover</td>
+                            <td>a:hover {color:#fff;}</td>
+                            <td>마우스 오버 링크</td>
+                        </tr>
+                        <tr>
+                            <td>:active</td>
+                            <td>a:active {color:#fff;}</td>
+                            <td>활성화된 링크</td>
+                        </tr>
+                        <tr>
+                            <td>:focus</td>
+                            <td>a:focus {color:#fff;}</td>
+                            <td>포커스된 링크</td>
+                        </tr>
+                        <tr>
+                            <td>:root</td>
+                            <td>a:root {color:#fff;}</td>
+                            <td>문서의 루트 요소</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-child(n)</td>
+                            <td>p:nth-child(3) {color:#fff;}</td>
+                            <td>n번째 스타일 적용</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-child(n)</td>
+                            <td>p:nth-last-child(n) {color:#fff;}</td>
+                            <td>끝에서 n번째 스타일 적용</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-of-type(n)</td>
+                            <td>p:nth-of-type(n) {color:#fff;}</td>
+                            <td>n번째 스타일 적용</td>
+                        </tr>
+                        <tr>
+                            <td>:nth-last-of-type(n)</td>
+                            <td>p:nth-last-of-type(n) {color:#fff;}</td>
+                            <td>끝에서 n번째 스타일 적용</td>
+                        </tr>
+
+                        <tr>
+                            <td>::first-letter</td>
+                            <td>p::first-letter {color:#fff;}</td>
+                            <td>첫 번째 문장</td>
+                        </tr>
+                        <tr>
+                            <td>::first-line</td>
+                            <td>p::first-line {color:#fff;}</td>
+                            <td>첫 번째 줄</td>
+                        </tr>
+
+                        <tr>
+                            <td>:first-of-type</td>
+                            <td>p:first-of-type {color:#fff;}</td>
+                            <td>첫 번째 요소의 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>:last-of-type</td>
+                            <td>p:last-of-type {color:#fff;}</td>
+                            <td>마지막 번째 요소의 선택자</td>
+                        </tr>
+                        <tr>
+                            <td>:only-of-type</td>
+                            <td>p:only-of-type {color:#fff;}</td>
+                            <td>해당 요소가 유일한 요소의 선택자</td>
+                        </tr>
+
+                        <tr>
+                            <td>:first-child</td>
+                            <td>p:first-child {color:#fff;}</td>
+                            <td>첫 번째 자식요소</td>
+                        </tr>
+                        <tr>
+                            <td>:last-child</td>
+                            <td>p:last-child {color:#fff;}</td>
+                            <td>마지막 자식요소</td>
+                        </tr>
+                        <tr>
+                            <td>:only-child</td>
+                            <td>p:only-child {color:#fff;}</td>
+                            <td>자식요소가 유일하게 하나일 때</td>
+                        </tr>
+                        <tr>
+                            <td>:only-of-child</td>
+                            <td>p:only-of-child {color:#fff;}</td>
+                            <td>해당 요소가 유일한 요소 일 때</td>
+                        </tr>
+                        <tr>
+                            <td>:target</td>
+                            <td>:target {color:#fff;}</td>
+                            <td>연결</td>
+                        </tr>
+                        <tr>
+                            <td>:enabled</td>
+                            <td>input[type="text"]:enabled {color:#fff;}</td>
+                            <td>사용할 수 있는 상태</td>
+                        </tr>
+                        <tr>
+                            <td>:disabled</td>
+                            <td>input[type="text"]:disabled {color:#fff;}</td>
+                            <td>사용할 수 없는 상태</td>
+                        </tr>
+                        <tr>
+                            <td>:checked</td>
+                            <td>input:checked {color:#fff;}</td>
+                            <td>체크된 상태</td>
+                        </tr>
+                        <tr>
+                            <td>:in-range</td>
+                            <td>input:in-range {color:#fff;}</td>
+                            <td>인풋 요소의 라인을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:out-of-range</td>
+                            <td>input:out-of-range {color:#fff;}</td>
+                            <td>인풋 요소의 아웃라인을 설정합니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:valid</td>
+                            <td>input:valid {color:#fff;}</td>
+                            <td>인풋 요소가 유효할 때 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:invalid</td>
+                            <td>input:invalid {color:#fff;}</td>
+                            <td>인풋 요소가 유효하지 않을 때 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:optional</td>
+                            <td>input:optional {color:#fff;}</td>
+                            <td>인풋 요소의 옵션에 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:read-only</td>
+                            <td>input:read-only {color:#fff;}</td>
+                            <td>인풋 요소를 읽었을 때 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:read-write</td>
+                            <td>input:read-write {color:#fff;}</td>
+                            <td>인풋 요소를 쓸 때 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:input:required</td>
+                            <td>input:required {color:#fff;}</td>
+                            <td>인풋 요소가 필수 일 때 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:lang(language)</td>
+                            <td>p:lang(it) {color:#fff;}</td>
+                            <td>언어설정에 따라 설정됩니다.</td>
+                        </tr>
+                        <tr>
+                            <td>:empty</td>
+                            <td>p:empty {color:#fff;}</td>
+                            <td>빈 상태</td>
+                        </tr>
+                        <tr>
+                            <td>::before</td>
+                            <td>p::before {content: "content";}</td>
+                            <td>요소 앞에 내용 추가</td>                 
+                            </tr>
+                        <tr>
+                            <td>::after</td>
+                            <td>p::after {content: "content";}</td>
+                            <td>요소 뒤에 내용 추가</td>
+                        </tr>
+                        <tr>
+                            <td>::selection</td>
+                            <td>::selection {color:#fff;}</td>
+                            <td>마우스로 선택했을 때</td>
+                        </tr>
+                        <tr>
+                            <td>:not(seletor)</td>
+                            <td>:not(p) {color:#fff;}</td>
+                            <td>제외한</td>
+                        </tr>
+
+
+
 
                     </tbody>
                 </table>
             </div>
-            <!-- //sample01 -->
+            <!-- //sample00 end -->
 
 
             <!-- sample01 -->
             <h4>애니메이션</h4>
-            <div id="sample08">
+            <div id="sample01">
                 <table>
                     <colgroup>
                         <col style="width: 10%;">
@@ -608,7 +880,7 @@
 
             <!-- sample02 -->
             <h4>백그라운드</h4>
-            <div id="sample09">
+            <div id="sample02">
                 <table>
                     <colgroup>
                         <col style="width: 10%">
@@ -671,7 +943,7 @@
 
             <!-- sample03 -->
             <h4>박스 모델</h4>
-            <div id="sample10">
+            <div id="sample01">
                 <table>
                     <colgroup>
                         <col style="width: 10%;">
@@ -926,6 +1198,8 @@
                 </table>
             </div>
             <!-- //sample03 -->
+
+
         </section>
     </main>
     <!-- //contents -->

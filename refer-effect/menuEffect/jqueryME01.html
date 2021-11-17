@@ -9,128 +9,137 @@
 
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/highlight.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style>
         #tab-menu {
             max-width: 600px;
-            background: rgb(209, 209, 209, 0.8);
+            background-color:rgba(231, 231, 231, 0.2);
             position: absolute;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
             border-radius: 5px;
-            font-family: "NEXONLv2Gothic";
-            color: #fff;
             overflow: hidden;
+            font-family: 'NEXONLv1Gothic';
+            color: #fff;
         }
-
         .tab-btn {}
-
         .tab-btn ul {
             display: flex;
         }
-
         .tab-btn li {
             width: 20%;
-            list-style: none;
             text-align: center;
+            list-style: none;
         }
-
         .tab-btn li a {
+            display: block;
             color: #fff;
             text-decoration: none;
-            padding: 18px 15px 15px 15px;
-            display: block;
+            padding: 15px;
         }
-
         .tab-btn li.active a {
-            border-bottom: 3px solid rgb(255, 83, 83);
-            color: rgb(0, 0, 0);
+            border-bottom: 3px solid #000;
+            color: #000;
         }
-
         .tab-cont {
-            background: rgba(255, 255, 255, 0.8);
+            background: #fff;
             padding: 20px;
-            color: #222;
+            color: #000;
         }
-
-        .tab-cont>div {
+        .tab-cont > div {
             display: none;
         }
-
-        .tab-cont>div:first-child {
+        .tab-cont > div:first-child {
             display: block;
         }
-
-        .tab-cont>div h2 {
-            margin-bottom: 10px;
+        .tab-cont > div h2 {
+        margin-bottom: 10px;
         }
-
-        .tab-cont>div p {
+        .tab-cont > div p {
             line-height: 1.6;
         }
 
-        @media (max-width: 800px){
-            #tab-menu {
-                width: 90%;
-            }
-            .tab-btn li a {
-                padding: 13px 10px 10px 10px;
-                font-size: 14px;
-            }
-            .tab-cont > div h2 {
-                font-size: 16px;
-            }
-            .tab-cont > div p {
-                font-size: 14px;
-            }
-        }
-    </style>
+		@media(max-width: 900px) {
+			#tab-menu {
+				width: 80%;
+			}
 
+			.tab-cont {
+				padding: 30px 20px 30px 20px;
+			}
+
+			.tab-cont>div h2 {
+				font-size: 22px;
+			}
+
+			.tab-cont>div p {
+				font-size: 14px;
+				line-height: 1.8;
+			}
+
+			.tab-btn {
+				font-size: 14px;
+			}
+		}
+    </style>
 </head>
 
-<body class="bg bg8">
-
+<body class="bg bg10">
     <!-- contents -->
     <main>
         <div id="tab-menu">
             <div class="tab-btn">
                 <ul>
-                    <li class="active"><a href="#">꽃말1</a></li>
-                    <li><a href="#">꽃말2</a></li>
-                    <li><a href="#">꽃말3</a></li>
-                    <li><a href="#">꽃말4</a></li>
-                    <li><a href="#">꽃말5</a></li>
+                    <li><a herf="#">윤동주1</a></li>
+                    <li><a herf="#">윤동주2</a></li>
+                    <li><a herf="#">윤동주3</a></li>
+                    <li><a herf="#">윤동주4</a></li>
+                    <li><a herf="#">윤동주5</a></li>
                 </ul>
+
             </div>
             <div class="tab-cont">
                 <div>
-                    <h2>파피오페딜럼</h2>
-                    <p>당신의 꿈이 이루어지기를 바랍니다</p>
+                    <h2>별헤는 밤.윤동주</h2>
+                    <p>나는 아무 걱정도 없이가을 속의 별들을 다 헤일듯 합니다.</p>
                 </div>
                 <div>
-                    <h2>로즈마리</h2>
-                    <p>나를 생각해요<br>기억, 영원한 사랑<br>아름다운 추억, 행복한 추억</p>
+                    <h2>계나는 아무 걱정도 없이 가을 속의 별들을 다 헤일듯 합니다</h2>
+                    <p>가슴속에 하나 둘 새겨지는 별을 이제 다 못헤는 것은 쉬이 아침이 오는 까닭이오.</p>
                 </div>
                 <div>
-                    <h2>망초</h2>
-                    <p>화해<br>가까이 있는 사람을 행복하게 해주고, 멀리 있는 사람은 가까이 오게 해준다</p>
+                    <h2>아직 나의 청춘이 다하지 않는 까닭입니다.</h2>
+                    <p>별 하나에 추억과
+                        별 하나에 사랑과
+                        별 하나에 쓸쓸함과
+                        별 하나에 동경과
+                        별 하나에 시와
+                        별 하나에 어머니, 어머니.</p>
                 </div>
                 <div>
-                    <h2>벚꽃</h2>
-                    <p>아름다운 정신, 정신적 사랑<br>삶의 아름다움과 덧없음<br>가장 아름다운 순간</p>
+                    <h2>
+                        어머님, 그리고 당신은 멀리 북간도에 계십니다.</h2>
+                    <p>나는 무엇인지 그리워 이 많은 별빛이 나린 언덕우에 내 이름자를 써 보고 흙으로 덮어 버리었읍니다.</p>
                 </div>
                 <div>
-                    <h2>델피니움</h2>
-                    <p>당신은 왜 나를 싫어합니까<br>제 마음을 헤아려주세요<br>경솔함</p>
+                    <h2>단은 밤을 새워 우는 벌레는부끄러운 이름을 슬퍼하는 까닭입니다.</h2>
+                    <p>그러나 겨울이 지나고 나의 별에도 봄이 오면
+                        무덤우에 파란 잔디가 피어나듯이
+                        내 이름자 묻힌 언덕 위에도
+                        자랑처럼 풀이 무성할 게외다.</p>
                 </div>
             </div>
         </div>
     </main>
-    <!-- //contents-->
+    <!-- //contents end -->
+
+
+
 
     <!-- info -->
     <div class="info">
-        <h1><a href="index.html">jQuery Menu Effect01</a></h1>
+        <h1><a href="index.html">jquery Menu Effect01</a></h1>
         <p>메뉴 이펙트 - 탭 메뉴</p>
     </div>
 
@@ -150,12 +159,13 @@
             <li><a href="jqueryME05.html">5</a></li>
         </ul>
     </div>
-
     <div class="info bottom">
-        <button>소스 보기</button>
+        <button>소스보기</button>
     </div>
+    <!-- //info end -->
 
-    <!-- #1 -->
+
+    <!-- modal -->
     <div id="modal">
         <div class="modal-bg">
             <div class="modal-cont">
@@ -169,159 +179,167 @@
                     </div>
                     <div class="view-title">
                         <ul>
-                            <li class="active"><a href="#">Html</a></li>
+                            <li class="active"><a href="#">html</a></li>
                             <li><a href="#">CSS</a></li>
-                            <li><a href="#">Jquery</a></li>
+                            <li><a href="#">jQuery</a></li>
                         </ul>
                     </div>
                     <div class="view-cont">
                         <div class="html">
-                            <pre><code class="language-html">&lt;main&gt;
-&lt;div id="tab-menu"&gt;
-    &lt;div class="tab-btn"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#"&gt;꽃말1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;꽃말2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;꽃말3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;꽃말4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;꽃말5&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;div class="tab-cont"&gt;
-    &lt;div&gt;
-        &lt;h2&gt;파피오페딜럼&lt;/h2&gt;
-        &lt;p&gt;당신의 꿈이 이루어지기를 바랍니다&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;h2&gt;로즈마리&lt;/h2&gt;
-        &lt;p&gt;나를 생각해요&lt;br&gt;기억, 영원한 사랑&lt;br&gt;아름다운 추억, 행복한 추억&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;h2&gt;망초&lt;/h2&gt;
-        &lt;p&gt;화해&lt;br&gt;가까이 있는 사람을 행복하게 해주고, 멀리 있는 사람은 가까이 오게 해준다&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;h2&gt;벚꽃&lt;/h2&gt;
-        &lt;p&gt;아름다운 정신, 정신적 사랑&lt;br&gt;삶의 아름다움과 덧없음&lt;br&gt;가장 아름다운 순간&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-        &lt;h2&gt;델피니움&lt;/h2&gt;
-        &lt;p&gt;당신은 왜 나를 싫어합니까&lt;br&gt;제 마음을 헤아려주세요&lt;br&gt;경솔함&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-&lt;/main&gt;
+<pre><code class="language-html">
+    &lt;main&gt;
+        &lt;div id="tab-menu"&gt;
+            &lt;div class="tab-btn"&gt;
+                &lt;ul&gt;
+                    &lt;li class="active"&gt;&lt;a herf="#"&gt;동주1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a herf="#"&gt;동주2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a herf="#"&gt;동주3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a herf="#"&gt;동주4&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a herf="#"&gt;동주5&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class="tab-cont"&gt;
+                &lt;div&gt;
+                    &lt;h2&gt;별헤는 밤.윤동주&lt;/h2&gt;
+                    &lt;p&gt;나는 아무 걱정도 없이가을 속의 별들을 다 헤일듯 합니다.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h2&gt;계나는 아무 걱정도 없이 가을 속의 별들을 다 헤일듯 합니다&lt;/h2&gt;
+                    &lt;p&gt;가슴속에 하나 둘 새겨지는 별을 이제 다 못헤는 것은 쉬이 아침이 오는 까닭이오.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h2&gt;아직 나의 청춘이 다하지 않는 까닭입니다.&lt;/h2&gt;
+                    &lt;p&gt;별 하나에 추억과
+                        별 하나에 사랑과
+                        별 하나에 쓸쓸함과
+                        별 하나에 동경과
+                        별 하나에 시와
+                        별 하나에 어머니, 어머니.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h2&gt;
+                        어머님, 그리고 당신은 멀리 북간도에 계십니다.&lt;/h2&gt;
+                    &lt;p&gt;나는 무엇인지 그리워 이 많은 별빛이 나린 언덕우에 내 이름자를 써 보고 흙으로 덮어 버리었읍니다.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div&gt;
+                    &lt;h2&gt;단은 밤을 새워 우는 벌레는부끄러운 이름을 슬퍼하는 까닭입니다.&lt;/h2&gt;
+                    &lt;p&gt;그러나 겨울이 지나고 나의 별에도 봄이 오면
+                        무덤우에 파란 잔디가 피어나듯이
+                        내 이름자 묻힌 언덕 위에도
+                        자랑처럼 풀이 무성할 게외다.&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
 </code></pre>
                         </div>
                         <div class="css">
-                            <pre><code class="language-css">#tab-menu {
-    max-width: 600px;
-    background: rgb(209, 209, 209, 0.8);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 5px;
-    font-family: "NEXONLv2Gothic";
-    color: #fff;
-    overflow: hidden;
-}
-
-.tab-btn {}
-
-.tab-btn ul {
-    display: flex;
-}
-
-.tab-btn li {
-    width: 20%;
-    list-style: none;
-    text-align: center;
-}
-
-.tab-btn li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 18px 15px 15px 15px;
-    display: block;
-}
-
-.tab-btn li.active a {
-    border-bottom: 3px solid rgb(255, 83, 83);
-    color: rgb(0, 0, 0);
-}
-
-.tab-cont {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    color: #222;
-}
-
-.tab-cont>div {
-    display: none;
-}
-
-.tab-cont>div:first-child {
-    display: block;
-}
-
-.tab-cont>div h2 {
-    margin-bottom: 10px;
-}
-
-.tab-cont>div p {
-    line-height: 1.6;
-}
+<pre><code class="language-css">
+    #tab-menu {
+        max-width: 600px;
+        background: rgb(173, 173, 173);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: 'NEXONLv2Gothic';
+        color: #fff;
+    }
+    .tab-btn ul {
+        display: flex;
+    }
+    .tab-btn li {
+        width: 20%;
+        list-style: none;
+        text-align: center;
+    }
+    .tab-btn li a {
+        color: #fff;
+        text-decoration: none;
+        padding: 18px 15px 15px 15px;
+        display: block;
+    }
+    .tab-btn li.active a {
+        border-bottom: 3px solid #000;
+        color: #000;
+    }
+    .tab-cont {
+        background: #fff;
+        padding: 20px;
+        color: #222;
+    }
+    .tab-cont > div {
+        display: none;
+    } 
+    .tab-cont > div:first-child {
+        display: block;
+    }
+    .tab-cont > div h2 {
+        margin-bottom: 10px;
+    }
+    .tab-cont > div p {
+        line-height: 1.6;
+    }
 </code></pre>
+
                         </div>
-                        <div class="jquery">
-                            <pre><code class="language-javascript">const tabBtn = $(".tab-btn ul li");
-const tabCont = $(".tab-cont > div");
+                        <div  class="javascript">
+<pre><code class="language-javascript">
+    const tabBtn = $(".tab-btn ul li"); //5개의 버튼을 변수에 할당
+    const tabCont = $(".tab-cont > div"); //5개의 컨텐츠 변수에 할당
 
-tabBtn.click(function () {
-    let target = $(this);
-    tabBtn.removeClass("active");
-    target.addClass("active");
+    tabBtn.click(function(){
+        let target = $(this);
+        tabBtn.removeClass("active");
+        target.addClass("active");
 
-    let index = target.index();
-    tabCont.css("display", "none");
-    tabCont.eq(index).css("display", "block");
-});
+        let index = target.index(); //번호
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+
+    });
+    
 </code></pre>
-                        </div>
+                    </div>
                     </div>
                 </div>
-                <button>닫기</button>
+
+                <button>close</button>
             </div>
         </div>
     </div>
-    <!-- //#1 -->
-    <!-- //info-->
+    <!-- //modal end -->
 
-
-
+    <!-- # 스크립트 -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/custom.js"></script>
     <script src="../assets/js/highlight.min.js"></script>
     <script>
-        window.onload = function () {
-            modal();
-            agentCheck();
-        }
-        
-        const tabBtn = $(".tab-btn ul li");     //5개의 버튼을 변수에 할당
-        const tabCont = $(".tab-cont > div");   //5개의 컨텐츠를 변수에 할당
+        const tabBtn = $(".tab-btn ul li"); //5개의 버튼을 변수에 할당
+        const tabCont = $(".tab-cont > div"); //5개의 컨텐츠 변수에 할당
+
+        //1. 버튼을 클릭하면 클릭한 버튼한테 active 추가
+        //2. 버튼을 클릭하면 클릭한 버튼은 active 제거
+        //3. 버튼 인덱스 설정
+        //4. 1번째 버튼은 1번째 컨텐츠 연결 (각각 짝이 맞는)
+        //5. 모든 컨텐츠를 안보이게 설정
+        //6. 클릭한 버튼의 해당 컨텐츠만 보이게 설정
 
         tabBtn.click(function(){
             let target = $(this);
             tabBtn.removeClass("active");
             target.addClass("active");
 
-            let index = target.index();
+            let index = target.index(); //번호
             tabCont.css("display","none");
             tabCont.eq(index).css("display","block");
+
         });
     </script>
-    </script>
+
 </body>
 
 </html>

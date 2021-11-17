@@ -1,356 +1,112 @@
-body {
-    background: #232323 url(../img/mainbg.png) repeat-x 50% 0/3380px 1652px;
-    font-family: "nanumsquare", sans-serif;
+body { 
+    background-color: rgb(46, 46, 46);
 }
 
 
 
-
-
-/*헤더*/
-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 100000;
-    background-color: rgba(0,0,0,0.5);
+/* hover */
+.hover01 {
+    font-family: 'NanumSquare';
+    padding: 100px 0;
 }
 
-header .headerWrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-header .logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 30px;
-    margin-left: 20px;
-}
-
-
-header .menu ul li {
-    display: inline-block;
-    margin: 0 30px;
-    padding: 15px;
-}
-
-header .menu ul li a {
-    color: #fff;
-    font-weight: 400;
-    font-size: 15px;
-}
-
-header .login a {
-    vertical-align: top;
-    color: #fff;
-    padding: 10px 20px;
-    border: 1px solid #fff;
-    border-radius: 20px;
-    font-family: "nanumsquare", sans-serif;
-    font-size: 11px;
-
-}
-.main1 {
-    width: 1024px;
-    margin: 0 auto;
-}
-.main2 {
-    width: 1024px;
-    margin: 0 auto;
-}
-.navertype {
-    margin: 150px 0;
-}
-
-/*1*/
-.navertype1 .navertypeWrap {
-    font-family: "nanumsquare", sans-serif;
-    color: #fff;
-}
-.navertype1 .title2 em {
-    margin: 75px 0 30px;
-    font-weight: 700;
-    font-size: 44px;
-    line-height: 48px;
-}
-.navertype1 .desc {
-    font-size: 23px;
-    line-height: 44px;
-}
-/*1*/
-
-/*2 슬라이드*/
-.swiper-inner {
-    padding: 50px 0 0 70px;
-}
-.swiper-inner .arrow {
-    width: 16px;
-    height: 13px;
-}
-em {
-    display: block;
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 19px;
-    margin-bottom: 15px;
-    color: hsla(0, 0%, 100%, .6);
-}
-.swiper-inner h2 {
-    font-size: 35px;
-    line-height: 50px;
-    font-weight: 700;
-    letter-spacing: -.6px;
-    color: #fff;
-}
-.swiper-inner p {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-    letter-spacing: -.2px;
-    color: #fff;
-}
-/* //2 */
-
-/* 3 */
-.navertype3 {}
-
-.navertype3 .navertypeWrap {
-    display: flex;
-    justify-content: space-between;
-}
-.navertype3 .navertypeWrap .contents {
-    width: 482px;
-}
-.navertype3 .navertypeWrap .contents .title {
-    display: block;
+.hover h2 {
     font-size: 50px;
-    font-weight: 800;
-    line-height: 65px;
-    text-align: left;
-    color: #6d8bff;
-    margin-bottom: 72px;
+    font-weight: 500;
+    margin-bottom: 36px;
 }
-.navertype3 .navertypeWrap .content {
-    position: relative;
-}
-.navertype3 .navertypeWrap .content1 {
-    height: 860px;
-}
-.navertype3 .navertypeWrap .content2 {
-    height: 560px;
-}
-.navertype3 .navertypeWrap .content3 {
-    margin-top: 35px;
-    height: 541px;
-}
-.navertype3 .navertypeWrap .contents .content {
-    background-image: linear-gradient(140deg, #36373a 6%, #242628 80%);
-    border-radius: 15px;
+
+.hoversec.hover-wrap {
     overflow: hidden;
-    width: 100%;
-    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
 }
-.navertype3 .navertypeWrap .contents .content a {
-    display: block;
-    height: 100%;
-}
-.navertype3 .navertypeWrap .contents .content .card {
-    padding: 52px 50px 0;
-}
-.navertype3 .navertypeWrap .contents .content .conttit {
-    display: block;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 19px;
-    margin-bottom: 10px;
-}
-.navertype3 .navertypeWrap .contents .content .desc {
-    display: block;
-    color: #fff;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 50px;
-    margin-bottom: 18px;
-}
-.navertype3 .navertypeWrap .contents .content .descLink {
-    display: block;
-    color: #6d8bff;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
-}
-.navertype3 .navertypeWrap .contents .content img {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    vertical-align: top;
-}
-.main2 {
-    padding: 150px 0 0;
-}
-.navertype4 {
-    margin: 0 0 140px 0;
-}
-.navertype4 .title {
-    display: block;
-    color: #5cf0c6;
-    font-size: 52px;
-    font-weight: 800;
-    line-height: 70px;
-    text-align: center;
-}
-.navertype4 .navertypeWrap {
-    margin: 50px 0;
-}
-.main2 .navertype4 .contents {
-    display: inline-block;
+
+.hover01 .hover {
     position: relative;
+    float: left;
+    width: 590px;
+    height: 385px;
     overflow: hidden;
-    width: 482px;
-    height: 466px;
-    border-radius: 15px;
 }
-.navertype4 .navertypeWrap .navertype41 {
-    background-image: url(../img/abcbg1.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 48%;
+.hover01 .hover .image1 {
+    transform: scale(1);
+    transition: opacity 0.4s transform 0.4s;
 }
-.navertype4 .navertypeWrap .navertype42 {
-    background-color: #5470f8;
-    margin-left: 32px;
-    width: 48%;
 
+.hover01 .hover:hover .image1 {
+    transform: scale(1.1);
 }
-.navertype4 .navertypeWrap .navertype43 {
-    background-image: url(../img/abcbg2.png);
-    background-color: #6452c7;
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 328px;
-    margin-top: 32px;
+
+.hover01 .hover .image2 {
+    opacity: 0.8;
+    transform: scale(1);
+    transition: opacity 0.4s transform 0.4s;
 }
-.navertype4 .navertypeWrap .contents .content {
-    padding: 50px 50px 0;
+.hover01 .hover:hover .image2 {
+    opacity: 1;
+    transform: scale(1.1);
 }
-.navertype4 .navertypeWrap .contents img {
+.hover01 .hover .image3 {
+    opacity: 0.8;
+    transform: scale(1);
+    transition: opacity 0.4s transform 0.4s;
+}
+
+.hover01 .hover:hover .image3 {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.hover01 .hover:first-child {
+    margin-right: 20px;
+}
+
+.hover01 .hover .hover-cont {
     position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-.navertype4 .navertypeWrap .navertype43 img {
-    width: 609px;
-    height: 237px;
-    left: auto;
-    bottom: 10px;
-}
-
-.navertype4 .navertypeWrap .contents .content em {
-    display: block;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 21px;
-}
-
-.navertype4 .navertypeWrap .contents .content strong {
-    display: block;
+    left: 30px;
+    bottom: 30px;
     color: #fff;
-    padding-top: 10px;
-    font-size: 35px;
-    font-weight: 700;
-    line-height: 50px;
 }
 
-.navertype4 .navertypeWrap .contents .content span {
-    color: #d1ffe6;
-    display: block;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 26px;
+.hover01 .hover .hover-title {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
 
-.navertype5 {
-    padding: 50px 0 200px;
-    text-align: center;
+.hover01 .hover .hover-desc {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding-right: 30%;
+    word-break: keep-all;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
 }
 
-.navertype5 .title {
-    display: block;
-    color: #fff;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 70px;
-    margin-bottom: 30px;
-}
 
-.navertype5 a {
+.hover01 .hover .hover-btn {
     display: inline-block;
-    color: #000;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 70px;
-    width: 300px;
-    border-radius: 41px;
-    background-color: #fff;
-}
-
-.navertype5 a:last-child {
-    background-color: #4b65f7;
     color: #fff;
-    margin-left: 20px;
+    margin-top: 10px;
+    font-size: 18px;
+
 }
 
-button {
-    border: 0;
-    outline: 0;
-}
-
-
-footer {
-    background-color: #000;
-    text-align: center;
-}
-footer .top {
-    width: 100%;
-    height: 54px;
-    background: #000;
-    color: #666;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-footer .footerss {
-    padding-bottom: 50px;
-}
-
-footer .footerss .footerLogin {
+.hover01 .hover2 {
+    margin-top: 50px;
     display: inline-block;
-    width: 75px;
-    color: #999;
-    background: rgb(56, 56, 56);
-    border-radius: 4px;
-    font-size: 13px;
-    line-height: 30px;
-    margin: 30px 0;
-    text-align: center;
+    width: 1230px;
 }
 
-footer .footerss .Copyright {
-    font-size: 13px;
-    line-height: 18px;
-    color: #666;
-    margin-bottom: 10px;
-}
+.hover01 .hover2 .hover-img {
 
-/*우ㅏ아앙앙아악*/
+}
+.hover01 .hover2 .hover-cont {}
+.hover01 .hover2 .hover-title {}
+.hover01 .hover2 .hover-desc {}
+
+
+
+
+

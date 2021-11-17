@@ -1,344 +1,400 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Effect</title>
-    ​
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/highlight.css">
-    ​
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Effect</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/highlight.css">
+
+  <style>
+
+  </style>
 </head>
 
 <body class="parallax">
-    ​
-    <!-- header -->
-    <header class="paraInfo">
-        <h1><a href="index.html">Parallax Effect01 - jQuery</a></h1>
-        <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
-    </header>
-    <!-- //header -->
-    ​
-    <!-- main -->
-    <main>
-        <div class="paraScroll">scrollTop() : <span>0</span></div>
 
-        <div class="paraInfo2">
-            <ul>
-                <li>section1 offset() : <span class="offset1">0</span></li>
-                <li>section2 offset() : <span class="offset2">0</span></li>
-                <li>section3 offset() : <span class="offset3">0</span></li>
-                <li>section4 offset() : <span class="offset4">0</span></li>
-                <li>section5 offset() : <span class="offset5">0</span></li>
-                <li>section6 offset() : <span class="offset6">0</span></li>
-                <li>section7 offset() : <span class="offset7">0</span></li>
-                <li>section8 offset() : <span class="offset8">0</span></li>
-                <li>section9 offset() : <span class="offset9">0</span></li>
-            </ul>
-        </div>
+  <!-- header -->
+  <header class="paraInfo">
+    <h1><a href="index.html">Parallax Effect01 - jQuery</a></h1>
+    <p>패랠랙스 스크로링 효과 - 메뉴 이동</p>
+  </header>
+  <!-- //header -->
 
-        <div class="paraNav">
-            <ul>
-                <li class="active"><a href="#section1">s1</a></li>
-                <li><a href="#section2">s2</a></li>
-                <li><a href="#section3">s3</a></li>
-                <li><a href="#section4">s4</a></li>
-                <li><a href="#section5">s5</a></li>
-                <li><a href="#section6">s6</a></li>
-                <li><a href="#section7">s7</a></li>
-                <li><a href="#section8">s8</a></li>
-                <li><a href="#section9">s9</a></li>
-            </ul>
-        </div>
-        <!-- //paraNav -->
 
-        <div class="paraCont">
-            <section id="section1" class="content-item">
-                <span class="num">01</span>
-                <h2 class="title">Section1</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">Doesn't this guitar<br>sound so good?</p>
-            </section>
-            <!-- //section1 -->
-            ​
-            <section id="section2" class="content-item">
-                <span class="num">02</span>
-                <h2 class="title">Section2</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">Mmm, mmm, mmm<br>So sweet</p>
-            </section>
-            <!-- //section2 -->
-            ​
-            <section id="section3" class="content-item">
-                <span class="num">03</span>
-                <h2 class="title">Section3</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">Living in this big blue world</p>
-            </section>
-            <!-- //section3 -->
-            ​
-            <section id="section4" class="content-item">
-                <span class="num">04</span>
-                <h2 class="title">Section4</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">With my head up<br>in outer space</p>
-            </section>
-            <!-- //section4 -->
-            ​
-            <section id="section5" class="content-item">
-                <span class="num">05</span>
-                <h2 class="title">Section5</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
-            </section>
-            <!-- //section5 -->
-            ​
-            <section id="section6" class="content-item">
-                <span class="num">06</span>
-                <h2 class="title">Section6</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
-            </section>
-            <!-- //section6 -->
-            ​
-            <section id="section7" class="content-item">
-                <span class="num">07</span>
-                <h2 class="title">Section7</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">When I see trouble<br>come my way</p>
-            </section>
-            <!-- //section7 -->
-            ​
-            <section id="section8" class="content-item">
-                <span class="num">08</span>
-                <h2 class="title">Section8</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">I be makin' lemonade</p>
-            </section>
-            <!-- //section8 -->
-            ​
-            <section id="section9" class="content-item">
-                <span class="num">09</span>
-                <h2 class="title">Section9</h2>
-                <figure class="img-wrap">
-                    <div class="img"></div>
-                </figure>
-                <p class="desc">I know I'll be A-O, A-O-K</p>
-            </section>
-            <!-- //section9 -->
-        </div>
-        <!-- //contents -->
-    </main>
-    <!-- //main -->
-    ​
-    <footer class="paraFooter">
-        <h1>Parallax <em>Scrolling</em></h1>
-        <div class="footerInfo">
-            <h2>javascript</h2>
-            <ul>
-                <li><a href="javascriptPE01.html">1</a></li>
-                <li><a href="javascriptPE02.html">2</a></li>
-                <li><a href="javascriptPE03.html">3</a></li>
-                <li><a href="javascriptPE04.html">4</a></li>
-                <li><a href="javascriptPE05.html">5</a></li>
-                <li><a href="javascriptPE06.html">6</a></li>
-                <li><a href="javascriptPE07.html">7</a></li>
-                <li><a href="javascriptPE08.html">8</a></li>
-            </ul>
-        </div>
-        <div class="footerInfo">
-            <h2>jquery</h2>
-            <ul>
-                <li class="active"><a href="jqueryPE01.html">1</a></li>
-                <li><a href="jqueryPE02.html">2</a></li>
-                <li><a href="jqueryPE03.html">3</a></li>
-                <li><a href="jqueryPE04.html">4</a></li>
-                <li><a href="jqueryPE05.html">5</a></li>
-                <li><a href="jqueryPE06.html">6</a></li>
-                <li><a href="jqueryPE07.html">7</a></li>
-                <li><a href="jqueryPE08.html">8</a></li>
-            </ul>
-        </div>
-    </footer>
-    <!-- //footer -->
-    ​
-    <!-- source -->
-    <div class="info bottom">
-        <button>소스 보기</button>
+  <!-- main -->
+  <main>
+    <div class="paraScroll">scrollTop() : <span>0</span></div>
+    <div class="paraInfo2">
+      <ul>
+        <li>section1 offset(): <span class="offset1">0</span></li>
+        <li>section2 offset(): <span class="offset2">0</span></li>
+        <li>section3 offset(): <span class="offset3">0</span></li>
+        <li>section4 offset(): <span class="offset4">0</span></li>
+        <li>section5 offset(): <span class="offset5">0</span></li>
+        <li>section6 offset(): <span class="offset6">0</span></li>
+        <li>section7 offset(): <span class="offset7">0</span></li>
+        <li>section8 offset(): <span class="offset8">0</span></li>
+        <li>section9 offset(): <span class="offset9">0</span></li>
+      </ul>
+
     </div>
-    <!-- //source -->
-    ​
-    <!-- modal -->
-    <div id="modal">
-        <div class="modal-bg">
-            <div class="modal-cont">
-                <div class="code-view">
-                    <div class="view-header">
-                        <div class="dot" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="view-title">
-                        <ul>
-                            <li class="active"><a href="#">Html</a></li>
-                            <li><a href="#">CSS</a></li>
-                            <li><a href="#">Jquery</a></li>
-                        </ul>
-                    </div>
-                    <div class="view-cont">
-                        <div class="html">
-                            <pre><code class="language-html">&lt;main&gt;
-    &lt;div class="paraScroll"&gt;scrollTop() : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;
 
-    &lt;div class="paraInfo2"&gt;
-        &lt;ul&gt;
-            &lt;li&gt;section1 offset() : &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section2 offset() : &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section3 offset() : &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section4 offset() : &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section5 offset() : &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section6 offset() : &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section7 offset() : &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section8 offset() : &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
-            &lt;li&gt;section9 offset() : &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
+    <!--//scroll-->
+    <div class="paraNav">
+      <ul>
+        <li class="active"><a href="#section1">s1</a></li>
+        <li><a href="#section2">s2</a></li>
+        <li><a href="#section3">s3</a></li>
+        <li><a href="#section4">s4</a></li>
+        <li><a href="#section5">s5</a></li>
+        <li><a href="#section6">s6</a></li>
+        <li><a href="#section7">s7</a></li>
+        <li><a href="#section8">s8</a></li>
+        <li><a href="#section9">s9</a></li>
+      </ul>
+    </div>
+    <!-- //nav -->
 
-    &lt;div class="paraNav"&gt;
-        &lt;ul&gt;
-            &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-    &lt;!-- //paraNav --&gt;
+    <div class="paraCont">
 
-    &lt;div class="paraCont"&gt;
-        &lt;section id="section1" class="content-item"&gt;
-            &lt;span class="num"&gt;01&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;Doesn't this guitar sound so good?&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section1 --&gt;
-        ​
-        &lt;section id="section2" class="content-item"&gt;
-            &lt;span class="num"&gt;02&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;Mmm, mmm, mmm So sweet&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section2 --&gt;
-        ​
-        &lt;section id="section3" class="content-item"&gt;
-            &lt;span class="num"&gt;03&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;Living in this big blue world&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section3 --&gt;
-        ​
-        &lt;section id="section4" class="content-item"&gt;
-            &lt;span class="num"&gt;04&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;With my head up in outer space&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section4 --&gt;
-        ​
-        &lt;section id="section5" class="content-item"&gt;
-            &lt;span class="num"&gt;05&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section5 --&gt;
-        ​
-        &lt;section id="section6" class="content-item"&gt;
-            &lt;span class="num"&gt;06&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section6 --&gt;
-        ​
-        &lt;section id="section7" class="content-item"&gt;
-            &lt;span class="num"&gt;07&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;When I see trouble come my way&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section7 --&gt;
-        ​
-        &lt;section id="section8" class="content-item"&gt;
-            &lt;span class="num"&gt;08&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;I be makin' lemonade&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section8 --&gt;
-        ​
-        &lt;section id="section9" class="content-item"&gt;
-            &lt;span class="num"&gt;09&lt;/span&gt;
-            &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
-            &lt;figure class="img-wrap"&gt;
-                &lt;div class="img"&gt;&lt;/div&gt;
-            &lt;/figure&gt;
-            &lt;p class="desc"&gt;I know I'll be A-O, A-O-K&lt;/p&gt;
-        &lt;/section&gt;
-        &lt;!-- //section9 --&gt;
+      <section id="section1" class="content-item">
+        <span class="num">01</span>
+        <h2 class="title">Section1</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">성공이 나를 버려놓은 것이 아니다. 나는 원래가 거슬리는 사람이다.
+            Fran Lebowitz</p>
+      </section>
+      <!-- section1 -->
+
+      <section id="section2" class="content-item">
+        <span class="num">02</span>
+        <h2 class="title">Section2</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">연은 순풍이 아니라 역풍에 가장 높이 난다.
+            Sir Winston Churchill</p>
+      </section>
+      <!-- section2 -->
+
+      <section id="section3" class="content-item">
+        <span class="num">03</span>
+        <h2 class="title">Section3</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">성공은 자연연소의 결과가 아니다. 먼저 자기 자신에게 불을 지펴야 한다.
+            Reggie Leach</p>
+      </section>
+      <!-- section3 -->
+
+      <section id="section4" class="content-item">
+        <span class="num">04</span>
+        <h2 class="title">Section4</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">언제나 현재에 집중할 수 있다면 행복할 것이다.
+            Paulo Cuelho</p>
+      </section>
+      <!-- section4 -->
+
+      <section id="section5" class="content-item">
+        <span class="num">05</span>
+        <h2 class="title">Section5</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">위대한 이들은 목적을 갖고, 그 외의 사람들은 소원을 갖는다.
+            Washington Irving</p>
+      </section>
+      <!-- section5 -->
+
+      <section id="section6" class="content-item">
+        <span class="num">06</span>
+        <h2 class="title">Section6</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">상대의 급소를 공략하면 마음도 사로잡을 수 있다.
+            John Wayne</p>
+      </section>
+      <!-- section6 -->
+
+      <section id="section7" class="content-item">
+        <span class="num">07</span>
+        <h2 class="title">Section7</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">미래가 어떻게 전개될지는 모르지만, 누가 그 미래를 결정하는지는 압니다.
+            Oprah Winfrey</p>
+      </section>
+      <!-- section7 -->
+
+      <section id="section8" class="content-item">
+        <span class="num">08</span>
+        <h2 class="title">Section8</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">멈추지 말고 한 가지 목표에 매진하라. 그것이 성공의 비결이다.
+            Anna Pavlova</p>
+      </section>
+      <!-- section8 -->
+
+      <section id="section9" class="content-item">
+        <span class="num">09</span>
+        <h2 class="title">Section9</h2>
+        <figure class="img-Wrap">
+          <div class="img"></div>
+        </figure>
+        <p class="desc">성공의 커다란 비결은 결코 지치지 않는 인간으로 인생을 살아나가는 것이다.
+            Albert Schweitzer</p>
+      </section>
+      <!-- section9 -->
+
+
+    </div>
+    <!-- //contents -->
+  </main>
+  <!-- //main -->
+
+  <!-- footer -->
+  <footer class="paraFooter">
+
+  </footer>
+  <!-- //footer -->
+
+  <!-- source -->
+  <div class="source">
+    <button>소스보기</button>
+  </div>
+  <!-- //source -->
+
+  <!-- modal -->
+  <div id="modal">
+    <div class="modal-bg">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-header">
+            <!-- aria : 접근성 / aria-hidden=true : 빈칸을 읽지 않음 -->
+            <div class="dot" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="view-title">
+            <ul>
+              <li class="active"><a href="#">HTML</a></li>
+              <li><a href="#">SCSS</a></li>
+              <li><a href="#">Javascript</a></li>
+            </ul>
+          </div>
+          <div class="view-cont">
+            <div class="html">
+              <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Parallax Effect&lt;/title&gt;
+
+    &lt;link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet"&gt;
+
+    &lt;link rel="stylesheet" href="../assets/css/style.css"&gt;
+    &lt;link rel="stylesheet" href="../assets/css/highlight.css"&gt;
+&lt;/head&gt;
+
+&lt;body class="parallax"&gt;
+
+    &lt;!-- header --&gt;
+    &lt;header class="paraInfo"&gt;
+        &lt;h1&gt;&lt;a href="index.html"&gt;Parallax Effect01 - javascript&lt;/a&gt;&lt;/h1&gt;
+        &lt;p&gt;패랠랙스 스크로링 효과 - 메뉴 이동&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;!-- //header end --&gt;
+
+
+    &lt;!-- main --&gt;
+    &lt;main&gt;
+        &lt;div class="paraScroll"&gt;window.scrollY : &lt;span&gt;0&lt;/span&gt;&lt;/div&gt;
+        &lt;div class="paraInfo2"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;section1 offset(): &lt;span class="offset1"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section2 offset(): &lt;span class="offset2"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section3 offset(): &lt;span class="offset3"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section4 offset(): &lt;span class="offset4"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section5 offset(): &lt;span class="offset5"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section6 offset(): &lt;span class="offset6"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section7 offset(): &lt;span class="offset7"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section8 offset(): &lt;span class="offset8"&gt;0&lt;/span&gt;&lt;/li&gt;
+                &lt;li&gt;section9 offset(): &lt;span class="offset9"&gt;0&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!--//scroll end--&gt;
+
+        &lt;div class="paraNav"&gt;
+            &lt;ul&gt;
+                &lt;li class="active"&gt;&lt;a href="#section1"&gt;s1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section2"&gt;s2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section3"&gt;s3&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section4"&gt;s4&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section5"&gt;s5&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section6"&gt;s6&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section7"&gt;s7&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section8"&gt;s8&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#section9"&gt;s9&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;!-- //nav end --&gt;
+
+        &lt;div class="paraCont"&gt;
+            &lt;section id="section1" class="content-item"&gt;
+                &lt;span class="num"&gt;01&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section1&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;성공이 나를 버려놓은 것이 아니다. 나는 원래가 거슬리는 사람이다. Fran Lebowitz&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section1 --&gt;
+
+            &lt;section id="section2" class="content-item"&gt;
+                &lt;span class="num"&gt;02&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section2&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;연은 순풍이 아니라 역풍에 가장 높이 난다. Sir Winston Churchill&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section2 --&gt;
+
+            &lt;section id="section3" class="content-item"&gt;
+                &lt;span class="num"&gt;03&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section3&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;성공은 자연연소의 결과가 아니다. 먼저 자기 자신에게 불을 지펴야 한다. Reggie Leach&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section3 --&gt;
+
+            &lt;section id="section4" class="content-item"&gt;
+                &lt;span class="num"&gt;04&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section4&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;언제나 현재에 집중할 수 있다면 행복할 것이다. Paulo Cuelho&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section4 --&gt;
+
+            &lt;section id="section5" class="content-item"&gt;
+                &lt;span class="num"&gt;05&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section5&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;위대한 이들은 목적을 갖고, 그 외의 사람들은 소원을 갖는다. Washington Irving&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section5 --&gt;
+
+            &lt;section id="section6" class="content-item"&gt;
+                &lt;span class="num"&gt;06&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section6&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;상대의 급소를 공략하면 마음도 사로잡을 수 있다. John Wayne&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section6 --&gt;
+
+            &lt;section id="section7" class="content-item"&gt;
+                &lt;span class="num"&gt;07&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section7&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;미래가 어떻게 전개될지는 모르지만, 누가 그 미래를 결정하는지는 압니다. Oprah Winfrey&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section7 --&gt;
+
+            &lt;section id="section8" class="content-item"&gt;
+                &lt;span class="num"&gt;08&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section8&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;멈추지 말고 한 가지 목표에 매진하라. 그것이 성공의 비결이다. Anna Pavlova&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section8 --&gt;
+
+            &lt;section id="section9" class="content-item"&gt;
+                &lt;span class="num"&gt;09&lt;/span&gt;
+                &lt;h2 class="title"&gt;Section9&lt;/h2&gt;
+                &lt;figure class="img-Wrap"&gt;
+                    &lt;div class="img"&gt;&lt;/div&gt;
+                &lt;/figure&gt;
+                &lt;p class="desc"&gt;성공의 커다란 비결은 결코 지치지 않는 인간으로 인생을 살아나가는 것이다. Albert Schweitzer&lt;/p&gt;
+            &lt;/section&gt;
+            &lt;!-- section9 --&gt;
+        &lt;/div&gt;
+        &lt;!-- //contents end --&gt;
+    &lt;/main&gt;
+    &lt;!-- //main end --&gt;
+
+    &lt;!-- footer --&gt;
+    &lt;footer class="paraFooter"&gt;
+    &lt;/footer&gt;
+    &lt;!-- //footer end --&gt;
+
+    &lt;!-- source --&gt;
+    &lt;div class="source"&gt;
+        &lt;button onclick="modal()"&gt;소스보기&lt;/button&gt;
     &lt;/div&gt;
-&lt;/main&gt;
+    &lt;!-- //source end --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code></pre>
-                        </div>
-                        <div class="css">
-                            <pre><code class="language-css">.parallax {
+            </div>
+            <div class="css">
+              <pre><code class="language-css">.parallax {
     background: #222;
     color: #fff;
-    font-family: 'NEXONLv1Gothic';
+    font-family: "NEXONLv2Gothic";
+    position: relative;
+}
+.parallax .source {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.parallax .source button {
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0 0 0 #fff inset;
+    transition: all 0.4s;
+    cursor: pointer;
+}
+.parallax .source button:hover {
+    box-shadow: 0 -50px 0 #fff inset;
+    color: #000;
 }
 
 .paraScroll {
@@ -353,22 +409,21 @@
     border-radius: 50px;
     text-align: center;
     font-size: 12px;
-    padding: 0px 20px;
+    padding: 0 20px;
 }
 
 .paraInfo2 {
     position: fixed;
     left: 20px;
     bottom: 70px;
-    z-index: 1000;
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
-    padding: 20px;
     font-size: 12px;
-    line-height: 1.8;
     border-radius: 10px;
+    line-height: 1.8;
+    padding: 20px;
+    z-index: 1000;
 }
-
 .paraInfo2 li {
     list-style: none;
 }
@@ -380,14 +435,12 @@
     z-index: 1000;
     background: rgba(0, 0, 0, 0.4);
     padding: 15px 20px;
-    border-radius: 30px;
+    border-radius: 50px;
 }
-
 .paraNav li {
     display: inline-block;
     list-style: none;
 }
-
 .paraNav li a {
     color: #fff;
     text-decoration: none;
@@ -398,7 +451,6 @@
     text-align: center;
     line-height: 30px;
 }
-
 .paraNav li.active a {
     background: #fff;
     color: #000;
@@ -408,7 +460,6 @@
 .paraInfo {
     padding: 20px;
 }
-
 .paraInfo h1 {
     display: inline-block;
     font-size: 20px;
@@ -416,12 +467,10 @@
     margin-bottom: 8px;
     font-weight: 400;
 }
-
 .paraInfo h1 a {
     color: #fff;
     text-decoration: none;
 }
-
 .paraInfo p {
     font-size: 14px;
     line-height: 1.8;
@@ -431,7 +480,6 @@
     width: 100%;
     overflow: hidden;
 }
-
 .paraCont .content-item {
     width: 1000px;
     max-width: 70vw;
@@ -440,9 +488,8 @@
     text-align: right;
     position: relative;
 }
-
 .paraCont .content-item .num {
-    font-family: 'Lato';
+    font-family: "Lato";
     font-weight: 100;
     font-size: 25vw;
     opacity: 0.07;
@@ -450,20 +497,17 @@
     right: -5vw;
     top: -10vw;
 }
-
 .paraCont .content-item .title {
     padding-bottom: 10px;
-    font-weight: 700;
+    font-weight: 500;
 }
-
-.paraCont .content-item .img-wrap {
+.paraCont .content-item .img-Wrap {
     width: 100%;
     padding-bottom: 56%;
     background: #000;
     position: relative;
 }
-
-.paraCont .content-item .img-wrap .img {
+.paraCont .content-item .img-Wrap .img {
     position: absolute;
     left: 0;
     top: 0;
@@ -471,19 +515,14 @@
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-filter: saturate(0%);
-            filter: saturate(0%);
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    filter: saturate(0%);
+    transition: all 0.8s;
 }
-
-.paraCont .content-item .img-wrap .img:hover {
-    -webkit-filter: saturate(100%);
-            filter: saturate(100%);
+.paraCont .content-item .img-Wrap .img:hover {
+    filter: saturate(100%);
 }
-
 .paraCont .content-item .desc {
-    font-size: 6vw;
+    font-size: 4vw;
     line-height: 1.4;
     margin-top: -6vw;
     margin-right: -3vw;
@@ -491,134 +530,133 @@
     z-index: 100;
     word-break: keep-all;
 }
-
 .paraCont .content-item:nth-child(even) {
     margin-left: auto;
     text-align: left;
 }
-
 .paraCont .content-item:nth-child(even) .num {
     right: auto;
     left: -5vw;
 }
-
 .paraCont .content-item:nth-child(even) .desc {
     margin-right: auto;
     margin-left: -3vw;
 }
 
-.paraCont .content-item:nth-child(1) .img {
-    background-image: url(../img/bg01.jpg);
+.content-item:nth-child(1) .img {
+    background: url(../img/bg1.jpg);
 }
 
-.paraCont .content-item:nth-child(2) .img {
-    background-image: url(../img/bg02.jpg);
+.content-item:nth-child(2) .img {
+    background: url(../img/bg2.jpg);
 }
 
-.paraCont .content-item:nth-child(3) .img {
-    background-image: url(../img/bg03.jpg);
+.content-item:nth-child(3) .img {
+    background: url(../img/bg3.jpg);
 }
 
-.paraCont .content-item:nth-child(4) .img {
-    background-image: url(../img/bg04.jpg);
+.content-item:nth-child(4) .img {
+    background: url(../img/bg4.jpg);
 }
 
-.paraCont .content-item:nth-child(5) .img {
-    background-image: url(../img/bg05.jpg);
+.content-item:nth-child(5) .img {
+    background: url(../img/bg5.jpg);
 }
 
-.paraCont .content-item:nth-child(6) .img {
-    background-image: url(../img/bg06.jpg);
+.content-item:nth-child(6) .img {
+    background: url(../img/bg6.jpg);
 }
 
-.paraCont .content-item:nth-child(7) .img {
-    background-image: url(../img/bg07.jpg);
+.content-item:nth-child(7) .img {
+    background: url(../img/bg7.jpg);
 }
 
-.paraCont .content-item:nth-child(8) .img {
-    background-image: url(../img/bg08.jpg);
+.content-item:nth-child(8) .img {
+    background: url(../img/bg8.jpg);
 }
 
-.paraCont .content-item:nth-child(9) .img {
-    background-image: url(../img/bg09.jpg);
+.content-item:nth-child(9) .img {
+    background: url(../img/bg9.jpg);
+}
+
+.content-item:nth-child(10) .img {
+    background: url(../img/bg10.jpg);
 }
 </code></pre>
-                        </div>
-                        <div class="javascript">
-                            <pre><code class="language-javascript">$('.paraNav ul li').click(function (e) {
+            </div>
+            <div class="javascript">
+              <pre><code class="language-js">$('.paraNav ul li').click(function (e) {
     e.preventDefault();
     let target = $(this);
     let index = target.index();
     let section = $('.paraCont > section').eq(index);
     let offset = section.offset().top;
 
-    $('html, body').animate({ scrollTop: offset }, 600);
-    });
+    $('html, body').animate({scrollTop: offset}, 600);
+});
 
-    $(window).scroll(function () {
+$(window).scroll(function () {
     let scrollTop = $(window).scrollTop();
 
     $('.content-item').each(function (i) {
         if (scrollTop >= $(this).offset().top - 2) {
-        $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
+            $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
         }
     });
 
     //info
     $('.paraScroll span').text(parseInt(scrollTop));
 
-    for (let i = 1; i &lt;= $('.content-item').length; i++) {
+    for (let i = 1; i <= $('.content-item').length; i++) {
         $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
     }
-    });
+});
 </code></pre>
-                        </div>
-                    </div>
-                </div>
-
-                <button>닫기</button>
             </div>
+          </div>
         </div>
+        <button>CLOSE</button>
+      </div>
     </div>
-    <!-- //modal -->
-    ​
-    <!-- script -->
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script>
-        modal();
+  </div>
+  <!-- //modal -->
 
-        $('.paraNav ul li').click(function (e) {
-            e.preventDefault();
-            let target = $(this);
-            let index = target.index();
-            let section = $('.paraCont > section').eq(index);
-            let offset = section.offset().top;
 
-            $('html, body').animate({
-                scrollTop: offset
-            }, 600);
-        });
+  <!-- script -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/highlight.min.js"></script>
+  <script>
+    $('.paraNav ul li').click(function (e) {
+      e.preventDefault();
+      let target = $(this);
+      let index = target.index();
+      let section = $('.paraCont > section').eq(index);
+      let offset = section.offset().top;
 
-        $(window).scroll(function () {
-            let scrollTop = $(window).scrollTop();
+      $('html, body').animate({
+        scrollTop: offset
+      }, 600);
+    });
 
-            $('.content-item').each(function (i) {
-                if (scrollTop >= $(this).offset().top - 2) {
-                    $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
-                }
-            });
+    $(window).scroll(function () {
+      let scrollTop = $(window).scrollTop();
 
-            //info
-            $('.paraScroll span').text(parseInt(scrollTop));
+      $('.content-item').each(function (i) {
+        if (scrollTop >= $(this).offset().top - 2) {
+          $('.paraNav ul li').eq(i).addClass('active').siblings().removeClass('active');
+        }
+      });
 
-            for (let i = 1; i <= $('.content-item').length; i++) {
-                $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
-            }
-        });
-    </script>
+      //info
+      $('.paraScroll span').text(parseInt(scrollTop));
+
+      for (let i = 1; i <= $('.content-item').length; i++) {
+        $('.offset' + i).text(parseInt($('#section' + i).offset().top) + 'px');
+      }
+    });
+  </script>
 </body>
 
 </html>

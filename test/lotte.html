@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotte</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+            font-family: 'S-CoreDream-4Regular';
+        }
+        header {
+            margin: 20px 0 10px;
+        }
+        header .container {
+            overflow: hidden;
+        }
+        header .logo {
+            width: 100px;
+            float: left;
+        }
+        header .logo img {
+            width: 100%;
+        }
+        header .menu {
+            float: right;
+            margin-top: 30px;
+        }
+        header .menu ul li {
+            padding: 10px 0 10px 25px;
+            margin-left: 10px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        main {
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgb(179, 179, 179);
+        }
+        main article {
+            margin-bottom: 20px;
+        }
+        article img {
+            width: 100%;
+        }
+        #section1 {
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        #section1 .tabmenu {
+            float: left;
+            width: 470px;
+            border: 1px solid rgb(179, 179, 179);
+            padding: 29px;
+            box-sizing: border-box;
+        }
+        #section1 .tabmenu .tabmenu-wrap {
+            overflow: hidden;
+        }
+        .tabmenu-wrap .notice {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+        .tabmenu-wrap .news {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 10px;
+            color: #cdcdcd;
+        }
+        .tabmenu-wrap .pbtn {
+            position: relative;
+            float: right;
+            padding-right: 20px;
+            line-height: 17px;
+            font-size: 15px;
+        }
+        .tabmenu-wrap .pbtn img {
+            width: 20px;
+        }
+        .tabmenu ul {
+            padding: 0;
+        }
+        .tabmenu li {
+            overflow: hidden;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+        .tabmenu li span {
+            font-size: 16px;
+            float: right;
+        }
+        .section1_img {
+            width: 470px;
+            float: right;
+        }
+        .section1_img img {
+            width: 100%;
+        }
+        #section2 .container {}       
+        #section2 .container .title {
+            font-size: 18px;
+            margin-bottom: 18px;
+            font-weight: bold;
+            margin-top: 70px;
+        }
+        #section2 .contents {
+            overflow: hidden;
+        }
+        #section2 .contents .cont {
+            float: left;
+            width: 220px;
+            margin-left: 25px;
+        }
+        #section2 .contents .cont:first-child {
+            margin-left: 0;
+        }
+        #section2 .cont img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        #section2 .cont p {
+            margin: 0;
+            font-size: 15px;
+        }
+        footer {
+            margin: 30px 0 60px;
+            color: #999;
+        }
+        footer ul {
+            width: 960px;
+            margin-bottom: 20px;
+        }
+        footer li {
+            font-size: 12px;
+            line-height: 20px;
+        }
+        footer span {
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../test/assets/img/lott/logo.jpg" alt="로떼월드로고">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>즐길거리</li>
+                    <li>요금/우대혜택</li>
+                    <li>참여프로그램</li>
+                    <li>이용가이드</li>
+                    <li>소통서비스</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div class="container">
+                <img src="../test/assets/img/lott/cont1.jpg" alt="슬라이더이미지">
+            </div>
+        </article>
+        <section id="section1">
+            <div class="container">
+                <div class="tabmenu">
+                    <div class="tabmenu-wrap">
+                        <div class="notice">롯데월드 소식</div>
+                        <div class="news">뉴스 . 공지</div>
+                        <div class="pbtn">더보기 <img src="../test/assets/img/lott/pbtn.jpg" alt="더보기이미지"> </div>
+                    </div>
+                    <ul class="notice_li">
+                        <li>그럴싸진관 미라클<span>2018.11.19</span></li>
+                        <li>드림스테이지 '힘내 소중한 너'<span>2018.11.19</span></li>
+                        <li>'힘내 소중한 너' 음원 발매<span>2018.11.19</span></li>
+                        <li>이용 요금 조정 안내<span>2018.11.19</span></li>
+                    </ul>
+                    <!-- <ul class="news_li">
+                        <li>뉴스다용<span>2021.10.08</span></li>
+                        <li>뉴스다용<span>2021.10.08</span></li>
+                        <li>뉴스다용<span>2021.10.08</span></li>
+                        <li>나와라 뉴스<span>2021.10.08</span></li>
+                    </ul> -->
+                </div>
+                <div class="section1_img">
+                    <img src="../test/assets/img/lott/cont2.jpg" alt="cont2이미지">
+                </div>
+            </div>
+        </section> 
+        <section id="section2">
+            <div class="container"> 
+                <div class="title">특별한 경험</div>
+                <div class="contents">
+                    <div class="cont">
+                        <img src="../test/assets/img/lott/cont3_1.jpg" alt="연간회원안내">
+                        <p>연간회원안내</p>
+                    </div>
+                    <div class="cont">
+                        <img src="../test/assets/img/lott/cont3_2.jpg" alt="프리미엄투어">
+                        <p>프리미엄투어</p>
+                    </div>
+                    <div class="cont">
+                        <img src="../test/assets/img/lott/cont3_3.jpg" alt="공연참여 프로그램">
+                        <p>공연참여 프로그램</p>
+                    </div>
+                    <div class="cont">
+                        <img src="../test/assets/img/lott/cont3_4.jpg" alt="단체프로그램">
+                        <p>단체프로그램</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li>서울특별시 송파구 올림픽로 240 호텔롯데 롯데월드 | 대표자 : 박동기</li>
+                <li>사업자등록번호 : 219-85-00014 | 통신판매업신고번호 : 송파 제5513호 | 전화 : 1661-2000</li>
+            </ul>
+            <span>COPYRIGHT 2018 LOTTEWORLD ALL RIGHTS RESERVED</span>
+        </div>
+    </footer>
+</body>
+
+<script>
+    let noticeli = document.querySelector('.notice_li');
+    let newsli = document.querySelector('.news_li');
+
+
+</script>
+
+
+</html>

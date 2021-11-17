@@ -1,8 +1,34 @@
 /* ==================================================
    Info Block
 ================================================== */
+
+
+/* 스노우
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@200,400&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.fa-snowflake {
+	animation: fall 5s linear forwards;
+	color: #fff;
+	position: absolute;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(90vh);
+	}
+} */
+
+
 .info-block {
-    border-left: 4px solid #DE5E60;
+    border-left: 4px solid #1761a1;
     overflow: hidden;
     padding: 20px 20px 24px 20px;
     position: relative;
@@ -10,7 +36,8 @@
 }
 .info-block:hover {
 	background-color:#000;
-	border-left: 4px solid #2c8555;
+	border-left: 4px solid #1761a1;
+
 }
 .info-block:hover h3 a{
 	color:#fff;
@@ -42,7 +69,7 @@
     padding: 10px 15px;
 }
 .info-block a.button:hover {
-	background-color: #DE5E60;
+	background-color: #1761a1;
 	color:#fff;
 }
 
@@ -219,10 +246,10 @@
 }
 #contents_tit p {
 	padding:35px 0; 
-	font-family: 'Gaegu', cursive; font-size: 40px;
+	font-family: 'yg-jalnan', cursive; font-size: 40px;
 }
 #contents_tit p a {
-	color:#000; 
+	color:#2c94c4; 
 }
 
 
@@ -279,51 +306,50 @@
 }
 
 .gridly .webstandard a {
-	color: #E17983;
+	color: #157ed3;
 	display: block;
-	border-bottom: 3px solid #E79098;
+	border-bottom: 3px solid #a5d5fa;
 	margin-right: 20px;
 } 
 .gridly .html5 a {
-	color: #8432c4;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8432c4;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 	
 }
 .gridly .photoshop a {
-	color: #8ccc3d;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8ccc3d;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 }
 .gridly .illustrator a {
-	color: #8ccc3d;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8ccc3d;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 }
 .gridly .javascript a {
-	color: #8ccc3d;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8ccc3d;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 }
 .gridly .jquery a {
-	color: #8ccc3d;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8ccc3d;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 }
 .gridly .reference a {
-	color: #8ccc3d;
+	color: #1761a1;
 	display: block;
-	border-bottom: 3px solid #8ccc3d;
+	border-bottom: 3px solid #1761a1;
 	margin-right: 20px;
 }
 .photoshop .image-wrap .img-text h5 {
-	color: #8ccc3d;
-
+	color: #1761a1;
 }
 
 
@@ -383,7 +409,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #E79098;
+	background: #1761a1;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -1138,7 +1164,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a64b23;
+	color: #568cbb;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
@@ -1576,7 +1602,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #f04b3e;
+	color: #1761a1;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
@@ -1699,7 +1725,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #f2a1d1;
+	background: #1761a1;
 	color: #FFFFFF;
 	font-size: 25px;
 	font-weight: 300;
@@ -1722,7 +1748,7 @@
 	width: 100%;
 	height: 32px;
 	top: 50%;
-	color: #a92c76;
+	color: #61abec;
 	font-size: 20px;
 	text-transform: uppercase;
 	line-height: 20px;
@@ -1902,7 +1928,7 @@
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
+	background: #1761a1;
 	
 	opacity: 0.80;
 	filter: alpha(opacity=80);
@@ -1940,102 +1966,102 @@
 
 
 .donutImg {text-align: center; }
-.donutImg h5 {color: #f47cc3; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.donutImg h5 {color: #5ca5e6; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
 .donutImg p {color: #565656; font-size: 18px; }
 .donutImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .appleImg {text-align: center; }
-.appleImg h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.appleImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .appleImg p {color: #565656; font-size: 18px; }
 .appleImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .breadImg {text-align: center; }
-.breadImg h5 {color: #a46816; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.breadImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .breadImg p {color: #565656; font-size: 18px; }
 .breadImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .carrotImg {text-align: center; }
-.carrotImg h5 {color: #ff860d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.carrotImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .carrotImg p {color: #565656; font-size: 18px; }
 .carrotImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .burgerImg {text-align: center; }
-.burgerImg h5 {color: #de912a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.burgerImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .burgerImg p {color: #565656; font-size: 18px; }
 .burgerImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .cherriesImg {text-align: center; }
-.cherriesImg h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.cherriesImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .cherriesImg p {color: #565656; font-size: 18px; }
 .cherriesImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .cookieImg {text-align: center; }
-.cookieImg h5 {color: #c8801d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.cookieImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .cookieImg p {color: #565656; font-size: 18px; }
 .cookieImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .frenchImg {text-align: center; }
-.frenchImg h5 {color: #f04b3e; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.frenchImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .frenchImg p {color: #565656; font-size: 18px; }
 .frenchImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .chickenImg {text-align: center; }
-.chickenImg h5 {color: #a35a2d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.chickenImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .chickenImg p {color: #565656; font-size: 18px; }
 .chickenImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .grapesImg {text-align: center; }
-.grapesImg h5 {color: #51b224; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.grapesImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .grapesImg p {color: #565656; font-size: 18px; }
 .grapesImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .hotdogImg {text-align: center; }
-.hotdogImg h5 {color: #a64b23; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.hotdogImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .hotdogImg p {color: #565656; font-size: 18px; }
 .hotdogImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .cupcakeImg {text-align: center; }
-.cupcakeImg h5 {color: #d6bb8d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.cupcakeImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .cupcakeImg p {color: #565656; font-size: 18px; }
 .cupcakeImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .lemonImg {text-align: center; }
-.lemonImg h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.lemonImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .lemonImg p {color: #565656; font-size: 18px; }
 .lemonImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .macaronImg {text-align: center; }
-.macaronImg h5 {color: #824b3d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.macaronImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .macaronImg p {color: #565656; font-size: 18px; }
 .macaronImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .pearImg {text-align: center; }
-.pearImg h5 {color: #ffd10a; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.pearImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .pearImg p {color: #565656; font-size: 18px; }
 .pearImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .pizzaImg {text-align: center; }
-.pizzaImg h5 {color: #c52525; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.pizzaImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .pizzaImg p {color: #565656; font-size: 18px; }
 .pizzaImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .popcornImg {text-align: center; }
-.popcornImg h5 {color: #c52525; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.popcornImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .popcornImg p {color: #565656; font-size: 18px; }
 .popcornImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .creamImg {text-align: center; }
-.creamImg h5 {color: #d6bb8d; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
+.creamImg h5 {color: #5ca5e6; font-size: 22px; padding-top: 22px; text-transform: uppercase;}
 .creamImg p {color: #565656; font-size: 18px; }
 .creamImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .magnumImg {text-align: center; }
-.magnumImg h5 {color: #f47cc3; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.magnumImg h5 {color: #5ca5e6; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
 .magnumImg p {color: #565656; font-size: 18px; }
 .magnumImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 
 .vanillaImg {text-align: center; }
-.vanillaImg h5 {color: #824b3d; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
+.vanillaImg h5 {color: #5ca5e6; font-size: 23px; padding-top: 22px; text-transform: uppercase;}
 .vanillaImg p {color: #565656; font-size: 18px; }
 .vanillaImg span {color: #999; font-size: 12px; text-transform: uppercase;}
 

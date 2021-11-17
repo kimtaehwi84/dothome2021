@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kim.taehwi">
+    <meta name="description" content="웹 사이트 제작을 위한 사이트입니다.">
+    <meta name="keywords" content="사이트, 웹퍼블리셔, 웹 접근성, 화려한 디자인, publisher, css3, html, markup, design">
+    <title>Kim.taehwi - ImgdType</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+
+    <!-- Card Type CSS -->
+    <link rel="stylesheet" href="css/imgType.css">
+</head>
+<body>
+        <!-- 이미지를 표현하는 방법
+            1.이미지를 img 태그 (alt) ===> 의미가 있을 때
+            2.이미지를  background 속성 ===> 의미가 없을 때(장식,배경)   
+
+            3.최근에는 의미가 있는 이미지도 background로 사용 ===> 이미지 스플라이트 기법
+            -이미지 스플라이트를 사용하면 접근성이 깨림 ===> IR효과 (alt)속성을 css로 만듦
+
+            4.이미지 해당도 (디바이스별) ===> 이미지 분류 ===> picture 태그(img대신 사용가능), figure 태그 (웹표준 준수)
+        -->
+
+    <!-- imgType01 -->
+    <section class="imageType">
+        <div class="container">
+            <div class="imageType01">
+                <h2>멈머 멍멍 멈무 인터뷰</h2>
+                <div class="image-wrap">
+                    <div class="image">
+                        <img class="image-img" src="img/image01.jpg" alt="말티즈Maltese 이미지">
+                        <div class="image-cont">
+                            <h3 class="image-title">말티즈Maltese</h3>
+                            <p class="image-desc">지중해의 몰타섬에서 유래해온 이름의 품종 말티즈는 현재 우리 지구에서 가장 오래된 강아이지 종입니다. </p>
+                            <a class="image-btn green" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                    <div class="image">
+                        <img class="image-img" src="img/image02.jpg" alt="시츄Chichu 이미지">
+                        <div class="image-cont">
+                            <h3 class="image-title">시츄Chichu</h3>
+                            <p class="image-desc">중국에서 비롯한 개 품종이며 과거 중국 황실이 기르던 견종이다. 
+                                중국에서는 사자개로 불리는데 이 이름의 로마자 표기법에서 ‘시추’라는...
+                            </p>
+                            <a class="image-btn yellow" href="#">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //imgType01 end-->
+ 
+
+
+
+        <!-- imageType02 -->
+        <section class="imageType">
+            <div class="container">
+                <div class="imageType02">
+                    <h2>멈머 멍멍 멈무 걍걍쥬 ver2</h2>
+                    <div class="image-wrap">
+                        <figure class="image"> 
+                            <img src="img/image03.jpg" alt="걍걍쥬 이미지1">
+                            <figcaption class="image-cont">
+                                <h3 class="image-title">말티즈Maltese</h3>
+                                <a href="#" class="image-btn">자세히 보기</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="image"> 
+                            <img src="img/image04.jpg" alt="걍걍쥬 이미지2">
+                            <figcaption  class="image-cont">
+                                <h3 class="image-title">골든 리트리버</h3>
+                                <a href="#" class="image-btn">자세히 보기</a>
+                            </figcaption>
+                        </figure>
+                        <figure class="image"> 
+                            <img src="img/image05.jpg" alt="걍걍쥬 이미지3">
+                            <figcaption  class="image-cont">
+                                <h3 class="image-title">시츄Chichu</h3>
+                                <a href="#" class="image-btn">자세히 보기</a>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //imageType02 -->
+
+  <!-- imageType03 -->
+  <section class="imageType">
+    <div class="container">
+      <div class="imageType03">
+        <h2>자연주의 인테리어</h2>
+        <div class="wrap">
+          <div class="img">
+            <a href="#">
+              <img src="img/image06.jpg" alt="이미지6">
+              <div class="contents">
+                <strong class="title">소소한 기쁨을 주는 아이템</strong>
+                <p class="desc">넉넉하면서도 우아한 선, 한국적인 아름다움에서 영감을 받은 아이템 
+                    식물의 실루엣이 고급스럽고도 근사하답니다.</p>
+              </div>
+            </a>
+          </div>
+          <div class="img">
+              <img src="img/image07.jpg" alt="이미지7">
+              <div class="box">
+                <strong class="title">시들지 않는 꽃은 어떨까요</strong>
+              </div>
+          </div>
+          <div class="img">
+              <img src="img/image08.jpg" alt="이미지8">
+              <div class="box">
+                <strong class="title">순수한 나무의그대로</strong>
+              </div>
+          </div>
+          <div class="img">
+              <img src="img/image09.jpg" alt="이미지9">
+              <div class="box">
+                <strong class="title">넉넉하면서도 우아한 선</strong>
+              </div>
+          </div>
+          <div class="img">
+              <img src="img/image10.jpg" alt="이미지10">
+              <div class="box">
+                <strong class="title">오브제와 공간의 아름다운 조화</strong>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //imageType03 end -->
+</body>
+</html>
+
