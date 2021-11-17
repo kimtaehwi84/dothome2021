@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -58,14 +59,14 @@
         * {margin: 0; padding: 0; box-sizing: border-box; font-family: 'NEXONLv2Gothic';}
         a {text-decoration: none;}
         li {list-style: none;}
-        body {height: 10000px;}
-        iframe {border: 0}
+        iframe {border: 0;}
+        /* body {height: 10000px;} */
         .scroll {
             position: fixed;
             right: 10px; top: 10px;
             width: 50px; height: 50px;
             background: rgba(0,0,0,0.3);
-            text-align: center; 
+            text-align: center;
             line-height: 50px;
             color: #fff;
             border-radius: 50%;
@@ -85,14 +86,17 @@
         }
         #section3 {
             /* background: blue; */
-            height: 20000px;
+            height: 16000px;
             z-index: 3000;
         }
         #section4 {
-            height: 30000px;
-            /* background: #000; */
+            height: 10000px;
+            z-index: 4000;
         }
-        #section5 {}
+        #section5 {
+            height: 1000px;
+            z-index: 5000;
+        }
         #section6 {}
         #section7 {}
         img {
@@ -112,7 +116,7 @@
         .s1Text2 {
             font-size: 8vw;
             font-weight: 700;
-            white-space: nowrap;
+            white-space: nowrap;   
         }
         .s1Text3 {
             width: 100vw;
@@ -135,10 +139,11 @@
             left: 50%; top: 50%;
             transform: translate(-50%, -50%);
         }
-        /* section1 */
+        /* section2 */
         .s2Text1 {
             font-size: 5vw;
             text-align: center;
+            color: #fff;
             white-space: nowrap;
             font-weight: 700;
             background-image: url(../assets/img/apple-text-bg.jpg);
@@ -147,13 +152,6 @@
             -webkit-background-clip: text;
             color: transparent;
             text-transform: capitalize;
-            /* background: #55ffaa;
-            background: -webkit-linear-gradient(left, #55ff55, #55ffff);
-            background:    -moz-linear-gradient(right, #55ff55, #55ffff);
-            background:      -o-linear-gradient(right, #55ff55, #55ffff);
-            background:         linear-gradient(to right, #55ff55, #55ffff);
-            -webkit-background-clip: text;
-                    background-clip: text; */
         }
         .s2Text2 > div {
             color: #fff;
@@ -191,60 +189,24 @@
         }
         .s2Text3 .img-wrap > div {
             position: absolute;
-            top: 0;
-            left: 100%;
+            top: 0; left: 100%;
             width: 100%;
         }
         .s2Text3 .img-wrap > div a {
             position: absolute;
             left: 50%; top: 50%;
-            transform: translate(-50%,-50%);
-            width: 10vw; height: 10vw;
-            background: rgba(0,0,0,0.8);
+            transform: translate(-50%, -50%);
+            width: 8vw; height: 8vw;
+            background: rgba(0,0,0,.8);
             color: #fff;
             border-radius: 50%;
             text-align: center;
-            line-height: 10vw;
-            font-size: 2vw;
+            line-height: 8vw;
+            font-size: 1.5vw;
         }
         .s2Text3 .img-wrap > div:nth-child(1) {
             left: 0;
         }
-        .s3Text2 {
-            perspective: 600px;
-            
-        }
-        .s3Text2 iframe {
-            width: 60vw;
-            height: 60vh;
-            transform-style: preserve-3d;
-            transform: translate3d(0,0,0);
-        }
-        .il-text {
-            position: absolute;
-            left: 0; top: 0%;
-        }
-        .il-text-desc  {
-            width: 60vw;
-            height: 60vh;
-            transform-style: preserve-3d;
-            transform: translate3d(0,0,0);
-            font-size: 20px;
-        }
-        .s3Text2 .i1, .i2, .i3 {
-            position: absolute;
-            left: 0; top: 0%;
-        }
-
-        .s4Text2 span{
-            color: #fff;
-            font-size: 8vw;
-            font-weight: 100;
-            font-family: 'NEXONLv1Gothic';
-        }
-
-       
-        
     </style>
 </head>
 <body>
@@ -252,137 +214,136 @@
     <div id="contents">
         <section id="section1">
             <div class="s1Text1 fixed" 
-                data-0="transform: translate(-50%, 0%); opacity:0;"
-                data-500="transform: translate(-50%, -50%); opacity:1;"
-                data-1000="transform: translate(-50%, -100%); opacity:0;"
-            >안녕하세요!</div>
-            <div class="s1Text2 fixed" 
-                data-1500="transform: translate(-50%, 0%); opacity:0;"
-                data-2000="transform: translate(-50%, -50%); opacity:1;"
-                data-2500="transform: translate(-50%, -50%); opacity:1; font-size: 8vw;"
-                data-3500="transform: translate(-50%, -50%); opacity:1; font-size: 0vw;"
-            >웹퍼블리셔입니다.
+                data-0 = "transform: translate(-50%, 0%); opacity:0;"
+                data-500 = "transform: translate(-50%, -50%); opacity:1;"
+                data-1000 = "transform: translate(-50%, -100%); opacity:0;"
+            >안녕하세요.</div>
+            <div class="s1Text2 fixed"
+                data-1500 = "transform: translate(-50%, 0%); opacity:0;"
+                data-2000 = "transform: translate(-50%, -50%); opacity:1;"
+                data-2500 = "transform: translate(-50%, -50%); opacity:1; font-size: 8vw;"
+                data-3500 = "transform: translate(-50%, -50%); opacity:1; font-size: 0vw;"
+            >프론트앤드 개발자입니다.
             </div>
-            <div class="s1Text3 fixed" 
-                data-3500="width:0vw;"
-                data-4200="width:100vw;"
-                data-10200="width: 100vw; display:block"
-                data-10201="width: 100vw; display:none"
-                ><img src="../assets/img/bg31.jpg" alt="이미지">
+            <div class="s1Text3 fixed"
+                data-3200 = "width:0vw;"
+                data-4200 = "width:100vw;"
+                data-10200 = "width:100vw; display: block;"
+                data-10201 = "width:100vw;  display: none;"
+            ><img src="../assets/img/bg11.jpg" alt="이미지">
             </div>
             <div class="s1Text4 fixed"
-                data-3800="width: 0vw; height: 0vw;"
-                data-4300="width: 40vw; height: 40vw;"
-                data-5500="width: 40vw; height: 40vw;"
-                data-6500="width: 250vw; height: 250vw;"
-                data-24000="width: 250vw; height: 250vw;"
-                data-25000="width: 250vw; height: 250vw;"
-                data-26000="width: 0vw; height: 0vw;"
+                data-3800 = "width:0vw; height:0vw;"
+                data-4300 = "width:40vw; height:40vw;"
+                data-5500 = "width:40vw; height:40vw;"
+                data-6500 = "width:250vw; height:250vw;"
+                data-24000 = "width:250vw; height:250vw;"
+                data-26000 = "width:0vw; height:0vw;"
                 ><span
-                    data-4000="transform: translate(-50%, -50%) scale(0) rotate(-360deg)"
-                    data-4500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                    data-5500="transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                    data-6500="transform: translate(-50%, -50%) scale(0) rotate(0deg)"
-                >Hello!</span>
+                    data-4000="transform: translate(-50%, -50%) scale(0) rotate(-360deg);"
+                    data-4500="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                    data-5500="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                    data-6500="transform: translate(-50%, -50%) scale(0) rotate(0deg);"
+                >Hello</span>
             </div>
-        </section>
-        <!--//section1-->
+        </section> 
+        <!-- //section1 -->
+
         <section id="section2">
-            <div class="s2Text1 fixed"
-                data-7000="transform: translate(-50%, -50%) scale(1); top: 50%; opacity:0;"
-                data-8000="transform: translate(-50%, -50%) scale(1); top: 50%;  opacity:1;"
-                data-9000="transform: translate(-50%, -50%) scale(0.7); top: 14%; opacity:1;"
-                data-23500="transform: translate(-50%, -50%) scale(0.7); top: 14%; opacity:1;"
-                data-24500="transform: translate(-50%, -50%) scale(1); top: 50%; opacity:1;"
-                data-26000="transform: translate(-50%, -50%) scale(0); top: 50%; opacity:1;"
-            >I've Been Working On Sites
-            </div>
+            <div class="s2Text1 fixed" 
+                data-7000 = "transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 0;"
+                data-8000 = "transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 1;"
+                data-9000 = "transform: translate(-50%, -50%) scale(0.7); top: 14%; opacity: 1;"
+                data-23000 = "transform: translate(-50%, -50%) scale(0.7); top: 14%; opacity: 1"
+                data-24500 = "transform: translate(-50%, -50%) scale(1); top: 50%; opacity: 1"
+                data-26000 = "transform: translate(-50%, -50%) scale(0); top: 50%; opacity: 1"
+            >I've been working on Sites</div>
             <div class="s2Text2">
                 <div class="t1 fixed"
-                    data-9000="opacity: 0; top: 50%;"
-                    data-10000="opacity: 1; top: 30%;"
-                    data-11500="opacity: 1; top: 30%;"
-                    data-12500="opacity: 0; top: 50%;"
+                    data-9000 = "opacity: 0; top: 50%;"
+                    data-10000 = "opacity: 1; top: 30%;"
+                    data-11500 = "opacity: 1; top: 30%;"
+                    data-12500 = "opacity: 0; top: 50%;"
                 >
                     <h2>웹표준을 준수한<br>웹 표준 사이트 제작</h2>
-                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의
-                        용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브
-                        라우징도 작업하였습니다.</p>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
+                        웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성,
+                        견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
                 </div>
                 <div class="t2 fixed"
-                    data-12500="opacity: 0; top: 50%;"
-                    data-13500="opacity: 1; top: 30%;"
-                    data-15000="opacity: 1; top: 30%;"
-                    data-16000="opacity: 0; top: 50%;"
+                    data-12500 = "opacity: 0; top: 50%;"
+                    data-13500 = "opacity: 1; top: 30%;"
+                    data-15000 = "opacity: 1; top: 30%;"
+                    data-16000 = "opacity: 0; top: 50%;"
                 >
-                    <h2>반응형을 준수한<br>반응형 사이트 제작</h2>
-                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의
-                        용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브
-                        라우징도 작업하였습니다.</p>
+                    <h2>반응형 준수한<br>반응형 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
+                        웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성,
+                        견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
                 </div>
                 <div class="t3 fixed"
-                    data-16000="opacity: 0; top: 50%;"
-                    data-17000="opacity: 1; top: 30%;"
-                    data-18500="opacity: 1; top: 30%;"
-                    data-19500="opacity: 0; top: 50%;"
+                    data-16000 = "opacity: 0; top: 50%;"
+                    data-17000 = "opacity: 1; top: 30%;"
+                    data-18500 = "opacity: 1; top: 30%;"
+                    data-19500 = "opacity: 0; top: 50%;"    
                 >
-                    <h2>영화 사이트<br>웹 표준 사이트 제작</h2>
-                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의
-                        용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브
-                        라우징도 작업하였습니다.</p>
+                    <h2>영화 사이트<br>기업형 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
+                        웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성,
+                        견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
                 </div>
                 <div class="t4 fixed"
-                    data-19500="opacity: 0; top: 50%;"
-                    data-20500="opacity: 1; top: 30%;"
-                    data-22000="opacity: 1; top: 30%;"
-                    data-23000="opacity: 0; top: 50%;"
+                    data-19500 = "opacity: 0; top: 50%;"
+                    data-20500 = "opacity: 1; top: 30%;"
+                    data-22000 = "opacity: 1; top: 30%;"
+                    data-23000 = "opacity: 0; top: 50%;"   
                 >
-                    <h2>PHP를 이용한<br>PHP 사이트 제작</h2>
-                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다. 웹 표준에 필요한 인식의
-                        용이성, 운용의 용이성, 이해의 용이성, 견고성을 바탕으로 코딩을 하였으며, 크로스브
-                        라우징도 작업하였습니다.</p>
+                    <h2>php를 이용한<br>php 사이트 제작</h2>
+                    <p>웹접근성지침서2.0을 바탕으로 사이트를 제작하였습니다.
+                        웹 표준에 필요한 인식의 용이성, 운용의 용이성, 이해의 용이성,
+                        견고성을 바탕으로 코딩을 하였으며, 크로스브라우징도 작업하였습니다.</p>
                 </div>
                 
             </div>
             <div class="s2Text3 fixed"
-                data-8000="top: 210%; transform: translate(-50%, -50%) scale(3.4)"
-                data-9000="top: 70%; transform: translate(-50%, -50%) scale(1)"
-                data-23000="top: 70%; transform: translate(-50%, -50%) scale(1); opacity:1"
-                data-24000="top: 70%; transform: translate(-50%, -50%) scale(1); opacity:0"
-            >
+                data-8000 = "top: 210%; transform: translate(-50%, -50%) scale(3.4)"
+                data-9000 = "top: 70%; transform: translate(-50%, -50%) scale(1)"
+                data-23000 = "top: 70%; transform: translate(-50%, -50%) scale(1); opacity: 1"
+                data-24000 = "top: 70%; transform: translate(-50%, -50%) scale(1); opacity: 0"
+                >
                 <div class="img-wrap"
-                    data-0="display:block"
-                    data-26000="display:block"
-                    data-26001="display:none"
+                    data-0 = "display:block"
+                    data-26000 = "display:block"
+                    data-26001 = "display:none"
                 >
                     <div class="img1"
-                        data-11000="left: 0%"
-                        data-13000="left: -100%"
+                        data-11000 = "left: 0%"
+                        data-13000 = "left: -100%"
                     >
                         <img src="../assets/img/apple-site01.jpg" alt="사이트1">
                         <a href="#">VIEW</a>
                     </div>
                     <div class="img2"
-                        data-11000="left: 100%"
-                        data-13000="left: 0%"
-                        data-15000="left: 0%"
-                        data-16000="left: -100%"
+                        data-11000 = "left: 100%"
+                        data-13000 = "left: 0%"
+                        data-15000 = "left: 0%"
+                        data-16000 = "left: -100%"
                     >
                         <img src="../assets/img/apple-site02.jpg" alt="사이트2">
                         <a href="#">VIEW</a>
                     </div>
                     <div class="img3"
-                        data-15000="left: 100%"
-                        data-16000="left: 0%"
-                        data-18000="left: 0%"
-                        data-19000="left: -100%"
+                        data-15000 = "left: 100%"
+                        data-16000 = "left: 0%"
+                        data-18000 = "left: 0%"
+                        data-19000 = "left: -100%"
                     >
                         <img src="../assets/img/apple-site03.jpg" alt="사이트3">
                         <a href="#">VIEW</a>
                     </div>
                     <div class="img4"
-                        data-18000="left: 100%"
-                        data-19000="left: 0%"
+                        data-18000 = "left: 100%"
+                        data-19000 = "left: 0%"
                     >
                         <img src="../assets/img/apple-site04.jpg" alt="사이트4">
                         <a href="#">VIEW</a>
@@ -390,243 +351,372 @@
                 </div>
             </div>
         </section>
-        <!--//section2-->
+        <!-- //section2 -->
+
         <style>
             .s3Text1 {
                 font-size: 8vw;
-                font-weight: 100;
+                font-weight: 300;
                 font-family: 'NEXONLv1Gothic';
                 text-transform: uppercase;
+                white-space: nowrap;
+                font-weight: 500;
+                color: #000;
             }
             .s3Text1 span {
                 display: inline-block;
             }
             .s3Text1 .s1 {
-                transform: translate(-50vw, -20vw);
+                /* transform: translate(-20vw, -10vw); */
             }
             .s3Text1 .s2 {
-                transform: translate(-60vw, 20vw);
+                /* transform: translate(-20vw, 20vw); */
             }
             .s3Text1 .s3 {
-                transform: translate(-70vw, -20vw);
+                /* transform: translate(-10vw, -20vw); */
             }
             .s3Text1 .s4 {
-                transform: translate(50vw, -20vw);
+                /* transform: translate(10vw, -20vw); */
             }
             .s3Text1 .s5 {
-                transform: translate(60vw, 20vw);
+                /* transform: translate(10vw, 20vw); */
             }
             .s3Text1 .s6 {
-                transform: translate(70vw, 3vw);
+                /* transform: translate(30vw, 10vw); */
             }
+            .s3Text1 .s7 {
+                width: 100vw;
+                height: 1px;
+                background: #000;
+            }
+            /* s3Text2 */
+            .s3Text2 {
+                perspective: 500px;
+            }
+            .s3Text2 iframe {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s3Text2 .i1-text {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s3Text2 .i1 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s3Text2 .i2 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s3Text2 .i3 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            
         </style>
         <section id="section3">
-            <div class="s3Text1 fixed">
+            <div class="s3Text1 fixed"
+                data-32500="top: 50%;"
+                data-33500="top: 10%;"
+                data-40000="top: 10%;"
+                data-41000="top: -10%;"
+            >         
                 <span class="s1"
-                    data-26000="transform: translate(-50vw, -20vw); font-size: 10vw;"
-                    data-27000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;"
+                    data-28000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-28500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-29000="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >s</span><span class="s2"
-                    data-26500="transform: translate(-60vw, 20vw); font-size: 10vw;"
-                    data-27500="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-28500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-29000="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-29500="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >c</span><span class="s3"
-                    data-27000="transform: translate(-70vw, -20vw); font-size: 10vw;"
-                    data-28000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-29000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-29500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-30000="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >r</span><span class="s4"
-                    data-27500="transform: translate(50vw, -20vw); font-size: 10vw;"
-                    data-28500="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-29500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-30500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-31000="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >i</span><span class="s5"
-                    data-28000="transform: translate(60vw, 20vw); font-size: 10vw;"
-                    data-29000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-30500="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-31000="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-31500="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >p</span><span class="s6"
-                    data-28500="transform: translate(70vw, 3vw); font-size: 10vw;"
-                    data-29500="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-30000="transform: translate(0vw, 0vw); font-size: 8vw;"
-                    data-32000="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-44500="transform: translate(0vw, -20vw); font-size: 8vw;"
-                    data-47000="transform: translate(0vw, -50vw); font-size: 8vw;"
+                    data-26000="font-size:100vw; opacity:0;" 
+                    data-28000="font-size:8vw; opacity:1;"
+                    data-31000="font-size:8vw; opacity:1; transform:translatey(0%);"
+                    data-31500="font-size:8vw; opacity:1; transform:translatey(-20%);"
+                    data-32000="font-size:5vw; opacity:1; transform:translatey(0%);"
                 >t</span>
-                <div class="s3Text2 fixed">
-                    <div class="il-text">
-                        <div class="il-text-desc"
-                        data-33000 = "transform: translate3d(30%, -0%, -10000px; opacity: 0"
-                        data-37000 = "transform: translate3d(30%, -0%, 0px); opacity: 1">
-                        <!-- 자바스크립트를 이용한 마우스 효과입니다. -->
-                    </div>
-                        
-                    </div>
-                    <iframe class="i1" src="../mouseEffect/javascriptME01.html" alt="mouse"
-                        data-33000 = "transform: translate3d(-80%, -50%, -10000px; opacity: 0"
-                        data-35000 = "transform: translate3d(-80%, -50%, 0px); opacity: 1"
-                        data-44000 = "transform: translate3d(-80%, -50%, 0px); opacity: 1"
-                        data-46000 = "transform: translate3d(-80%, -50%, 1000px); opacity: 0">
-                    </iframe>
-                    <iframe class="i2" src="../menuEffect/javascriptME01.html" alt="mouse"
-                        data-35000 = "transform: translate3d(-50%, -80%, -10000px; opacity: 0"
-                        data-37000 = "transform: translate3d(-50%, -80%, 0px); opacity: 1"
-                        data-43000 = "transform: translate3d(-50%, -80%, 0px); opacity: 1"
-                        data-44000 = "transform: translate3d(-50%, -80%, 1000px); opacity: 0">
-                    </iframe>
-                    <iframe class="i3" src="../parallaxEffect/javascriptPE01.html" alt="mouse"
-                        data-37000 = "transform: translate3d(-30%, -30%, -10000px; opacity: 0"
-                        data-39000 = "transform: translate3d(-30%, -30%, 0px); opacity: 1"
-                        data-41000 = "transform: translate3d(-30%, -30%, 0px); opacity: 1"
-                        data-43000 = "transform: translate3d(-30%, -30%, 1000px); opacity: 0">
-                    </iframe>
-                </div>
+            </div>
+            <div class="s3Text2 fixed">
+                <iframe class="i1" src="../MouseEffect/javascriptME01.html" alt="mouse"
+                    data-33000 = "transform: translate3d(-80%, -50%, -10000px); opacity:0"
+                    data-34000 = "transform: translate3d(-80%, -50%, 0px); opacity:1"
+                    data-39000 = "transform: translate3d(-80%, -50%, 0px); opacity:1"
+                    data-40000 = "transform: translate3d(-80%, -50%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i2" src="../GameEffect/quiz/cardGame.html" alt="mouse"
+                    data-34000 = "transform: translate3d(-50%, -80%, -10000px); opacity:0"
+                    data-35000 = "transform: translate3d(-50%, -80%, 0px); opacity:1"
+                    data-38500 = "transform: translate3d(-50%, -80%, 0px); opacity:1"
+                    data-39500 = "transform: translate3d(-50%, -80%, 1000px); opacity:0"
+                ></iframe>
+                <iframe class="i3" src="../GameEffect/quiz/quiz01.html" alt="mouse"
+                    data-36000 = "transform: translate3d(-30%, -30%, -10000px); opacity:0"
+                    data-37000 = "transform: translate3d(-30%, -30%, 0px); opacity:1"
+                    data-38000 = "transform: translate3d(-30%, -30%, 0px); opacity:1"
+                    data-39000 = "transform: translate3d(-30%, -30%, 1000px); opacity:0"
+                ></iframe>
             </div>
         </section>
-        <!--//section3-->
+        <!-- //section3 -->
+
+
         <style>
-            .s4Text1 {
-            }
+            .s4Text1 {}
+
             .s4Text1 > div {
-                width: 10vw; height: 10vw;
                 background: #000;
                 border-radius: 50%;
             }
-            .s4Text1 .cicle1 {
+            .s4Text1 .circle1 {
+                left: 50%; top: 50%;
+            }
+            .s4Text1 .circle2 {
                 left: 20%; top: 20%;
             }
-            .s4Text1 .cicle2 {
-                left: 80%; top: 50%;
+            .s4Text1 .circle3 {
+                left: 60%; top: 60%;
             }
-            .s4Text1 .cicle3 {
-                left: 40%; top: 60%;
+            .s4Text1 .circle4 {
+                left: 60%; top: 90%;
             }
-            .s4Text1 .cicle4 {
+            .s4Text1 .circle5 {
                 left: 90%; top: 10%;
             }
-            .s4Text1 .cicle5 {
-                left: 20%; top: 90%;
+            .s4Text1 .circle6 {
+                left: 10%; top: 60%;
             }
-            .s4Text1 .cicle6 {
-                left: 40%; top: 30%;
+
+            /* s4Text2 */
+            .s4Text2 {
+                perspective: 700px;
             }
-            .s4Text2 .cp {
-                display: block;
+            .s4Text2 .s1 {
+                color: #FFF;
+                font-size: 8vw;
+                font-weight: 500;
+                position: absolute;
+            }
+            .s4Text2 iframe {
+                width: 60vw; height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s4Text2 .i1-text {
+                width: 60vw;
+                height: 60vh;
+                transform-style: preserve-3d;
+                transform: translate3d(0, 0, 0);
+            }
+            .s4Text2 .i1 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s4Text2 .i2 {
+                position: absolute;
+                left: 0; top: 0;
+            }
+            .s4Text2 .i3 {
+                position: absolute;
+                left: 0; top: 0;
             }
         </style>
         <section id="section4">
             <div class="s4Text1"
-                data-0 = "display: none;"
-                data-44999 = "display: none;"
-                data-45000 = "display: block;"
-                data-46000 = "display: block;"
-                data-72000 = "display: none;"
+                data-39999 = "display: none"
+                data-40000 = "display: block"
+                data-43000 = "display: block"
+                data-48500 = "display: none"
             >
-                <div class="cicle1 fixed"
-                    data-46000 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
+                <div class="circle1 fixed"
+                    data-40000="width: 0vw; height: 0vw;"
+                    data-41000="width: 200vw; height: 200vw;"
                 ></div>
-                <div class="cicle2 fixed"
-                    data-46050 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
+                <div class="circle2 fixed"
+                    data-40050="width: 0vw; height: 0vw;"
+                    data-42000="width: 200vw; height: 200vw;"
                 ></div>
-                <div class="cicle3 fixed"
-                    data-46100 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
+                <div class="circle3 fixed"
+                    data-40100="width: 0vw; height: 0vw;"
+                    data-43000="width: 200vw; height: 200vw;"
+                ></div>3
+                <div class="circle4 fixed"
+                    data-40150="width: 0vw; height: 0vw;"
+                    data-43000="width: 200vw; height: 200vw;"
                 ></div>
-                <div class="cicle4 fixed"
-                    data-46150 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
+                <div class="circle5 fixed"
+                    data-40200="width: 0vw; height: 0vw;"
+                    data-43000="width: 200vw; height: 200vw;"
                 ></div>
-                <div class="cicle5 fixed"
-                    data-46200 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
-                ></div>
-                <div class="cicle6 fixed"
-                    data-46250 = "width: 0vw; height: 0vw;"
-                    data-52000 = "width: 200vw; height: 200vw;"
+                <div class="circle6 fixed"
+                    data-40250="width: 0vw; height: 0vw;"
+                    data-43000="width: 200vw; height: 200vw;"
                 ></div>
             </div>
             <div class="s4Text2 fixed"
-            data-48000 = "opacity:0"
-            data-49000 = "transform: translate(-50%, -5vw); opacity:1"
-            data-50000 = "transform: translate(-50%, -5vw); opacity:1"
-            data-51000 = "transform: translate(-50%, -24vw); opacity:1; font-size: 6vw;"
+                data-40000="top: 50%;"
+                data-44000="top: 10%;"
+                data-48000="top: 10%;"
+                data-51000="top: -10%;"
             >
-                <span
-                >animation</span>
-                <div class="cp cp1" data-49000 = "opacity:0;"
-                    data-52000 = "transform: translate(-0%, 20%); opacity:0"
-                    data-53000 = "transform: translate(-0%, -0%); opacity:1"
-                    data-56000 = "transform: translate(-0%, -0%); opacity:1"
-                    data-59000 = "transform: translate(-200%, -0%); opacity:1"
-                >
-                    <p class="codepen" data-height="700" data-default-tab="html,result" data-slug-hash="NWvggaN" data-user="faigh1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
-                >
-                    <span>See the Pen <a href="https://codepen.io/faigh1/pen/NWvggaN">
-                    face animation</a> by faigh1 (<a href="https://codepen.io/faigh1">@faigh1</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-                  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                </div>
-
-                <div  class="cp cp2" data-56000 = "transform: translate(200%, -100%); opacity:0;"
-                    data-59000 = "transform: translate(-0%, -100%); opacity:1"
-                    data-62000 = "transform: translate(-0%, -100%); opacity:1"
-                    data-65000 = "transform: translate(-200%, -100%); opacity:1"
-                    
-                >
-                    <p class="codepen" data-height="700" data-default-tab="html,result" data-slug-hash="PoKjjBq" data-user="faigh1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                        <span>See the Pen <a href="https://codepen.io/faigh1/pen/PoKjjBq">
-                        Untitled</a> by faigh1 (<a href="https://codepen.io/faigh1">@faigh1</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                      </p>
-                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                </div>
-
-                <div  class="cp cp3" data-62000 = "transform: translate(200%, -200%); opacity:0;"
-                    data-65000 = "transform: translate(-0%, -200%); opacity:1"
-                    data-68000 = "transform: translate(-0%, -200%); opacity:1"
-                    data-71000 = "transform: translate(-200%, -200%); opacity:1"
-
-                >
-                    <p class="codepen" data-height="700" data-default-tab="html,result" data-slug-hash="VwzWWRJ" data-user="faigh1" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                        <span>See the Pen <a href="https://codepen.io/faigh1/pen/VwzWWRJ">
-                        Untitled</a> by faigh1 (<a href="https://codepen.io/faigh1">@faigh1</a>)
-                        on <a href="https://codepen.io">CodePen</a>.</span>
-                    </p>
-                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-                </div>
-                
+            <div class="wrapper">
+                <span class="s1"
+                    data-40500 = "top: 0; opacity:0;"
+                    data-41000 = "top: 10; opacity:1;"
+                    data-41500 = "top: 10%; opacity:0.5;"
+                    data-42000 = "top: 20%; opacity:0.3;"
+                    data-43000 = "top: 20%; opacity:0;"
+                >ANIMATION</span>
             </div>
+                <div class="s4Text2 fixed">
+                    <iframe class="i1" src="https://kimtaehwi84.github.io/dothome21/codepen/codepen1.html" alt="mouse"
+                        data-42000 = "transform: translate3d(-30%, -80%, -10000px); opacity:0"
+                        data-43000 = "transform: translate3d(-50%, 10%, 0px); opacity:1"
+                        data-44000 = "transform: translate3d(-50%, -10%, 0px); opacity:1"
+                        data-45000 = "transform: translate3d(-50%, -30%, 1000px); opacity:0"
+                    ></iframe>
+                    <iframe class="i2" src="https://kimtaehwi84.github.io/dothome21/codepen/codepen2.html" alt="mouse"
+                        data-44000 = "transform: translate3d(-30%, -80%, -10000px); opacity:0"
+                        data-45000 = "transform: translate3d(-50%, 10%, 0px); opacity:1"
+                        data-46000 = "transform: translate3d(-50%, -10%, 0px); opacity:1"
+                        data-46500 = "transform: translate3d(-50%, -30%, 1000px); opacity:0"
+                    ></iframe>
+                    <iframe class="i3" src="https://kimtaehwi84.github.io/dothome21/codepen/codepen3.html" alt="mouse"
+                        data-46000 = "transform: translate3d(-30%, -80%, -10000px); opacity:0"
+                        data-47000 = "transform: translate3d(-50%, 10%, 0px); opacity:1"
+                        data-48000 = "transform: translate3d(-50%, -10%, 0px); opacity:1"
+                        data-49000 = "transform: translate3d(-50%, -30%, 1000px); opacity:0"
+                    ></iframe>
+                </div>
+            </div>
+        </section> 
+        <!-- //section4 -->
 
-        </section><!--//section4-->
+        <style>
+            .s5Text1 {
 
-        <section id="section5"></section><!--//section5-->
-        <section id="section6"></section><!--//section6-->
-        <section id="section7"></section><!--//section7-->
+            }
+            @import url(https://fonts.googleapis.com/css?family=Righteous);
+
+            *, *:before, *:after {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                position: relative;
+            }
+            .s5Text1 {
+                text-align: center;
+                background: rgb(0, 0, 0);
+                width: 100%;
+                height: 2000px;
+                top: 20%;
+            }
+            .s5Text1:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 0;
+                height: 100%;
+            }
+
+            .s5Text1 h1 {
+                position: relative;
+                left: 10%; top: 10%;
+                display: inline-block;
+                color: white;
+                font-family: 'Righteous', serif;
+                font-size: 5vw; 
+                text-shadow: .03vw .03vw 0 rgb(24, 35, 92);
+            }
+            .s5Text1 p {
+                top: 15%;  left: -10%;
+                /* transform: translate(-50%, -50%); */
+                display: inline-block;
+                color: #fff;
+                font-size: 1.5vw;
+                font-family: 'NEXONLv1Gothic';
+                font-weight: 200;
+            }
+            .s5Text1 h1:after {
+                content: attr(data-shadow);
+                position: absolute;
+                top: .06em; left: .06em;
+                z-index: -1;
+                text-shadow: none;
+                background-image:
+                linear-gradient(
+                    45deg,
+                    transparent 45%,
+                    hsla(48,20%,90%,1) 45%,
+                    hsla(48,20%,90%,1) 55%,
+                    transparent 0
+                    );
+                background-size: .05em .05em;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            
+                animation: shad-anim 15s linear infinite;
+                }
+
+            @keyframes shad-anim {
+                0% {background-position: 0 0}
+                0% {background-position: 100% -100%}
+            }
+        </style>
+        <section id="section5">
+            <div class="s5Text1 fixed"
+                data-47000 = "display: none"
+                data-48500 = "display: block"
+                data-51500 = "display: block"
+            >
+                <h1 data-shadow='contact!'
+                    data-48500="opacity: 0; transform:scale(0)"
+                    data-49000="opacity: 0.3; transform:scale(0.3)"
+                    data-49500="opacity: 0.6; transform:scale(0.6)"
+                    data-50000="opacity: 1; transform:scale(1)"
+                >contact!</h1>
+                <p
+                data-49500="opacity: 0; transform:scale(0)"
+                data-50000="opacity: 0.3; transform:scale(0.3)"
+                data-50500="opacity: 0.6; transform:scale(0.6)"
+                data-51000="opacity: 1; transform:scale(1)"
+                >Email : beatrice.txt@gmail.com</p>
+            </div>
+        </section> <!-- //section5 -->
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
     <script>
         var s = skrollr.init();
         window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-        
+            let scrollTop = document.documentElement.scrollTop || window.scrollY || window.PageYOffset; 
             document.querySelector(".scroll").innerHTML = scrollTop;
         })
-        
     </script>
 </body>
 </html>

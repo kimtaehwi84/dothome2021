@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 테스트5</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: #b3e5fc  ;
+        }
+
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #81d4fa;
+            width: 100%;
+            height: 150px;
+        }
+
+        nav {
+            background-color: #4fc3f7;
+            width: 100%;
+            height: 150px;
+        }
+
+        main {
+            overflow: auto;
+        }
+
+        aside {
+            background-color: #29b6f6;
+            width: 30%;
+            height: 900px;
+            float: left;
+        }
+
+        section {
+            background-color: #03a9f4;
+            width: 70%;
+            height: 300px;
+            float: left;
+        }
+
+        article {
+            background-color: #039be5;
+            width: 70%;
+            height: 300px;
+            float: left;
+        }
+
+        span {
+            background-color: #0288d1;
+            width: 70%;
+            height: 300px;
+            float: left;
+        }
+
+        footer {
+            background-color: #01579b;
+            width: 100%;
+            height: 150px;
+        }
+
+        @media (max-width: 1000px) {
+            #wrap {
+                width: 100%;
+            }
+
+            aside {
+                height: 600px;
+            }
+
+            span {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            aside {
+                float: none;
+                width: 100%;
+                height: 150px;
+            }
+
+            section {
+                float: none;
+                width: 100%;
+                height: 300px;
+            }
+
+            article {
+                float: none;
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <main>
+            <aside></aside>
+            <section></section>
+            <article></article>
+            <span></span>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

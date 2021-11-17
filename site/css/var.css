@@ -1,7 +1,7 @@
 :root {
     /* 폰트 */
     font-size: 16px;
-    
+
     --fontScore1 : 'S-CoreDream-1Thin';
     --fontScore2 : 'S-CoreDream-2ExtraLight';
     --fontScore3 : 'S-CoreDream-3Light';
@@ -21,5 +21,4 @@
     --fontNexon2L : 'NEXON Lv2 Gothic Light';
     --fontNexon2M : 'NEXON Lv2 Gothic';
     --fontNexon2B : 'NEXON Lv2 Gothic Bold';
-    
 }

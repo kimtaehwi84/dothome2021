@@ -1,101 +1,115 @@
+
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>레이아웃 14</title>
-  <style>
-    * {
-      margin : 0; padding: 0;
-    }
-    body {
-      background-color: #E8F5E9;
-    }
-    #wrap {
-      width: 1200px;
-      margin : 0 auto;
-    }
-    #header {
-      width: 100%;
-      height: 100px;
-      background-color: #C8E6C9;
-    }
-    #nav {
-      width: 100%;
-      height: 100px;
-      background-color: #A5D6A7;
-    }
-    #side {
-      width: 20%;
-      height: 1000px;
-      background-color: #81C784;
-      float: left;
-    }
-    #contents {
-      width: 50%;
-      height: 1000px;
-      background-color: #66BB6A;
-      float: left;
-    }
-    #article {
-      width: 30%;
-      height: 1000px;
-      background-color: #4CAF50;
-      float: left;
-    }
-    #footer {
-      width: 100%;
-      height: 100px;
-      background-color: #43A047;
-      clear: both;
-    }
-    @media (max-width: 1210px){
-      #wrap {
-        width: 90%;
-      }
-    }
-    @media (max-width: 900px){
-      #wrap {
-        width: 100%;
-      }
-      #side {
-        width: 20%;
-        height: 400px;
-      }
-      #contents {
-        width: 80%;
-        height: 400px;
-      }
-      #article {
-        width: 100%;
-        height: 200px;
-      }
-    }
-    @media (max-width: 600px){
-      #header {
-        width: 100%;
-        height: 200px;
-      }
-      #side {
-        width: 100%;
-        height: 300px;
-      }
-      #contents{
-        width: 100%;
-        height: 300px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 연습14</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: #E8F5E9;
+        }
+
+        #wrap {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #C8E6C9;
+            width: 100%;
+            height: 150px;
+        }
+
+        nav {
+            background-color: #A5D6A7;
+            width: 100%;
+            height: 150px;
+        }
+
+        main {
+            overflow: auto;
+        }
+
+        aside {
+            background-color: #81C784;
+            width: 30%;
+            height: 1000px;
+            float: left;
+        }
+
+        section {
+            background-color: #66BB6A;
+            width: 40%;
+            height: 1000px;
+            float: left;
+        }
+
+        article {
+            background-color: #4CAF50;
+            width: 30%;
+            height: 1000px;
+            float: left;
+        }
+
+        footer {
+            background-color: #43A047;
+            width: 100%;
+            height: 150px;
+        }
+
+        @media (max-width: 1000px) {
+            #wrap {
+                width: 100%;
+            }
+
+            section {
+                width: 70%;
+            }
+
+            article {
+                float: none;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            aside {
+                float: none;
+                width: 100%;
+                height: 200px;
+            }
+
+            section {
+                float: none;
+                width: 100%;
+                height: 400px;
+            }
+
+            article {
+                float: none;
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-  <div id="wrap">
-    <div id="header"></div>
-    <div id="nav"></div>
-    <div id="side"></div>
-    <div id="contents"></div>
-    <div id="article"></div>
-    <div id="footer"></div>
-  </div>
+    <div id="wrap">
+        <header></header>
+        <nav></nav>
+        <main>
+            <aside></aside>
+            <section></section>
+            <article></article>
+        </main>
+        <footer></footer>
+    </div>
 </body>
+
 </html>

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>government</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0; padding: 0;
+            font-family: 'S-CoreDream-4Regular';
+            font-size: 16px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        #body {
+            display: flex;
+            margin-top: 50px;
+            justify-content: space-between;
+            font-family: 'S-CoreDream-4Regular';
+        }
+        #aside {
+            flex: 0 0 28%;
+        }
+        #main {
+            flex: 0 0 70%;
+        }
+        #aside h2 a {
+            display: inline-block;
+            color: transparent;
+            background: url(../test/assets/img/government/government24_logo.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            padding: 10px 30px;
+        }
+        #aside nav {
+            margin-top: 20px;
+        }
+        #aside nav .mainMenu .subMenu a {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 0;
+            display: inline-block;
+        }
+        #aside nav .mainMenu .subMenu ul {
+            padding: 10px 0;
+            display: none;
+        }
+        #aside nav .mainMenu .subMenu ul>li:last-child {
+            padding-bottom: 20px;
+        }
+        #aside nav .mainMenu .subMenu ul li a {
+            font-size: 15px;
+            font-weight: bold;
+            display: block;
+            border-bottom: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+        }
+        .banner {
+            display: flex;
+        }
+        .slider-img {
+            width: 700px;
+            height: 380px;
+            overflow: hidden;
+        }
+        .slider-img img {
+            width: 100%;
+        }
+        .slider-inner {
+            position: relative;
+            width: 700px;
+            height: 1520px;
+            overflow: hidden;
+        }
+        .slider-inner .slider {
+            float: left;
+            width: 700px;
+            height: 380px;
+            position: relative;
+        }
+        .slider-inner .slider::before {
+            font-family: 'S-CoreDream-4Regular';
+            position: absolute;
+            left: 5px;top: 5px;
+            padding: 5px 10px 3px;
+            background: rgba(0, 0, 0, .3);
+            color: #fff;
+        }
+        .slider-inner .slider:nth-child(1) {
+            z-index: 3;
+        }
+        .slider-inner .slider:nth-child(2) {
+            z-index: 2;
+        }
+        .slider-inner .slider:nth-child(3) {
+            z-index: 1;
+        }
+        .slider-inner .slider::before {
+            content: attr(data-name);
+        }
+        .tabMenu {
+            margin: 50px 0;
+        }
+        .tabMenu .tab-btn ul {
+            display: flex;
+            justify-content: center;
+        }
+        .tabMenu .tab-btn ul li a {
+            font-size: 20px;
+            padding: 10px 20px;
+            color: #ddd;
+            font-weight: 800;
+        }
+        .tabMenu .tab-btn ul li.active a {
+            color: #000;
+        }
+        .tabMenu .tab-btn ul li .child {
+            position: relative;
+        }
+        .tabMenu .tab-btn ul li .child::after {
+            content: '';
+            position: absolute;
+            width: 2px;height: 20px;
+            right: 0; top: 13px;
+            background: #000;
+        }
+        .tab-cont {
+            display: flex;
+            justify-content: space-between;
+        }
+        .tab-cont .service {
+            text-align: center;
+        }
+        .tab-cont .service a img {
+            width: 80%;
+        }
+        .tab-cont div p {
+            display: block;
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #373737;
+        }
+        .cont2 {
+            display: none;
+        }
+        .noticeWrap {
+            margin-top: 50px;
+        }
+        .noticeWrap .row {
+            display: flex;
+            justify-content: space-between;
+            background: #F7F7F7;
+            padding: 20px;
+        }
+        .wrapper {
+            padding: 5px;
+        }
+        .noticeWrap .notice {
+            flex: 0 0 30%;
+            border: 1px solid #D0D2E1;
+            background: #fff;
+        }
+        .noticeWrap .notice strong {
+            display: block;
+            text-align: center;
+            padding: 20px;
+            font-weight: 800;
+            position: relative;
+        }
+        .noticeWrap .notice strong::after {
+            content: '';
+            position: absolute;
+            width: 25px;height: 25px;
+            right: 0;top: 0;
+            background: url(../test/assets/img/government/plu_butt.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .noticeWrap .notice img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: 15px;
+        }
+        .noticeWrap .notice .desc span {
+            position: relative;
+            display: inline-block;
+        }
+        .noticeWrap .notice .desc span::before {
+            content: '';
+            position: absolute;
+            top: 12px;left: 10px;         
+            width: 4px;height: 4px;
+            background: #494949;
+            border-radius: 50%;
+        }
+        .noticeWrap .notice .desc span a {
+            display: block;
+            width: 175px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 0;
+            margin-left: 20px;
+            color: #494949;
+        }
+        #footer {
+            margin-top: 100px;
+            background: #EDF2F8;
+        }
+        #footer .footerWrap {
+            overflow: hidden;
+            padding: 10px;
+        }
+        #footer .footerWrap .footerLogo {
+            float: left;
+            width: 50px;
+        }
+        #footer .footerWrap .footerLogo img {
+            width: 100%;
+            margin-top: 5px;
+        }
+        #footer .footerWrap .address {
+            float: left;
+            margin-top: 10px;
+            margin-left: 30px;
+        }
+        #footer .footerWrap .address p {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 2px 0;
+            color: #2F2E2C;
+        }
+        #footer .footerWrap .footerSns {
+            float: right;
+            width: 200px;height: 60px;
+            margin-top: 20px;
+            background-image: url(../test/assets/img/government/footer_sns.jpg);
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="body">
+            <aside id="aside">
+                <h2><a href="#">정부24</a></h2>
+                <nav>
+                    <ul class="mainMenu">
+                        <li class="subMenu">
+                            <a href="#">서비스</a>
+                            <ul>
+                                <li><a href="#">분야별 정책정보1</a></li>
+                                <li><a href="#">정책뉴스1</a></li>
+                                <li><a href="#">연구보고서1</a></li>
+                                <li><a href="#">간행물1</a></li>
+                                <li><a href="#">정책자료1</a></li>
+                            </ul>
+                        </li>
+                        <li class="subMenu">
+                            <a href="#">정책정보</a>
+                            <ul>
+                                <li><a href="#">분야별 정책정보2</a></li>
+                                <li><a href="#">정책뉴스2</a></li>
+                                <li><a href="#">연구보고서2</a></li>
+                                <li><a href="#">간행물2</a></li>
+                                <li><a href="#">정책자료2</a></li>
+                            </ul>
+                        </li>
+                        <li class="subMenu">
+                            <a href="#">기관정보</a>
+                            <ul>
+                                <li><a href="#">분야별 정책정보3</a></li>
+                                <li><a href="#">정책뉴스3</a></li>
+                                <li><a href="#">연구보고서3</a></li>
+                                <li><a href="#">간행물3</a></li>
+                                <li><a href="#">정책자료3</a></li>
+                            </ul>
+                        </li>
+                        <li class="subMenu">
+                            <a href="#">고객센터</a>
+                            <ul>
+                                <li><a href="#">분야별 정책정보4</a></li>
+                                <li><a href="#">정책뉴스4</a></li>
+                                <li><a href="#">연구보고서4</a></li>
+                                <li><a href="#">간행물4</a></li>
+                                <li><a href="#">정책자료4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <main id="main">
+                <div class="banner">
+                    <div class="slider-img">
+                        <div class="slider-inner">
+                            <div class="slider" data-name="슬라이더 이미지1">
+                                <img src="../test/assets/img/government/government24_main_image.jpg" alt="이미지1">
+                            </div>
+                            <div class="slider" data-name="슬라이더 이미지2">
+                                <img src="../test/assets/img/government/government24_main_image.jpg" alt="이미지2">
+                            </div>
+                            <div class="slider" data-name="슬라이더 이미지3">
+                                <img src="../test/assets/img/government/government24_main_image.jpg" alt="이미지3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabMenuWrap">
+                    <div class="tabMenu">
+                        <div class="tab-btn">
+                            <ul>
+                                <li class="active"><a class="child" href="#">자주찾는 서비스</a></li>
+                                <li><a href="#">키워드 서비스</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-cont cont1">
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_1.jpg" alt="주민등록표등본">
+                            </a>
+                            <p>주민등록표등본<br>(초본)교부</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_2.jpg" alt="토지(임야)대장">
+                            </a>
+                            <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_3.jpg" alt="건축물대장청">
+                            </a>
+                            <p>건축물대장 등/초본<br>발급(열람)신청</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_4.jpg" alt="지방세 납세증명">
+                            </a>
+                            <p>지방세 납세증명</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_5.jpg" alt="지적도(임야도)">
+                            </a>
+                            <p>지적도(임야도) 등본<br>발급 및 열람</p>
+                        </div>
+                    </div>
+                    <div class="tab-cont cont2">
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_5.jpg" alt="주민등록표등본">
+                            </a>
+                            <p>주민등록표등본<br>(초본)교부</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_4.jpg" alt="토지(임야)대장">
+                            </a>
+                            <p>토지(임야)대장<br>열람/등본 발급신청</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_3.jpg" alt="건축물대장청">
+                            </a>
+                            <p>건축물대장 등/초본<br>발급(열람)신청</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_2.jpg" alt="지방세 납세증명">
+                            </a>
+                            <p>지방세 납세증명</p>
+                        </div>
+                        <div class="service">
+                            <a href="#">
+                                <img src="../test/assets/img/government/contservice_image_1.jpg" alt="지적도(임야도)">
+                            </a>
+                            <p>지적도(임야도) 등본<br>발급 및 열람</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="noticeWrap">
+                    <div class="row">
+                        <div class="notice news">
+                            <div class="wrapper">
+                                <strong>공지사항</strong>
+                                <img src="../test/assets/img/government/contservice_image_6.jpg" alt="공지사항 이미지">
+                                <div class="desc">
+                                    <span><a href="#">[어디서나 대학민원] 호서대학교 팩스</a></span>
+                                    <span><a href="#">[전라북도 고창군] 새올행정시스템 D</a></span>
+                                    <span><a href="#">교육부 행정전자서명인증센터 시스템</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice data">
+                            <div class="wrapper">
+                                <strong>자료실</strong>
+                                <img src="../test/assets/img/government/contservice_image_7.jpg" alt="자료실 이미지">
+                                <div class="desc">
+                                    <span><a href="#">인터넷 민원발급 위한 프로그램(주</a></span>
+                                    <span><a href="#">정부24 발급물 등록 프로그램</a></span>
+                                    <span><a href="#">전자문서 관련 설치 프로그램</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notice faq">
+                            <div class="wrapper">
+                                <strong>FAQ</strong>
+                                <img src="../test/assets/img/government/contservice_image_8.jpg" alt="FAQ 이미지">
+                                <div class="desc">
+                                    <span><a href="#">'민원발급불가'또는'발급불가'프린터</a></span>
+                                    <span><a href="#">가족관계증명서 프린터 발급이 가능</a></span>
+                                    <span><a href="#">온라인 전입신고 시 [세재주확인]은 어</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <footer id="footer">
+            <div class="footerWrap">
+                <div class="footerLogo">
+                    <img src="../test/assets/img/government/government24_logo_footer.jpg" alt="정부24">
+                </div>
+                <div class="address">
+                    <p>03171 서울특별시 세종대로 209 (세종로) 행정안전부</p>
+                    <p>정부24 콜센터 1588-2188 정부민원안내콜센터 국번없이 110</p>
+                    <p>Copyright © Ministry of the Interior and Safety.All Rights reserved.</p>
+                </div>
+                <div class="footerSns"></div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        // 메인탭메뉴
+        $(document).ready(function (e) {
+            $(".mainMenu > .subMenu > a").on("click", function (e) {
+                if ($(this).parent().has("ul")) {
+                    e.preventDefault();
+                }
+
+                if (!$(this).hasClass("open")) {
+                    $(".mainMenu .subMenu ul").slideUp(350);
+                    $(".mainMenu .subMenu a").removeClass("open");
+
+                    $(this).next("ul").slideDown(350);
+                    $(this).toggleClass("open");
+                    $(this).css("color", "#0368EA");
+
+                } else if ($(this).hasClass("open")) {
+                    $(this).removeClass("open");
+                    $(this).next("ul").slideUp(350);
+                    $(this).css("color", "black");
+                }
+            });
+        });
+
+        // 슬라이드
+        const sliderImg = $(".slider-img");
+        const sliderInner = $(".slider-inner");
+        const slider = $(".slider");
+
+        let currentIndex = 0;
+        let sliderHeight = slider.height();
+
+        setInterval(function () {
+            sliderInner.animate({
+                top: -sliderHeight
+            }, 600, "easeOutExpo", function () {
+                $(".slider:first-child").appendTo(sliderInner);
+                sliderInner.css("top", "");
+            });
+        }, 3000);
+
+        // 메인 탭메뉴
+        const tabBtn = $(".tab-btn ul li");
+        const tabCont = $(".tab-cont");
+
+        tabBtn.click(function (e) {
+            e.preventDefault();
+            let target = $(this);
+            tabBtn.removeClass("active");
+            target.addClass("active");
+
+            let index = target.index();
+            tabCont.css("display", "none");
+            tabCont.eq(index).css("display", "flex");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,172 +1,175 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Effect</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/highlight.css">
-    <style>
-        .mouseCont {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: #fff;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'NEXONLv2Gothic';
-            /* cursor: none; */
-        }
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/highlight.css">
 
-        .mouseCont p {
-            font-size: 2.5vw;
-            line-height: 2.3;
-            font-weight: 300;
-        }
+  <style>
+    body {
+      cursor: none;
+    }
 
-        .mouseCont h2 {
-            font-size: 3vw;
-            font-weight: normal;
-            font-weight: 400;
-        }
+    .mouseCont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'S-CoreDream';
+      cursor: none;
+    }
 
-        .mouseCont em {
-            font-style: normal;
-            border-bottom: 0.2vw dashed rgb(255, 255, 255);
-            color: orange;
-        }
+    .mouseCont p {
+      font-size: 2.5vw;
+      line-height: 2.3;
+      font-weight: 200;
+    }
 
-        .cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            z-index: 9999;
-            background-color: #fff;
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-            mix-blend-mode: difference;
-        }
+    .mouseCont h2 {
+      font-size: 3vw;
+      font-weight: 500;
+    }
 
-        .cursor.active {
-            transform: scale(20);
-        }
+    .mouseCont em {
+      font-style: normal;
+      border-bottom: 0.2vw dashed rgb(22, 93, 14);
+      color: rgb(22, 93, 14);
+    }
 
-        .info.left.list li.active {
-            text-decoration: underline;
-            color: orange;
-        }
-    </style>
+    .cursor {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 1);
+      /* 아무것도 못하게 해줌 */
+      user-select: none;
+      pointer-events: none;
+      transition: transform .3s;
+    }
+
+    .cursor.active {
+      transform: scale(20);
+      border: 1px solid rgb(22, 93, 14);
+      mix-blend-mode: difference;
+    }
+
+    .info.left.list li.active {
+      text-decoration: underline;
+      color: rgb(22, 93, 14);
+    }
+  </style>
 
 </head>
 
-<body class="bg bg5 blue">
+<body class="bg bg18 black">
 
-    <!-- contents -->
-    <main>
-        <div class="cursor"></div>
+  <!-- contents -->
+  <main>
+    <div class="cursor"></div>
+    <article class="mouseCont">
+      <p>그러나 겨울이 지나고 나의 <em>별에도 봄이 오면</em></p>
+      <p>무덤 위에 <em>파란 잔디가 피어나듯이</em></p>
+      <p>내 이름자 묻힌 언덕위에도</p>
+      <h2><em>자랑처럼</em> 풀이 무성할 게외다.</h2>
+    </article>
+  </main>
+  <!-- //contents -->
 
-        <article class="mouseCont">
-            <p>고통은 잠깐이다. 포기는 <em>영원히</em> 남는다.</p>
-            <h2>Pain is temporary. Quitting lasts forever.</h2>
-        </article>
-    </main>
-    <!-- //contents-->
+  <!-- info -->
+  <div class="info">
+    <h1><a href="index.html">Mouse Effect 03 - javascript</a></h1>
+    <p>마우스 이펙트 - 브랜딩 이펙트</p>
+  </div>
 
-    <!-- info -->
-    <div class="info">
-        <h1><a href="index.html">Mouse Effect03 - javascript</a></h1>
-        <p>마우스 이펙트 - 브랜딩 이펙트</p>
-    </div>
+  <div class="info left list">
+    <ul>
+      <li>multiply</li>
+      <li>screen</li>
+      <li>overlay</li>
+      <li>darken</li>
+      <li>lighten</li>
+      <li>color-dodge</li>
+      <li>color-burn</li>
+      <li>hard-light</li>
+      <li>soft-light</li>
+      <li class="active">difference</li>
+      <li>exclusion</li>
+      <li>hue</li>
+      <li>saturation</li>
+      <li>color</li>
+      <li>luminosity</li>
+    </ul>
+  </div>
 
-    <div class="info right">
-        <ul>
-            <li><a href="javascriptME01.html">1</a></li>
-            <li><a href="javascriptME02.html">2</a></li>
-            <li class="active"><a href="javascriptME03.html">3</a></li>
-            <li><a href="javascriptME04.html">4</a></li>
-            <li><a href="javascriptME05.html">5</a></li>
-            <li><a href="javascriptME06.html">6</a></li>
-            <li><a href="javascriptME07.html">7</a></li>
-            <li><a href="javascriptME08.html">8</a></li>
-        </ul>
-        <ul>
-            <li><a href="jqueryME01.html">1</a></li>
-            <li><a href="jqueryME02.html">2</a></li>
-            <li><a href="jqueryME03.html">3</a></li>
-            <li><a href="jqueryME04.html">4</a></li>
-            <li><a href="jqueryME05.html">5</a></li>
-            <li><a href="jqueryME06.html">6</a></li>
-            <li><a href="jqueryME07.html">7</a></li>
-            <li><a href="jqueryME08.html">8</a></li>
-        </ul>
-    </div>
+  <div class="info right">
+    <ul>
+      <li><a href="javascriptME01.html">1</a></li>
+      <li><a href="javascriptME02.html">2</a></li>
+      <li class="active"><a href="javascriptME03.html">3</a></li>
+      <li><a href="javascriptME04.html">4</a></li>
+      <li><a href="javascriptME05.html">5</a></li>
+    </ul>
+    <ul>
+      <li><a href="jqueryME01.html">1</a></li>
+      <li><a href="jqueryME02.html">2</a></li>
+      <li><a href="jqueryME03.html">3</a></li>
+      <li><a href="jqueryME04.html">4</a></li>
+      <li><a href="jqueryME05.html">5</a></li>
+    </ul>
+  </div>
 
-    <div class="info left list">
-        <ul>
-            <li>multiply</li>
-            <li>screen</li>
-            <li>overlay</li>
-            <li>darken</li>
-            <li>lighten</li>
-            <li>color-dodge</li>
-            <li>color-burn</li>
-            <li>hard-light</li>
-            <li>soft-light</li>
-            <li class="active">difference</li>
-            <li>exclusion</li>
-            <li>hue</li>
-            <li>saturation</li>
-            <li>color</li>
-            <li>luminosity</li>
-        </ul>
-    </div>
+  <div class="info bottom source">
+    <button>소스보기</button>
+  </div>
+  <!-- //info -->
 
-    <div class="info bottom">
-        <button>소스 보기</button>
-    </div>
-
-    <!-- #1 -->
-    <div id="modal">
-        <div class="modal-bg">
-            <div class="modal-cont">
-                <div class="code-view">
-                    <div class="view-header">
-                        <div class="dot" aria-hidden="true">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </div>
-                    <div class="view-title">
-                        <ul>
-                            <li class="active"><a href="#">Html</a></li>
-                            <li><a href="#">CSS</a></li>
-                            <li><a href="#">Javascript</a></li>
-                        </ul>
-                    </div>
-                    <div class="view-cont">
-                        <div class="html">
-                            <pre><code class="language-html">&ltmain&gt
-    &ltdiv class="cursor"&gt&lt/div&gt
-
-    &ltarticle class="mouseCont"&gt
-        &ltp&gt고통은 잠깐이다. 포기는 &ltem&gt영원히&lt/em&gt 남는다.&lt/p&gt
-        &lth2&gtPain is temporary. Quitting lasts forever.&lt/h2&gt
-    &lt/article&gt
-&lt/main&gt
+  <!-- modal -->
+  <div id="modal">
+    <div class="modal-bg">
+      <div class="modal-cont">
+        <div class="code-view">
+          <div class="view-header">
+            <!-- aria : 접근성 / aria-hidden=true : 빈칸을 읽지 않음 -->
+            <div class="dot" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="view-title">
+            <ul>
+              <li class="active"><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">Javascript</a></li>
+            </ul>
+          </div>
+          <div class="view-cont">
+            <div class="html">
+              <pre><code class="language-html">&lt;main&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+    &lt;article class="mouseCont"&gt;
+        &lt;p&gt;pain past is &lt;em&gt;pleasure&lt;/em&gt;&lt;/p&gt;
+        &lt;h2&gt;지나간 고통은 &lt;em&gt;즐거움&lt;/em&gt;이다&lt;/h2&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
-                        </div>
-                        <div class="css">
-                            <pre><code class="language-css">.mouseCont {
+            </div>
+            <div class="css">
+              <pre><code class="language-css">.mouseCont {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,25 +178,24 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    font-family: 'NEXONLv2Gothic';
+    font-family: 'S-CoreDream';
     cursor: none;
 }
 
 .mouseCont p {
     font-size: 2.5vw;
     line-height: 2.3;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 .mouseCont h2 {
     font-size: 3vw;
-    font-weight: normal;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .mouseCont em {
     font-style: normal;
-    border-bottom: 0.2vw dashed rgb(255, 255, 255);
+    border-bottom: 0.2vw dashed orange;
     color: orange;
 }
 
@@ -205,53 +207,28 @@
     height: 10px;
     border-radius: 50%;
     z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 1);
+    /* 아무것도 못하게 해줌 */
     user-select: none;
     pointer-events: none;
-    transition: transform 0.3s, opacity 0.2s;
+    transition: transform .3s;
 }
 
 .cursor.active {
-    opacity: .5;
-    transform: scale(0);
-}
-
-.cursor-follower {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    user-select: none;
-    pointer-events: none;
-    transition: transform 0.6s, opacity 0.2s;
-}
-
-.cursor-follower.active {
-    opacity: .7;
-    transform: scale(5);
-    background: rgb(255, 179, 39, 0.6);
-}
-
-.cursor-follower.show {
-    opacity: .7;
-    transform: scale(5);
-    background: rgba(255, 112, 112, 0.6);
+    transform: scale(20);
+    border: 1px solid orange;
+    mix-blend-mode: difference;
 }
 </code></pre>
-                        </div>
-                        <div class="jquery">
-                            <pre><code class="language-javascript">const w = document.querySelector('.cursor').clientWidth / 2;
+            </div>
+            <div class="javascript">
+              <pre><code class="language-js">const w = document.querySelector('.cursor').clientWidth / 2;
 const y = document.querySelector('.cursor').clientHeight / 2;
 let text = 'difference';
 
 //움직임 효과
 document.addEventListener('mousemove', e => {
-    gsap.to('.cursor', {
-        duration: .5,
-        left: e.pageX - w,
-        top: e.pageY - y
-    });
+    gsap.to('.cursor', { duration: .5, left: e.pageX - w, top: e.pageY - y });
 });
 
 //hover 효과
@@ -277,64 +254,54 @@ document.querySelectorAll('.info.left.list li').forEach(li => {
     });
 });
 </code></pre>
-                        </div>
-                    </div>
-                </div>
-                <button>닫기</button>
             </div>
+          </div>
         </div>
+        <button>닫기</button>
+      </div>
     </div>
-    <!-- //#1 -->
-    <!-- //info-->
+  </div>
+  <!-- //modal -->
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="../assets/js/custom.js"></script>
-    <script src="../assets/js/highlight.min.js"></script>
-    <script>
-        window.onload = function () {
-            // init();
-            // animate();
-            agentCheck();
-        }
+  <!-- script -->
+  <!-- green sock -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="../assets/js/custom.js"></script>
+  <script src="../assets/js/highlight.min.js"></script>
+  <script>
+    const w = document.querySelector('.cursor').clientWidth / 2;
+    const y = document.querySelector('.cursor').clientHeight / 2;
+    let text = 'difference';
 
-        modal();
-        const w = document.querySelector('.cursor').clientWidth / 2;
-        const y = document.querySelector('.cursor').clientHeight / 2;
-        let text = 'difference';
+    //움직임 효과
+    document.addEventListener('mousemove', e => {
+      gsap.to('.cursor', { duration: .5, left: e.pageX - w, top: e.pageY - y });
+    });
 
-        //움직임 효과
-        document.addEventListener('mousemove', e => {
-            gsap.to('.cursor', {
-                duration: .5,
-                left: e.pageX - w,
-                top: e.pageY - y
-            });
+    //hover 효과
+    document.querySelectorAll('.mouseCont em').forEach(em => {
+      em.addEventListener('mouseenter', () => {
+        document.querySelector('.cursor').classList.add('active');
+        document.querySelector('.cursor.active').style.mixBlendMode = text;
+      });
+      em.addEventListener('mouseout', () => {
+        document.querySelector('.cursor').classList.remove('active');
+        document.querySelector('.cursor').style.mixBlendMode = 'normal';
+      });
+    });
+
+    //출력용
+    document.querySelectorAll('.info.left.list li').forEach(li => {
+      li.addEventListener('click', () => {
+        document.querySelectorAll('.info.left.list li').forEach(el => {
+          el.classList.remove('active');
         });
-
-        //hover 효과
-        document.querySelectorAll('.mouseCont em').forEach(em => {
-            em.addEventListener('mouseenter', () => {
-                document.querySelector('.cursor').classList.add('active');
-                document.querySelector('.cursor.active').style.mixBlendMode = text;
-            });
-            em.addEventListener('mouseout', () => {
-                document.querySelector('.cursor').classList.remove('active');
-                document.querySelector('.cursor').style.mixBlendMode = 'normal';
-            });
-        });
-
-        //출력용
-        document.querySelectorAll('.info.left.list li').forEach(li => {
-            li.addEventListener('click', () => {
-                document.querySelectorAll('.info.left.list li').forEach(el => {
-                    el.classList.remove('active');
-                });
-                li.classList.add('active');
-                text = li.innerText;
-            });
-        });
-    </script>
+        li.classList.add('active');
+        text = li.innerText;
+      });
+    });
+  </script>
 </body>
 
 </html>

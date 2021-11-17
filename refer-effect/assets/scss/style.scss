@@ -43,8 +43,9 @@
     font-style: normal;
 }
 
+
 // reset
-// 여백 초기화 
+/* 초기화 */
 body,
 div,
 dl,
@@ -78,16 +79,24 @@ figcaption {
     padding: 0
 }
 
+/* 링크 초기화 */
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
 // variable
 $font-Six: 'Six Caps';
 $font-Nexon1: 'NEXONLv1Gothic';
 $font-Nexon2: 'NEXONLv2Gothic';
+
 $gradient1: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
-$gradient2: linear-gradient(to bottom, #30cfd0 0%, #330867 100%);
-$gradient3: linear-gradient(to bottom, #f43b47 0%, #453a94 100%);
-$gradient4: linear-gradient(to bottom, #7028e4 0%, #e5b2ca 100%);
-$gradient5: linear-gradient(to bottom, #09203f 0%, #537895 100%);
-$gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
+$gradient2: linear-gradient(to top, #2f9c97 0%, #d85a82 100%);
+$gradient3: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+$gradient4: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+$gradient5: linear-gradient(to top, #4fb576 0%, #44c489 30%, #28a9ae 46%, #28a2b7 59%, #4c7788 71%, #6c4f63 86%, #432c39 100%);
+$gradient6: linear-gradient(-225deg, #1b9b98 0%, #817bcc 56%, #e07e8b 100%);
+
 
 // mixin
 @mixin positionCenter {
@@ -112,51 +121,34 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
 
 //agent
 .iphone main {
+    display: 10px;
+}
+.android main {
     padding: 10px;
 }
 
-.android main {
-    display: none;
-}
-
-//bg1
+// bg
 .bg {
     position: relative;
     height: 100vh;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    z-index: 0;
+    overflow: hidden;
 
     &::before {
         @include content;
         width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.5);
         z-index: -1;
-    }
-
-    &.blue {
-        &::before {
-            background: rgba(7, 4, 58, 0.39);
-        }
-    }
-    &.black {
-        &::before {
-            background: rgb(0, 0, 3);
-        }
-    }
-
-    &.brown {
-        &::before {
-            background-color: rgba(50, 37, 11, 0.7);
-        }
     }
 }
 
-@for $i from 1 through 9 {
+@for $i from 1 through 20 {
     .bg#{$i} {
-        background-image: url(../img/bg0#{$i}@2.jpg);
-
+        background-image: url(../img/bg#{$i}@2.jpg);
     }
 }
 
@@ -167,46 +159,30 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
     height: 100vh;
     overflow: hidden;
     background: #11e8bb;
-    /* Old browsers */
-    background: $gradientMain;
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-
-    &.game {
-        background: $gradient1;
-
-        #contents h1 {
-            background-image: linear-gradient(to top, #30cfd0, #330867);
-        }
-    }
+    background: $gradient1;
+    background-repeat: no-repeat;
 
     &.menu {
         background: $gradient2;
-
-        #contents h1 {
-            background-image: linear-gradient(to top, #30cfd0 1%, #330867);
-        }
     }
 
     &.mouse {
         background: $gradient3;
     }
 
-    &.parallax {
+    &.slider {
         background: $gradient4;
-
-        #contents h1 {
-            background-image: linear-gradient(to bottom, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-        }
     }
 
-    &.slider {
+    &.parallax {
         background: $gradient5;
+    }
 
-        #contents h1 {
-            background-image: linear-gradient(to bottom, #cc4f74 0%, #ffdc14 100%);
-        }
+    &.game {
+        background: $gradient6;
     }
 }
+
 
 #contents {
     h1 {
@@ -218,33 +194,34 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         text-transform: uppercase;
         letter-spacing: 1vw;
         -webkit-text-fill-color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(to bottom, #8200c9, #240038);
+        -webkit-background-clip: text;
+        background-image: linear-gradient(to bottom, #580685 20%, #f3b2c5);
     }
 }
 
 #nav {
     @include positionCenter;
-    bottom: 10px;
+    bottom: 50px;
     top: auto;
+    text-align: center;
 
     li {
         list-style: none;
         display: inline;
 
         a {
-            font-family: $font-NEXON1;
             color: #fff;
             text-decoration: none;
             width: 100px;
             height: 40px;
             line-height: 40px;
-            display: inline-block;
             border: 1px solid #fff;
+            display: inline-block;
             border-radius: 50px;
             font-size: 14px;
             text-align: center;
             margin: 4px;
+            font-family: $font-Nexon1;
             box-shadow: inset 0 0 0 #fff;
             transition: all 0.4s;
 
@@ -263,8 +240,7 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
     font-family: $font-Nexon1;
     padding: 20px;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0; top: 0;
 
     &.right {
         left: auto;
@@ -276,13 +252,6 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         left: auto;
         bottom: 0;
         right: 0;
-        position: fixed;
-    }
-
-    &.left {
-        top: auto;
-        left: 0;
-        bottom: 0;
     }
 
     h1 {
@@ -292,11 +261,6 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         border-bottom: 1px dashed #fff;
         display: inline-block;
         margin-bottom: 10px;
-
-        a {
-            color: #fff;
-            text-decoration: none;
-        }
     }
 
     p {
@@ -320,7 +284,6 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
             text-align: center;
             font-size: 12px;
             margin-bottom: 5px;
-            padding: 1px 2px 0 0;
         }
 
         &.active {
@@ -329,23 +292,6 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
                 color: #000;
             }
         }
-
-
-    }
-
-    &.list {
-        background: rgba(0, 0, 0, 0.4);
-        color: #fff;
-        padding: 20px;
-        font-size: 12px;
-        line-height: 1.8;
-        border-radius: 10px;
-        margin: 20px;
-
-        li {
-            display: block;
-        }
-
     }
 
     button {
@@ -356,23 +302,6 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         border-radius: 50px;
         box-shadow: 0 0 0 #fff inset;
         transition: all 0.4s;
-        cursor: pointer;
-
-        &:hover {
-            box-shadow: 0 -50px 0 #fff inset;
-            color: #000;
-        }
-    }
-
-    .source {
-        background: transparent;
-        border: 1px solid #fff;
-        padding: 5px 20px;
-        color: #fff;
-        border-radius: 50px;
-        box-shadow: 0 0 0 #fff inset;
-        transition: all 0.4s;
-        cursor: pointer;
 
         &:hover {
             box-shadow: 0 -50px 0 #fff inset;
@@ -381,24 +310,23 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
     }
 }
 
-// #1
+/* modal */
 #modal {
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
+    left: 0;top: 0;
+    width: 100%;height: 100vh;
     z-index: 1000;
     transform: scale(0);
 
     .modal-bg {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.6);
         height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
 
         .modal-cont {
+
             h2 {
                 font-weight: 400;
                 font-size: 30px;
@@ -419,41 +347,20 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
                 padding: 5px 10px;
                 cursor: pointer;
                 font-family: 'NEXONLv2Gothic';
-                margin-top: 10px
-            }
-
-            source {
-                float: right;
-                border: 1px solid #000;
-                background: #000;
-                border-radius: 20px;
-                color: #fff;
-                padding: 5px 10px;
-                cursor: pointer;
-                font-family: 'NEXONLv2Gothic';
-                margin-top: 10px
+                margin-top: 10px;
             }
         }
     }
 }
-
 
 #modal.show {
     animation: unfoldIn 1s ease forwards;
 }
 
 @keyframes unfoldIn {
-    0% {
-        transform: scaley(0.005) scalex(0);
-    }
-
-    50% {
-        transform: scaley(0.005) scalex(1);
-    }
-
-    100% {
-        transform: scaley(1) scalex(1);
-    }
+    0% {transform: scaley(0.005) scalex(0);}
+    50% {transform: scaley(0.005) scalex(1);}
+    100% {transform: scaley(1) scalex(1);}
 }
 
 #modal.show.hide {
@@ -461,17 +368,11 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
 }
 
 @keyframes unfoldOut {
-    0% {
-        transform: scaley(1) scalex(1);
-    }
+    0% {transform: scaley(1) scalex(1);}
 
-    50% {
-        transform: scaley(0.005) scalex(1);
-    }
+    50% {transform: scaley(0.005) scalex(1);}
 
-    100% {
-        transform: scaley(0.005) scalex(0);
-    }
+    100% {transform: scaley(0.005) scalex(0);}
 }
 
 #modal.show .modal-bg .modal-cont {
@@ -485,164 +386,102 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
 }
 
 @keyframes zoomIn {
-    0% {
-        transform: scale(0)
-    }
-
-    100% {
-        transform: scale(1)
-    }
+    0% {transform: scale(0)}
+    100% {transform: scale(1)}
 }
 
 @keyframes zoomOut {
-    0% {
-        transform: scale(1)
-    }
-
-    100% {
-        transform: scale(0)
-    }
+    0% {transform: scale(1)}
+    100% {transform: scale(0)}
 }
 
-//code-view
+// code-view
 .code-view {
-    background: #fff;
+    background-color: #fff;
     width: 60vw;
-    border: 1px solid #f2f2f2;
+    border: 1px solid #F2F2F2;
     border-radius: 10px;
     overflow: hidden;
 
     .view-header {
-        border-bottom: 1px solid #f2f2f2;
-
+        border-bottom: 1px solid #F2F2F2;
         .dot {
-            padding: 12px 10px 10px 15px;
-
+            padding: 13px 10px 10px 15px;
             span {
-                width: 12px;
-                height: 12px;
+                width: 12px; height: 12px;
                 display: inline-block;
                 border-radius: 50%;
                 margin: 0 2px;
             }
-
-            span:nth-child(1) {
-                background-color: #f56565;
+            span:nth-child(1){
+                background-color: #F56565;
             }
-
-            span:nth-child(2) {
-                background-color: #f6e05e;
+            span:nth-child(2){
+                background-color: #F6E05E;
             }
-
-            span:nth-child(3) {
-                background-color: #48bb78;
+            span:nth-child(3){
+                background-color: #48BB78;
             }
         }
     }
-
     .view-title {
-        font-family: 'NEXONLv2Gothic';
-        border-bottom: 1px solid #f2f2f2;
+        border-bottom: 1px solid #F2F2F2;
         padding: 0 11px;
-
+        font-family: 'NEXONLv2Gothic';
         li {
             display: inline;
             list-style: none;
-
             a {
                 text-decoration: none;
-                color: #cccccc;
+                color: #CCCCCC;
                 padding: 10px 10px 12px;
                 margin: 0 5px;
                 display: inline-block;
             }
-
             &.active a {
-                border-top: 2px solid #667eea;
-                color: #4a5568;
+                border-top: 2px solid #667EEA;
+                color: #4A5568;
             }
         }
     }
-
     .view-cont {
-        height: 70vh;
+        height: 500px;
         overflow-y: scroll;
-        background: #F8F8F9;
-
+        
         >div {
             display: none;
         }
-
-        >div:nth-child(1) {
+        >div:nth-child(1){
             display: block;
         }
-    }
+   }
 }
 
 
-@media(max-width: 800px) {
+@media (max-width: 900px) {
     #contents {
         h1 {
+            @include positionCenter;
             font-size: 15vw;
         }
     }
 
     #nav {
-        ul {
-            display: grid;
-            grid-template-columns: repeat(5, 50px);
-            gap: 25px;
-
-            li {
-                a {
-                    font-size: 11px;
-                    width: 55px;
-                    height: 26px;
-                    line-height: 2.5;
-                }
-            }
-        }
-    }
-
-    .info {
-        padding: 12px;
-
-        h1 {
-            font-size: 16px;
-        }
-
-        p {
-            font-size: 10px;
-        }
-
-        &.bottom {
-            bottom: 20px;
-        }
+        @include flexCenter;
+        text-align: center;
+        align-items: unset;
+        bottom: 0;
+        width: 100%;
 
         li {
             a {
-                width: 15px;
-                height: 15px;
-                line-height: 15px;
-                font-size: 5px;
+                width: 80px;
+                height: 35px;
+                line-height: 35px;
             }
         }
     }
-
-    .code-view {
-        width: 90vw;
-        font-size: 14px;
-        overflow: hidden;
-        padding-bottom: 10px;
-        background: #f8f8f8;
-
-        .view-cont {
-            height: 55vh;
-        }
-    }
 }
-
-
 
 
 
@@ -656,8 +495,7 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
 
 .paraScroll {
     position: fixed;
-    left: 20px;
-    bottom: 20px;
+    left: 20px; bottom: 20px;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.4);
     color: #fff;
@@ -688,12 +526,11 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
 
 .paraNav {
     position: fixed;
-    right: 20px;
-    top: 20px;
+    right: 20px; top: 20px;
     z-index: 1000;
     background: rgba(0, 0, 0, 0.4);
     padding: 15px 20px;
-    border-radius: 30px;
+    border-radius: 50px;
 
     li {
         display: inline-block;
@@ -704,8 +541,7 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
             text-decoration: none;
             display: inline-block;
             padding: 5px;
-            width: 30px;
-            height: 30px;
+            width: 30px; height: 30px;
             text-align: center;
             line-height: 30px;
         }
@@ -714,32 +550,29 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
             background: #fff;
             color: #000;
             border-radius: 50%;
+
         }
     }
 }
 
 .paraInfo {
     padding: 20px;
-
     h1 {
         display: inline-block;
         font-size: 20px;
         border-bottom: 1px dashed #fff;
         margin-bottom: 8px;
         font-weight: 400;
-
         a {
             color: #fff;
             text-decoration: none;
         }
     }
-
     p {
         font-size: 14px;
         line-height: 1.8;
     }
 }
-
 .paraCont {
     width: 100%;
     overflow: hidden;
@@ -752,46 +585,38 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         padding-top: 10vw;
         text-align: right;
         position: relative;
-
         .num {
             font-family: 'Lato';
             font-weight: 100;
             font-size: 25vw;
             opacity: 0.07;
             position: absolute;
-            right: -5vw;
-            top: -10vw;
+            right: -5vw; top: -10vw;
         }
-
         .title {
             padding-bottom: 10px;
             font-weight: 700;
         }
-
-        .img-wrap {
+        .img-Wrap {
             width: 100%;
             padding-bottom: 56%;
             background: #000;
             position: relative;
-            overflow: hidden;
-
             .img {
                 position: absolute;
-                left: -10%;
-                top: -10%;
-                width: 120%;
-                height: 120%;
+                left: 0; top: 0;
+                width: 100%;
+                height: 100%;
                 background-size: cover;
                 background-repeat: no-repeat;
                 filter: saturate(0%);
-                transition: filter 1s;
+                transition: all 1s;
 
                 &:hover {
-                    filter: saturate(100%)
-                }
+                            filter: saturate(100%);
+                }            
             }
         }
-
         .desc {
             font-size: 4vw;
             line-height: 1.4;
@@ -801,35 +626,32 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
             z-index: 100;
             word-break: keep-all;
         }
-
-        &:nth-child(even) {
+        &:nth-child(even){
             margin-left: auto;
             text-align: left;
-
             .num {
                 right: auto;
                 left: -5vw;
             }
-
             .desc {
                 margin-right: auto;
                 margin-left: -3vw;
             }
         }
     }
-
-    @for $i from 1 through 9 {
-        .content-item {
-            &:nth-child(#{$i}) {
-                .img {
-                    background-image: url(../img/bg0#{$i}.jpg);
-                }
+}
+@for $i from 1 through 9 {
+    .content-item {
+        &:nth-child(#{$i}){
+            .img {
+                background-image: url(../img/bg#{$i}.jpg);
             }
         }
     }
 }
 
-// paraFooter
+
+//paraFooter
 .paraFooter {
     padding: 200px 0;
 
@@ -839,48 +661,45 @@ $gradient6: linear-gradient(to bottom, #874da2 0%, #c43a30 100%);
         padding: 10vw 8vw 0 8vw;
         text-transform: uppercase;
         margin-bottom: 3vw;
+    }
+    em {
+        display: block;
+        font-family: ‘Lato’;
+        font-weight: 100;
+        padding-left: 18vw;
 
-        em {
-            display: block;
-            font-family: 'Lato';
-            font-weight: 100;
-            padding-left: 18vw;
-        }
+    }
+}
+.footerInfo {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    padding: 15px 20px;
+    margin-bottom: 2px;
+
+    h2 {
+        padding-right: 20px;
     }
 
-    .footerInfo {
-        padding: 20px;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #000;
-        padding: 15px 20px;
-        margin-bottom: 2px;
+    li {
+        display: inline;
+        list-style: none;    
+        a {
+            color: #fff;
+            border: 1px dashed #fff;
+            width: 30px; height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 30px;
+            text-decoration: none;
 
-        h2 {
-            padding-right: 20px;
         }
-
-        li {
-            display: inline;
-            list-style: none;
-
-            a {
-                color: #fff;
-                border: 1px dashed #fff;
-                width: 30px;
-                height: 30px;
-                display: inline-block;
-                border-radius: 50%;
-                line-height: 30px;
-                text-decoration: none;
-            }
-
-            &.active a {
-                background: #fff;
-                color: #000;
-            }
+        &.active a {
+            background-color: #fff;
+            color: #000;
         }
     }
 }

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout05</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fce4ec;
+        }
+        .wrap {
+            width: 1200px;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 auto;
+            color: white;
+            font-size: 30px;
+        }
+
+        .header {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #c2185b ;
+        }
+
+        .nav {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #d81b60 ;
+        }
+
+        .side {
+            width: 400px;
+            height: 1000px;
+            line-height: 1000px;
+            background-color: #e91e63 ;
+            float: left;
+        }
+        .content {
+            width: 800px;
+            height: 700px;
+            line-height: 500px;
+            background-color: #ec407a ;
+            float: right;
+
+        }
+
+        .article {
+            width: 800px;
+            height: 300px;
+            background-color: #f06292 ;
+            float: right;
+        }
+
+        .article .box1 {
+        width:340px; 
+        height:230px; 
+        top: 30px;  
+        right: 10px;
+        background:#f48fb1 ; 
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+
+        .article .box2 {
+        width:340px; 
+        height:230px; 
+        top: 30px;  
+        left: 20px;
+        background:#f48fb1 ; 
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        }
+
+        .footer {
+            width: 1200px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #880e4f ;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="nav">nav</div>
+        <div class="side">side</div>
+        <div class="content">content</div>
+        <div class="article">
+            <span class="box1">cont1</span>
+            <span class="box2">cont2</span>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

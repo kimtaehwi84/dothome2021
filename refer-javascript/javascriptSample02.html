@@ -1,9 +1,14 @@
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS 속성 검색하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'GyeonggiBatang';
@@ -11,37 +16,44 @@
             font-weight: normal;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'TmonMonsori';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
+
         * {
             margin: 0;
             padding: 0;
         }
+
         img {
             width: 100%;
         }
+
         body {
             background-image: url(img/search_bg.jpg);
             background-size: cover;
             background-position: center bottom;
             background-attachment: fixed;
         }
+
         .girl {
             width: 250px;
             position: fixed;
             bottom: -60px;
             right: 5%;
         }
+
         .dog {
             width: 150px;
             position: fixed;
             bottom: -40px;
             left: 5%;
         }
+
         .board {
             margin: 5vw 10vw 10vw 10vw;
             width: 80vw;
@@ -51,6 +63,7 @@
             text-align: center;
             box-sizing: border-box;
         }
+
         .board h1 {
             font-family: 'TmonMonsori';
             color: #223547;
@@ -58,11 +71,13 @@
             margin-top: 10px;
             margin-bottom: 20px;
         }
+
         .board span {
             font-family: 'GyeonggiBatang';
             color: #223547;
             font-size: 20px;
         }
+
         .board .search label {
             font-family: 'GyeonggiBatang';
             background-color: #BFE6FE;
@@ -72,6 +87,7 @@
             border-radius: 40px;
             display: none;
         }
+
         .board .search input {
             font-family: 'GyeonggiBatang';
             font-size: 24px;
@@ -79,12 +95,13 @@
             padding: 10px 10px 10px 30px;
             border-radius: 40px;
             outline: none;
-
         }
+
         .board .list {
             text-align: left;
             margin-top: 40px;
         }
+
         .board .list ul li {
             font-family: 'GyeonggiBatang';
             line-height: 1.6;
@@ -94,77 +111,84 @@
             padding: 5px 10px;
             border-radius: 4px;
         }
+
         .board .list ul li.hide {
-            display:none;
+            display: none;
         }
 
-
-        @media (max-width: 800px){
+        @media (max-width: 800px) {
             .board {
                 width: 92vw;
                 padding: 6% 3% 3% 3%;
                 margin: 4vw;
             }
+
             .board h1 {
                 font-size: 30px;
                 margin-top: 5px;
             }
+
             .board span {
                 font-size: 12px;
             }
+
             .board .search input {
                 width: 100%;
                 box-sizing: border-box;
                 font-size: 16px;
-                padding :10px 10px 10px 20px;
+                padding: 10px 10px 10px 20px;
             }
+
             .board .list {
                 margin-top: 20px;
             }
+
             .girl {
                 width: 200px;
             }
+
             .dog {
                 width: 100px;
             }
         }
+
         .search-result {
             padding: 20px;
             font-family: 'GyeonggiBatang';
             background-color: #bdd6e6;
-            margin: 20px;
+            margin: 10px 0;
             border-radius: 40px;
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <div class="board">
-            <span>CSS 속성을 넣어주세요</span>
+            <span>CSS 속성을 넣어주세요!!</span>
             <h1>CSS 속성 검색하기</h1>
-            <div class ="search">
+            <div class="search">
                 <label for="search-box">검색하기</label>
                 <input id="search-box" class="search-input" type="text">
             </div>
-
             <div class="search-result">
-            </div>
 
+            </div>
         </div>
         <div class="girl">
-            <img src="img/search_girl.png" alt="">
+            <img src="img/search_girl.png" alt="girl">
         </div>
         <div class="dog">
-            <img src="img/search_dog.png" alt="">
+            <img src="img/search_dog.png" alt="dog">
         </div>
     </div>
 
     <script>
         const cssProp = [
             { name: "align-content", desc: "콘텐츠의 상하관계 정렬 상태를 정의합니다." },
-            { name: "align-items", desc: "콘텐츠 내부의 정렬 상태를 정의합니다." },
-            { name: "align-self", desc: "콘텐츠의 정렬 상태를 정의합니다." },
-            { name: "all", desc: "콘텐츠의 정렬 상태를 정의합니다." },
+            { name: "align-content", desc: "콘텐츠 내부의 정렬 상태를 정의합니다." },
+            { name: "align-content", desc: "콘텐츠의 정렬 상태를 정의합니다." },
+            { name: "all", desc: "요소의 속성을 초기화 또는 상속을 설정합니다." },
             { name: "animation", desc: "애니메이션을 정의합니다." },
             { name: "animation-delay", desc: "요소가 로드된 후 애니메이션이 시작될 때 까지의 시간을 나타냅니다." },
             { name: "animation-direction", desc: "애니메이션 움직임 방향을 설정합니다." },
@@ -361,31 +385,28 @@
             { name: "word-wrap", desc: "줄바꿈을 설정합니다." },
             { name: "z-index", desc: "요소의 위치가 겹칠 경우 순서를 정의합니다." }
         ];
-        
+
         const searchInput = document.querySelector(".search-input");
         const searchResult = document.querySelector(".search-result");
 
-
-        searchInput.addEventListener("keyup",()=>{
-            const searchWord = searchInput.value; //사용자가 입력한 값
-            //console.log(searchWord);
+        searchInput.addEventListener("keyup", () => {
+            const searchWord = searchInput.value;   //사용자가 입력한 값
+            // console.log(searchWord);
             findDesc(searchWord);
         });
 
         function findDesc(searchWord){
-            const findData = cssProp.find((el)=>{
-                return el.name === searchWord;   //사용자가 입력한 값, 데이터 값이 일치여부
+            const findData = cssProp.find((el) => {
+                return el.name === searchWord;          //사용자가 입력한 값, 데이터 일치 여부
             });
 
-            //데이터가 없을때
             if(findData == null){
-                searchResult.textContent = "해당 속성이 존재하지 않습니다."
+                searchResult.textContent = "해당 속성이 존재하지 않습니다.";
             } else {
-                searchResult.textContent = findData.desc; //데이터가 있으면 출력
-
+                searchResult.textContent = findData.desc;   //데이터가 있으면 출력
             }
         }
-
     </script>
 </body>
+
 </html>
