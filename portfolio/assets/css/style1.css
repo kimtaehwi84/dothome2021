@@ -973,7 +973,7 @@ body.active {
 
 /* animation - blossom3 */
 .blossom1, .blossom2, .blossom3, .aniLast {background: #F2C2C6;}
-.blossom3 .blossomTxt {
+.blossom3 .blossomBackTxt {
     position: absolute;
     left: 50%; top: 50%; 
     transform: translate(-50%, -50%);
@@ -992,9 +992,9 @@ body.active {
     font-family: var(--font-eng);
     text-align: center;
     line-height: 1;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
     position: absolute;
-    left: 53%; top: 66%; 
+    left: 50%; top: 73%; 
     transform: translate(-50%, -50%);
     animation: flash 2.5s ease infinite;
 }
@@ -1003,7 +1003,7 @@ body.active {
 }
 .blossom3 .aniblossom .aniBtn {
     font-family: var(--font-eng);
-    font-size: 3vw;
+    font-size: 2vw;
     color: #A36B58;
     transition: all 0.2s;
 }
@@ -1014,7 +1014,7 @@ body.active {
 .blossom3 .aniblossom1 {
     width: 18vw;
     position: absolute;
-    left: 0; top: 13%;
+    left: 11%; top: 34%;
 }
 .blossom3 .aniblossom1 .aniBtn {
     position: absolute; 
@@ -1024,7 +1024,7 @@ body.active {
 .blossom3 .aniblossom2 {
     width: 18vw;
     position: absolute;
-    left: 25%; top: -5%;
+    left: 32%; top: 35%;
 }
 .blossom3 .aniblossom2 .aniBtn {
     position: absolute; 
@@ -1034,7 +1034,7 @@ body.active {
 .blossom3 .aniblossom3 {
     width: 18vw;
     position: absolute;
-    left: 53%; top: 15%;
+    left: 53%; top: 35%;
 }
 .blossom3 .aniblossom3 .aniBtn {
     position: absolute; 
@@ -1043,11 +1043,11 @@ body.active {
 }
 .blossom3 .aniblossom4 .aniBtn {
     position: absolute;
-    left: 10%; top: 48%;
+    left: 15%; top: 68%;
 }
 .blossom3 .aniblossom5 .aniBtn {
     position: absolute;
-    right: 7%; top: 48%;
+    right: 15%; top: 67%;
 }
 .blossom3 .aniFrame .ani {
     width: 18vw; height: 18vw;
@@ -1057,19 +1057,19 @@ body.active {
 }
 .blossom3 .aniFrame .ani1 {
     position: absolute;
-    left: 0; top: 13%;
+    left: 5%; top: 35%;
     transform: scale(0);
     opacity: 0.8;
 }
 .blossom3 .aniFrame .ani2 {
     position: absolute;
-    left: 25%; top: -5%;
+    left: 32%; top: 37%;
     transform: scale(0);
     opacity: 0.8;
 }
 .blossom3 .aniFrame .ani3 {
     position: absolute;
-    left: 53%; top: 15%;
+    left: 53%; top: 35%;
     transform: scale(0);
     opacity: 0.8;
 }
@@ -1212,25 +1212,25 @@ body.active {
     z-index: -1;
 }
 .aniLast .umbrella1 {
-    width: 15vw;
+    width: 13vw;
     position: absolute;
     left: 5vw; top: 5vw;
     animation: umbrellaMove 2.5s ease-in-out infinite;
 }
 .aniLast .umbrella2 {
-    width: 15vw;
+    width: 13vw;
     position: absolute;
     left: 20vw; top: 15vw;
     animation: umbrellaMove 4s ease-in-out infinite;
 }
 .aniLast .umbrella3 {
-    width: 15vw;
+    width: 13vw;
     position: absolute;
     left: 40vw; top: 10vw;
     animation: umbrellaMove 4.2s ease-in-out infinite;
 }
 .aniLast .umbrella4 {
-    width: 15vw;
+    width: 13vw;
     position: absolute;
     left: 57vw; top: 7vw;
     animation: umbrellaMove 2s ease-in-out infinite;
