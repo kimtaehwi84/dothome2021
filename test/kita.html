@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITA NET</title>
+
+    <style>
+        /* 여백 초기화 */
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td,
+        input,
+        select,
+        button,
+        figure,
+        figcaption {
+            margin: 0;
+            padding: 0
+        }
+
+        /* 폰트 초기화*/
+        body,
+        button,
+        input,
+        select,
+        table,
+        textarea {
+            font-size: 12px;
+            line-height: 1.5;
+            color: #222;
+        }
+
+        /* a링크 초기화 */
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* 목록 초기화 ol이거나 ul일때*/
+        ol,
+        ul {
+            list-style: none
+        }
+
+        /* 스타일 초기화*/
+        strong {
+            font-weight: normal;
+        }
+
+        em {
+            font-style: normal;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0 auto;
+            padding: 0 auto;
+        }
+
+        #wrap {
+            background-color: #fff;
+            font-family: 'S-CoreDream-4Regular';
+
+        }
+
+        .container {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        #header {
+            background-color: #fff;
+        }
+
+        #header .headerInner {
+            height: 90px;
+            box-sizing: border-box;
+            margin: 0 30px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #header .headerInner .left {
+            width: 20%;
+            margin-top: 40px;
+        }
+
+        #header .headerInner .left img {
+            text-align: right;
+            width: 150px;
+            height: 30px;
+        }
+
+        #header .headerInner .right {
+            font-size: 14px;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        #header .headerInner .right a {
+            padding-left: 20px;
+            position: relative;
+        }
+
+        #header .headerInner .right .hidden {
+            position: absolute;
+            width: 80px;
+            z-index: 100;
+            display: inline-block;
+            background-color: #fff;
+            top: 80px;
+            transform: translateX(-87px);
+            padding: 5px;
+        }
+
+        #header .headerInner .right .hidden a {
+            display: block;
+            text-align: center;
+            display: none;
+        }
+
+        #header .headerInner .right .hidden li {
+            display: inline-block;
+            padding: 0 15px;
+
+        }
+
+        /* nav 메뉴 */
+        #nav {
+            transition: all 0.5 ease-in;
+            display: none;
+            width: 100%;
+            height: 100px;
+            z-index: 1000;
+        }
+
+        #main {
+            width: 100%;
+            height: 400px;
+        }
+
+        .swiper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .swiper .swiper-wrapper .swiper-slide {
+            background-image: url(/assets/img/kita/banner.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .swiper-button-prev {
+            width: 21px;
+            height: 41px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 25px;
+            transform: translateY(-50%);
+            color: #fff;
+            opacity: 0;
+
+        }
+
+        .swiper-button-next {
+            width: 21px;
+            height: 41px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 32px;
+            transform: translateY(-50%);
+            color: #fff;
+            opacity: 0;
+        }
+
+        #section {
+            background-color: #F3F7F8;
+            margin-top: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            border-bottom: 1px solid rgb(199, 199, 199);
+
+        }
+
+        #section .sectionInner {
+            width: 100%;
+            /* height: 300px; */
+            padding-bottom: 30px;
+
+
+        }
+
+        #section .sectionInner .title {
+            display: block;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 35px 0;
+            position: relative;
+        }
+
+        #section .sectionInner .title:after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: url(/assets/img/kita/plus.jpg)no-repeat;
+            background-size: cover;
+            left: 97%;
+            top: 41%;
+        }
+
+        #section .sectionInner .boxes {
+            display: flex;
+            gap: 25px;
+
+        }
+
+        #section .sectionInner .boxes .box {
+            padding: 20px 25px 40px;
+            background: #fff;
+            border: 1px solid rgb(201, 201, 201);
+
+        }
+
+        #section .sectionInner .boxes .box p {
+            display: inline-block;
+            color: #547388;
+            font-size: 8px;
+            border: 2px solid #547388;
+            border-radius: 5PX;
+            padding: 2px 8px;
+            margin-bottom: 10px;
+        }
+
+        #section .sectionInner .boxes .box h4 {
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        #section .sectionInner .boxes .box span {
+            display: inline-block;
+            padding: 0 0 5px 70px;
+            font-size: 6px;
+            line-height: 1.8;
+        }
+
+        #section .sectionInner .boxes .box .business {
+            position: relative;
+        }
+
+        #section .sectionInner .boxes .box .business::before {
+            position: absolute;
+            content: '사업기간';
+            font-size: 4px;
+            color: #fff;
+            background-color: #6990D5;
+            padding: 0 3px;
+            border-radius: 2px;
+            left: 0;
+        }
+
+        #section .sectionInner .boxes .box .gathering {
+            position: relative;
+        }
+
+        #section .sectionInner .boxes .box .gathering::before {
+            position: absolute;
+            content: '모집기간';
+            font-size: 4px;
+            color: #fff;
+            background-color: #6990D5;
+            padding: 0 3px;
+            border-radius: 2px;
+            left: 0;
+        }
+
+        #article .articleInner {
+            background: #fff;
+            height: 500px;
+        }
+
+        #article .articleInner {
+            width: 100%;
+            margin: 40px 0;
+        }
+
+        #article .articleInner .top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        #article .articleInner .top .menu {
+            width: 35%;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 18px 25px;
+            box-sizing: border-box;
+        }
+
+        #article .articleInner .top .menu .title {
+            display: inline-flex;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        #article .articleInner .top .menu .title a {
+            padding: 0 23px 0 0;
+        }
+
+        #article .articleInner .top .menu .title a h1 {
+            color: rgb(136, 136, 136);
+        }
+
+        #article .articleInner .top .menu.menu01 .title .first {
+            position: relative;
+        }
+
+        #article .articleInner .top .menu.menu01 .title .first::before {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 18px;
+            left: 79px;
+            top: 4px;
+            background-color: #000;
+
+        }
+
+        #article .articleInner .top .menu .title .second {
+            position: relative;
+        }
+
+        #article .articleInner .top .menu .title .second::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            left: 215px;
+            top: -2px;
+            background: url(../assets/img/kita/plus.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        #article .articleInner .top .menu .title a h1.active {
+            color: #000;
+        }
+
+        #article .articleInner .top .menu .tab .desc {
+            padding-top: 15px;
+        }
+
+        #article .articleInner .top .menu .tab .desc li {
+            padding-bottom: 25px;
+        }
+
+        #article .articleInner .top .menu .tab .desc span {
+            font-size: 15px;
+        }
+
+        #article .articleInner .top .menu .tab .desc p {
+            color: rgb(136, 136, 136);
+            font-size: 12px;
+        }
+
+        #article .articleInner .top .menu .tab2 {
+            display: none;
+        }
+
+        #article .articleInner .top .menu.menu02 {
+            width: 63%;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 18px 25px;
+            box-sizing: border-box;
+        }
+
+        #article .articleInner .top .menu.menu02 .title .second::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            left: 614px;
+            top: -2px;
+            background: url(../assets/img/kita/plus.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        #article .articleInner .top .menu.menu02 .desc li,
+        #article .articleInner .top .menu.menu04 .desc li {
+            padding-bottom: 10px;
+        }
+
+        #article .articleInner .top .menu.menu02 .desc li em,
+        #article .articleInner .top .menu.menu04 .desc li em {
+            display: inline-block;
+            color: #fff;
+            background: rgb(72, 112, 223);
+            width: 89px;
+            height: 20px;
+            text-align: center;
+            margin-right: 10px;
+
+        }
+
+        #article .articleInner .top .menu.menu04 {
+            width: 63%;
+            border: 1px solid rgb(212, 212, 212);
+            padding: 18px 25px;
+            box-sizing: border-box;
+        }
+
+        #article .articleInner .top .menu.menu04 .title .second::before {
+            position: absolute;
+            content: '';
+            width: 25px;
+            height: 25px;
+            left: 614px;
+            top: -2px;
+            background: url(../img/kita/plus.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        #article .articleInner .top .menu.menu03 {
+            background: url(../img/kita/img01.jpg)no-repeat;
+            background-size: cover;
+        }
+
+        #article .articleInner .top .menu.menu04 .tab {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #article .articleInner .top .menu.menu04 .tab .desc li {
+            width: 80%;
+            overflow: hidden;
+        }
+
+        #article .articleInner .top .menu.menu04 .tab .desc.line {
+            position: relative;
+        }
+
+        #article .articleInner .top .menu.menu04 .tab .desc.line::after {
+            position: absolute;
+            content: '';
+            width: 1px;
+            height: 90px;
+            background: rgb(212, 212, 212);
+            left: -36px;
+            top: 18px;
+        }
+
+        #article .articleInner .top .menu.menu04 .tab .desc li span {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        /* sliderType */
+        body {
+            background-color: #f3f3f3;
+        }
+
+        .sliderType {
+            margin: 100px 0;
+            background-color: #fff;
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        /* sliderType01 */
+        .sliderType01 {
+            font-family: 'GmarketSans';
+        }
+
+        .sliderType01 .slider {
+            color: #fff;
+            position: relative;
+        }
+
+        .sliderType01 .slider .slider-inner {
+            width: 1400px;
+            margin: 0 auto;
+        }
+
+        .sliderType01 .slider .slider-inner em {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding-top: 100px;
+            display: block;
+        }
+
+        .sliderType01 .slider .slider-inner h3 {
+            font-family: 'GmarketSans';
+            font-size: 100px;
+            font-weight: 300;
+            line-height: 1.2;
+            text-indent: -8px;
+
+        }
+
+        .sliderType01 .slider .slider-inner p {
+            font-family: 'NEXONLv1Gothic';
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .sliderType01 .slider .slider-inner .btn {
+            display: block;
+            padding-bottom: 100px;
+            margin-top: 260px;
+        }
+
+        .sliderType01 .slider .slider-inner .btn a {
+            width: 200px;
+            height: 50px;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-family: 'NEXONLv2Gothic';
+            font-size: 16px;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+
+        .sliderType01 .slider .slider-inner .btn a.white {
+            background: #fff;
+            color: #000;
+        }
+
+        .sliderType01 .slider .slider-inner .btn a.black {
+            background: #000;
+            color: #fff;
+        }
+
+
+        .sliderType01 .slider .slicer-arrow a {
+            width: 21px;
+            height: 41px;
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .sliderType01 .slider .slicer-arrow a.left {
+            left: 25px;
+
+        }
+
+        .sliderType01 .slider .slicer-arrow a.right {
+            right: 25px;
+        }
+
+        .sliderType01 .slider .slicer-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 35px;
+        }
+
+        .sliderType01 .slider .slicer-dot a.dot {
+            width: 15px;
+            height: 15px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .sliderType01 .slider .slicer-dot a.dot.active {
+            background-color: #fff;
+        }
+
+        .sliderType01 .slider .slicer-dot a.play {
+            width: 13px;
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .sliderType01 .slider .slicer-dot a.stop {
+            width: 9px;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .sliderType01 .slider:nth-child(1) {
+            background-image: url(../img/SLIDER-TYPE01.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+
+        }
+
+        #footer {
+            overflow: hidden;
+            background-color: #263F5E;
+            height: 250px;
+        }
+
+        .footerInner {
+            box-sizing: border-box;
+            color: rgb(146, 151, 168);
+        }
+
+        .footerInner .top {
+            padding: 25px 0 20px;
+            justify-content: space-between;
+            display: flex;
+            border-bottom: 1px solid rgb(110, 116, 133);
+        }
+
+        .footerInner .top .left {
+            width: 50%;
+            display: flex;
+        }
+
+        .footerInner .top .familytab #tab {
+            padding: 5px 10px;
+        }
+
+        .footerInner .top .left span {
+            display: inline-block;
+            border-right: 1px solid rgb(110, 116, 133);
+            padding: 0;
+            padding-right: 10px;
+            margin-top: 5px;
+        }
+
+        .footerInner .top .left span:last-child {
+            border: none;
+        }
+
+        .footerInner .bottom {
+            box-sizing: border-box;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .footerInner .bottom .left {
+            display: flex;
+        }
+
+        .footerInner .bottom .footerlogo {
+            width: 150px;
+            height: 52px;
+            margin-right: 25px;
+        }
+
+        .footerInner .bottom div p {
+
+            display: inline-block;
+            padding: 0;
+            margin-top: 15px;
+            margin-right: 20px;
+        }
+
+        .footerInner .bottom .sns {
+            margin-top: 15px;
+
+        }
+
+        .footerInner .bottom .sns img {
+            width: 35px;
+        }
+
+        .footerInner .right {
+            color: #fff;
+        }
+    </style>
+
+
+</head>
+
+<body id="wrap">
+    <header id="header">
+        <div class="container">
+            <div class="headerInner">
+                <div class="left">
+                    <img src="assets/img/kita/logo.jpg" alt="로고">
+                </div>
+                <div class="right">
+                    <span>
+                        <a href="#">무역통상정보</a>
+                        <ul class="hidden">
+                            <a href="#">
+                                <li>1</li>
+                            </a>
+                            <a href="#">
+                                <li>2</li>
+                            </a>
+                            <a href="#">
+                                <li>3</li>
+                            </a>
+                            <a href="#">
+                                <li>4</li>
+                            </a>
+                            <a href="#">
+                                <li>5</li>
+                            </a>
+                        </ul>
+                    </span>
+                    <span>
+                        <a href="#">회원/업무지원</a>
+                        <ul class="hidden">
+                            <a href="#">
+                                <li>1</li>
+                            </a>
+                            <a href="#">
+                                <li>2</li>
+                            </a>
+                            <a href="#">
+                                <li>3</li>
+                            </a>
+                            <a href="#">
+                                <li>4</li>
+                            </a>
+                            <a href="#">
+                                <li>5</li>
+                            </a>
+                        </ul>
+                    </span>
+                    <span>
+                        <a href="#">무역통계</a>
+                        <ul class="hidden">
+                            <a href="#">
+                                <li>1</li>
+                            </a>
+                            <a href="#">
+                                <li>2</li>
+                            </a>
+                            <a href="#">
+                                <li>3</li>
+                            </a>
+                            <a href="#">
+                                <li>4</li>
+                            </a>
+                            <a href="#">
+                                <li>5</li>
+                            </a>
+                        </ul>
+                    </span>
+                    <span>
+                        <a href="#">협회안내</a>
+                        <ul class="hidden">
+                            <a href="#">
+                                <li>1</li>
+                            </a>
+                            <a href="#">
+                                <li>2</li>
+                            </a>
+                            <a href="#">
+                                <li>3</li>
+                            </a>
+                            <a href="#">
+                                <li>4</li>
+                            </a>
+                            <a href="#">
+                                <li>5</li>
+                            </a>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- //header -->
+    <main id="main">
+        <div class="mainInner">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                    </div>
+                    <div class="swiper-slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+    <section id="section">
+        <div class="container">
+            <div class="sectionInner">
+                <div class="title">KITA 사업일정</div>
+                <div class="boxes">
+                    <div class="box">
+                        <p>모집마감 -4일</p>
+                        <h4>『2019 태국 국제식품 전시회』업체모집</h4>
+                        <span class="business">2019-05-28 ~ 2019-06-01</span>
+                        <span class="gathering">2019-01-17 ~ 2019-02-12</span>
+                    </div>
+                    <div class="box">
+                        <p>모집마감 -4일</p>
+                        <h4>[아카데미]무역실무기초 단기속성(1차,야간) 개최</h4>
+                        <span class="business">2019-02-18 ~ 2019-02-22</span>
+                        <span class="gathering">2019-01-23 ~ 2019-02-12</span>
+                    </div>
+                    <div class="box">
+                        <p>모집마감 -4일</p>
+                        <h4>해외 온라인판매 글로벌 셀러 양성과정 참가자 모집</h4>
+                        <span class="business">2019-02-14 ~ 2019-03-05</span>
+                        <span class="gathering">2019-01-25 ~ 2019-02-12</span>
+                    </div>
+                    <div class="box">
+                        <p>모집마감 -4일</p>
+                        <h4>대전 수출활력 촉진단 행사 개최 (2/14)</h4>
+                        <span class="business">2019-02-14 ~ 2019-02-14</span>
+                        <span class="gathering">2019-02-01 ~ 2019-02-12</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //section -->
+    <article id="article">
+        <div class="container">
+            <div class="articleInner">
+                <div class="top">
+                    <div class="menu menu01">
+                        <div class="title">
+                            <a href="#">
+                                <h1 class="first menu01 active">보도자료</h1>
+                            </a>
+                            <a href="#">
+                                <h1 class="second menu01">언론기고</h2>
+                            </a>
+                        </div>
+                        <div class="tab tab1">
+                            <ul class="desc">
+                                <li>
+                                    <span>민관합동 현장중심 수출활력촉진단 가동</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                                <li>
+                                    <span>민간기업이 주도하는 유럽 스타트업 캠퍼스</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab tab2">
+                            <ul class="desc">
+                                <li>
+                                    <span>민간기업이 주도하는 유럽 스타트업 캠퍼스</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                                <li>
+                                    <span>민관합동 현장중심 수출활력촉진단 가동</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="menu menu02">
+                        <div class="title">
+                            <a href="#">
+                                <h1 class="second active">KITA 연구보고서</h1>
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <ul class="desc">
+                                <li class="tradebrief">
+                                    <em>Trade Brief</em>
+                                    <span>2019년 수출기업의 경영환경 전망 조사</span>
+                                </li>
+                                <li class="kita">
+                                    <em>KITA</em>
+                                    <span>[토론회자료] WTO 전자상거래 협상을 위한 공청회 겸 디지털통상정책 토론회 발표</span>
+                                </li>
+                                <li class="kita">
+                                    <em>KITA</em>
+                                    <span>[토론회자료] 브렉시트(Brexit) 설명회 발표 자료</span>
+                                </li>
+                                <li class="tradebrief">
+                                    <em>Trade Brief</em>
+                                    <span>스타트업 사례를 통해 본 2018 중국 AI시장 트렌드</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="top 02">
+                    <div class="menu menu03">
+                        <div class="seminor">
+                        </div>
+                    </div>
+                    <div class="menu menu04">
+                        <div class="title">
+                            <a href="#">
+                                <h1 class="second active">KITA 통상정보</h1>
+                            </a>
+                        </div>
+                        <div class="tab">
+                            <ul class="desc">
+                                <li>
+                                    <span>한미 통상현안 사례분석집</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                                <li>
+                                    <span>[통상리포트] 킥오프된 브렉시트 후반전:향후 통상리포트</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                            </ul>
+                            <ul class="desc line">
+                                <li>
+                                    <span>[통상리포트]2018년 통상이슈 점검 및 2019년 통상</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                                <li>
+                                    <span>[통상리포트] 미중 통상 분쟁 영향 및 시사점</span>
+                                    <p>2019-01-31</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <!-- //article -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footerInner">
+                <div class="top">
+                    <div class="left">
+                        <span>이용약관</span>
+                        <span>개인정보처리방침</span>
+                        <span>저작권 정책</span>
+                        <span>이메일주소무단수집거부</span>
+                        <span>온라인 고객상담</span>
+                        <span>신문고</span>
+                    </div>
+                    <div class="familytab">
+                        <select name="tab" id="tab">
+                            <option value="">국내외지부</option>
+                            <option value="">국내외지부</option>
+                            <option value="">국내외지부</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="left">
+                        <img class="footerlogo " src="assets/img/kita/logo_footer.jpg" alt="하단로고">
+                        <div>
+                            <p>(06164)서울시 강남구 영동대로 511(삼성동)<br>
+                                Copyright KITA ALL rights reserved</p><br>
+                        </div>
+                        <div class="sns">
+                            <img src="assets/img/kita/facebook.jpg" alt="페이스북">
+                            <img src="assets/img/kita/twitter.jpg" alt="트위터">
+                            <img src="assets/img/kita/youtube.jpg" alt="유투브">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p>트레이드 콜센터</p>
+                        <h1>1566-5114</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- //container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        //slider
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        //탭메뉴
+        $(".first.menu01").click(function (e) {
+            e.preventDefault();
+            $(".tab2").css("display", "none");
+            $(".tab1").css("display", "block");
+            $(".second.menu01").removeClass("active");
+            $(".first.menu01").addClass("active");
+        });
+        $(".second.menu01").click(function (e) {
+            e.preventDefault();
+
+            $(".tab1").css("display", "none");
+            $(".tab2").css("display", "block");
+            $(".first.menu01").removeClass("active");
+            $(".second.menu01").addClass("active");
+        });
+
+        //header메뉴 sliderDowm
+        $(".headerInner .right span").mouseenter(function () {
+            $(this).find(".hidden a").stop().slideDown(200);
+        });
+        $(".headerInner .right span").mouseleave(function () {
+            $(this).find(".hidden a").stop().slideUp(200);
+        });
+    </script>
+</body>
+
+</html>
